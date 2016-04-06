@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 配置 Git for Mac · one stark</title><meta name="description" content="配置 Git for Mac - Hewenwei"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/fav.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/fav.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">HOME</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">存档</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">关于</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">配置 Git for Mac</h1><div class="post-time">Jan 28, 2015</div><div class="post-content"><h2 id="下载安装-Git-for-Mac"><a href="#下载安装-Git-for-Mac" class="headerlink" title="下载安装 Git for Mac"></a>下载安装 Git for Mac</h2><p><a href="https://git-scm.com/downloads" target="_blank" rel="external">git-scm.com</a></p>
+<h2 id="3-步配置-Git"><a href="#3-步配置-Git" class="headerlink" title="3 步配置 Git"></a>3 步配置 Git</h2><p>1、Sets the default name for git to use when you commit</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"Your Name Here"</span></span><br></pre></td></tr></table></figure>
+<p>2、Sets the default email for git to use when you commit</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.email <span class="string">"your_email@example.com"</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>3、在上述设置完毕后，可通过这两条命令查看自己的设置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config user.name</span><br><span class="line">$ git config user.email</span><br></pre></td></tr></table></figure>
+<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p><strong><code>远程</code></strong></p>
+<p>在 Github.com 上创建一个repository（例：Hello-World）</p>
+<p><strong><code>本地</code></strong></p>
+<p>1、在本地的~/目录下创建一个 git 仓库，目录创建在别处也可以</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir ~/Hello-World</span><br></pre></td></tr></table></figure>
+<p>2、切换至刚创建好的目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/Hello-World</span><br></pre></td></tr></table></figure>
+<p>3、初始化一个本地的 git仓库，生成隐藏的.git目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
+<p><strong><code>添加</code></strong></p>
+<p>1、Creates a file called “README” in your Hello-World directory（也可以添加.txt .md .html等格式后缀）,找到后可打开编辑。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ touch README</span><br></pre></td></tr></table></figure>
+<p>2、Stages your README file, adding it to the list of files to be committed（把README文件添加到仓库中）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add README</span><br></pre></td></tr></table></figure>
+<p>3、Commits your files, adding the message “first commit”（执行提交说明）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m <span class="string">'first commit'</span></span><br></pre></td></tr></table></figure>
+<p><strong><code>提交</code></strong></p>
+<p>1、Creates a remote named “origin” pointing at your GitHub repository（使用https协议指定、连接远程仓库地址）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add origin https://github.com/username/Hello-World.git</span><br></pre></td></tr></table></figure>
+<p>2、Sends your commits in the “master” branch to GitHub（推送本地仓库到远程指定的master主分支上）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://help.github.com/articles/create-a-repo" target="_blank" rel="external">参考一</a></li>
+<li><a href="http://blog.sina.com.cn/s/blog_858820890101939b.html" target="_blank" rel="external">参考二</a></li>
+<li><a href="http://blog.csdn.net/duxinfeng2010/article/details/8654690" target="_blank" rel="external">参考三</a></li>
+</ul>
+</div></article></div></section><footer><div class="paginator"><a href="/2015/01/28/hexo-tutorial/" class="prev">PREV</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'onestark';
+var disqus_identifier = '2015/01/28/setting-git-for-mac/';
+var disqus_title = '配置 Git for Mac';
+var disqus_url = 'http://yoursite.com/2015/01/28/setting-git-for-mac/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//onestark.disqus.com/count.js" async></script><div class="copyright"><p>© 2015 - 2016 <a href="http://yoursite.com">Hewenwei</a>, unless otherwise noted.</p></div></footer><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-76036635-1",'auto');ga('send','pageview');</script><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?268766a660f25d31ebc2c4a170ca0fa2";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script></body></html>

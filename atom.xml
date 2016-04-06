@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>one stark</title>
+  <subtitle>走走停停，写写画画</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2016-04-06T08:33:11.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Hewenwei</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用 aria2 加速百度云下载</title>
+    <link href="http://yoursite.com/2016/03/07/baiduyun-download-faster/"/>
+    <id>http://yoursite.com/2016/03/07/baiduyun-download-faster/</id>
+    <published>2016-03-07T12:50:42.000Z</published>
+    <updated>2016-04-06T08:33:11.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;aria2 is a lightweight multi-protocol &amp;amp; multi-source command-line download utility. It supports HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;浏览器默认下载器下载百度云的文件速度大多不理想，非客户端下载限速，大文件下载中途失败，让人体验非常不友好。Windows 平台独享百度云管家下载工具，大文件的上下传速度都比较理想，Mac 平台的同步盘功能少，体验差，直到配合下载工具 &lt;code&gt;aria2&lt;/code&gt; 下载速度和大文件下载才有所改善。下面是几步简单的教程。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;p&gt;请首先自行安装 &lt;code&gt;Homebrew&lt;/code&gt;。Homebrew 安装 &lt;code&gt;aria2&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;brew install aria2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;配置&quot;&gt;&lt;a href=&quot;#配置&quot; class=&quot;headerlink&quot; title=&quot;配置&quot;&gt;&lt;/a&gt;配置&lt;/h2&gt;&lt;p&gt;参照以下配置新建 &lt;code&gt;aria2.conf&lt;/code&gt; 配置文件，自行设定配置文件路径。&lt;/p&gt;
+&lt;p&gt;必须要修改的地方有两处：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;下载文件保存路径。用户名填写本机当前用户名。&lt;/li&gt;
+&lt;li&gt;最后一行。如果是 SSD 则不用改，如果是传统硬盘，就改成 &lt;code&gt;file-allocation=prealloc&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#允许rpc&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;enable-rpc=true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#允许非外部访问&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rpc-listen-all=true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#RPC端口, 仅当默认端口被占用时修改&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rpc-listen-port=6800&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#最大同时下载数(任务数), 路由建议值: 3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;max-concurrent-downloads=10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#断点续传&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;continue=true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#同服务器连接数&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;max-connection-per-server=10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#最小文件分片大小, 下载线程数上限取决于能分出多少片, 对于小文件重要&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;min-split-size=10M&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#单文件最大线程数, 路由建议值: 5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;split=10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#下载速度限制&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;max-overall-download-limit=0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#单文件速度限制&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;max-download-limit=0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#上传速度限制&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;max-overall-upload-limit=0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#单文件速度限制&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;max-upload-limit=0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#文件保存路径, 默认为当前启动位置&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;dir=/Users/用户名/Downloads&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#允许所有来源, web界面跨域权限需要&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rpc-allow-origin-all=true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#文件预分配, 能有效降低文件碎片, 提高磁盘性能. 缺点是预分配时间较长&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#所需时间 none &amp;lt; falloc ? trunc &amp;lt;&amp;lt; prealloc, falloc和trunc需要文件系统和内核支持&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# !!仅针对传统磁盘，SSD 降低文件碎片并不是什么好事。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;file-allocation=none&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;打开终端，执行以下命令：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;alias aria2rpc=&#39;aria2c --conf-path=/Users/用户名/.../aria2.conf -D&#39;&quot;&lt;/span&gt; &amp;gt;&amp;gt; ~/.bash_profile&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;记得替换你设置的配置文件 &lt;code&gt;aria2.conf&lt;/code&gt; 的路径。&lt;/p&gt;
+&lt;p&gt;最后执行：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;source&lt;/span&gt; ~/.bash_profile&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;运行&quot;&gt;&lt;a href=&quot;#运行&quot; class=&quot;headerlink&quot; title=&quot;运行&quot;&gt;&lt;/a&gt;运行&lt;/h2&gt;&lt;p&gt;Terminal 执行命名运行 aria2：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;aria2rpc&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;每次开机均执行一次即可。&lt;/p&gt;
+&lt;h2 id=&quot;使用&quot;&gt;&lt;a href=&quot;#使用&quot; class=&quot;headerlink&quot; title=&quot;使用&quot;&gt;&lt;/a&gt;使用&lt;/h2&gt;&lt;p&gt;aria2 是一个命令行工具，为了方便，有几种图形界面工具可以配合使用：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;网页 YAAW&lt;br&gt;打开网页 &lt;a href=&quot;http://binux.github.io/yaaw/demo/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Yet Another Aria2 Web Frontend&lt;/a&gt;&lt;br&gt; 点右上角的扳手按钮，修改 JSON-RPC Path 内容为 &lt;code&gt;http://127.0.0.1:6800/jsonrpc&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;GUI 客户端&lt;br&gt;下载 &lt;a href=&quot;https://github.com/yangshun1029/aria2gui/releases&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;aria2gui&lt;/a&gt;&lt;br&gt;默认 JSON-RPC 为 &lt;code&gt;http://localhost:6800/jsonrpc&lt;/code&gt;，不需要修改。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;使用时按 &lt;code&gt;+Add&lt;/code&gt; 或 &lt;code&gt;+添加&lt;/code&gt; 按钮，输入 HTTP、FTP 或 Magnet 进行下载。&lt;/p&gt;
+&lt;p&gt;如果嫌每次复制粘贴链接麻烦，浏览器有 &lt;code&gt;百度网盘助手&lt;/code&gt; 插件，可以在百度云网页生成 &lt;code&gt;导出下载&lt;/code&gt; 按钮，点击 &lt;code&gt;ARIA2 RPC&lt;/code&gt; 即可自动在打开的 YAAW 网页或 GUI 客户端上进行下载。&lt;/p&gt;
+&lt;h2 id=&quot;下载&quot;&gt;&lt;a href=&quot;#下载&quot; class=&quot;headerlink&quot; title=&quot;下载&quot;&gt;&lt;/a&gt;下载&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/baiduexporter/mjaenbjdjmgolhoafkohbhhbaiedbkno&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Chrome 插件&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://raw.githubusercontent.com/acgotaku/BaiduExporter/master/firefox/baidu-exporter.xpi&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Firefox 插件&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;aria2 is a lightweight multi-protocol &amp;amp; multi-source command-line download utility. It supports HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;浏览器默认下载器下载百度云的文件速度大多不理想，非客户端下载限速，大文件下载中途失败，让人体验非常不友好。Windows 平台独享百度云管家下载工具，大文件的上下传速度都比较理想，Mac 平台的同步盘功能少，体验差，直到配合下载工具 &lt;code&gt;aria2&lt;/code&gt; 下载速度和大文件下载才有所改善。下面是几步简单的教程。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+    
+    
+      <category term="aria2" scheme="http://yoursite.com/tags/aria2/"/>
+    
+      <category term="cloud" scheme="http://yoursite.com/tags/cloud/"/>
+    
+      <category term="download" scheme="http://yoursite.com/tags/download/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用新浪微博相册打造一个图床</title>
+    <link href="http://yoursite.com/2015/01/31/sina-img-bed/"/>
+    <id>http://yoursite.com/2015/01/31/sina-img-bed/</id>
+    <published>2015-01-31T14:30:29.000Z</published>
+    <updated>2016-04-06T08:33:18.000Z</updated>
+    
+    <content type="html">&lt;p&gt;新浪微博相册图片支持外链，速度快，免费。用新浪微博相册可以为博客、写作平台打造一个免费的图床。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;1、登录 &lt;a href=&quot;http://weibo.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;新浪微博&lt;/a&gt;，进入我的相册，或登录 &lt;a href=&quot;http://photo.weibo.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;微相册&lt;/a&gt;；&lt;br&gt;2、上传图片至某专辑，最好勾选 &lt;code&gt;上传原图&lt;/code&gt;；&lt;br&gt;3、获取外链：点击图片-查看大图-右键图片复制图片链接，得到如下链接：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;http://ww1.sinaimg.cn/large/sample.jpg&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;此为尺寸最大的图片外链。其实图片在上传时会上传到几台服务器上，同时会生成几张不同尺寸的图片，常用的有以下几种形式：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;http://ww1.sinaimg.cn/thumbnail/sample.jpg   // 缩略图&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;http://ww1.sinaimg.cn/small/sample.jpg       // 稍微大点的图&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;http://ww1.sinaimg.cn/bmiddle/sample.jpg     // 再大点的图&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;http://ww1.sinaimg.cn/large/sample.jpg       // 最大的&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;其它尺寸可以通过修改链接地址中的 &lt;code&gt;thumbnail&lt;/code&gt;、&lt;code&gt;samll&lt;/code&gt;、&lt;code&gt;bmiddle&lt;/code&gt;、&lt;code&gt;large&lt;/code&gt; 来获取。&lt;/p&gt;
+&lt;p&gt;最后，要说的一点是，新浪微博哪天取消图片外链的功能，就会造成很大的麻烦了，因为这种用户自己发掘的特殊用途并得不到任何官方保障和承诺。虽然免费，但是就长远来说，数据的可控和安全性更重要，因此，寻找一个可靠的外链服务商才是最令人放心的。&lt;/p&gt;
+&lt;p&gt;免费的代价可能是高昂的。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;新浪微博相册图片支持外链，速度快，免费。用新浪微博相册可以为博客、写作平台打造一个免费的图床。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+    
+    
+      <category term="image-hosting" scheme="http://yoursite.com/tags/image-hosting/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo 使用指导</title>
+    <link href="http://yoursite.com/2015/01/28/hexo-tutorial/"/>
+    <id>http://yoursite.com/2015/01/28/hexo-tutorial/</id>
+    <published>2015-01-28T14:24:55.000Z</published>
+    <updated>2016-04-06T10:46:59.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;新建&quot;&gt;&lt;a href=&quot;#新建&quot; class=&quot;headerlink&quot; title=&quot;新建&quot;&gt;&lt;/a&gt;新建&lt;/h2&gt;&lt;p&gt;Hexo 使用 &lt;code&gt;new&lt;/code&gt; 指令来新建&lt;strong&gt;文章&lt;/strong&gt;、&lt;strong&gt;草稿&lt;/strong&gt;和&lt;strong&gt;页面&lt;/strong&gt;这三种默认layout布局。其中layout 是可选参数，默认值为 post。用户可以通过&lt;a href=&quot;#models&quot;&gt;布局模板&lt;/a&gt;来修改或增加。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;语法：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new 布局 &lt;span class=&quot;string&quot;&gt;&quot;文章名&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;布局&lt;/th&gt;
+&lt;th&gt;解释&lt;/th&gt;
+&lt;th&gt;路径&lt;/th&gt;
+&lt;th&gt;注释&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;post&lt;/td&gt;
+&lt;td&gt;文章&lt;/td&gt;
+&lt;td&gt;source/_posts&lt;/td&gt;
+&lt;td&gt;新建一个文章文件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;draft&lt;/td&gt;
+&lt;td&gt;草稿&lt;/td&gt;
+&lt;td&gt;source/_drafts&lt;/td&gt;
+&lt;td&gt;新建一个草稿文件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;page&lt;/td&gt;
+&lt;td&gt;页面&lt;/td&gt;
+&lt;td&gt;source&lt;/td&gt;
+&lt;td&gt;新建一个页面文件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;注意：页面文件需要在主题的 &lt;code&gt;_config.yml&lt;/code&gt; 中配置才能显示出来。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://hexo.io/zh-cn/docs/writing.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;阅读更多：写作&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;布局模板&quot;&gt;&lt;a href=&quot;#布局模板&quot; class=&quot;headerlink&quot; title=&quot;布局模板&quot;&gt;&lt;/a&gt;&lt;span id=&quot;models&quot;&gt;布局模板&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;layout 布局模板放在 &lt;code&gt;scaffolds/&lt;/code&gt; 目录下，文件名称就是 layout 名称。每次新建时，Hexo 会尝试在 scaffolds 文件夹中寻找同名文件，并根据其内容建立文章。所以可以在这里添加自己的 layout，作为常用的新建模板使用。&lt;br&gt;同时你也可以编辑现有的 layout，比如 post 的 layout 默认是 scaffolds\post.md&lt;/p&gt;
+&lt;p&gt;这里有一份文章配置信息，可以根据情况修改后作为模板复用，或直接在保存文章的路径新建.md文件中使用：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;---&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;title: 文章名&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;date: 2013-05-29 07:56:29  #发表日期&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;updated: 2016-04-06 14:58:03  #更新日期&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;categories: Life  #文章分类&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;tags: [tag1,tag2]  #文章标签，多标签时使用英文逗号隔开&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;photos:  #如果使用Fancybox（文章头部展示图片），如此设置&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- URL1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- URL2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;---&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#从这里开始&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#就是正文&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#使用markdown&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;a href=&quot;https://hexo.io/zh-cn/docs/models.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;阅读更多：数据模型信息&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;调试和部署&quot;&gt;&lt;a href=&quot;#调试和部署&quot; class=&quot;headerlink&quot; title=&quot;调试和部署&quot;&gt;&lt;/a&gt;调试和部署&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo clean #清除静态页面缓存（清除 public 文件夹）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ hexo g #在本地生成静态页面（生成 public 文件夹）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ hexo s #启动本地服务 http://localhost:4000，进行预览调试&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ hexo d #远程部署，同步到 GitHub&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;如果出现问题，最好先使用 &lt;code&gt;$ hexo clean&lt;/code&gt; 来清除 Hexo 的缓存。最后使用组合命令 &lt;code&gt;$ hexo d -g&lt;/code&gt; 远程部署网站。&lt;/p&gt;
+&lt;h2 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h2&gt;&lt;p&gt;扩展阅读:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://ibruce.info/2013/11/22/hexo-your-blog/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo 你的博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://hexo.io/zh-cn/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo 中文文档&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;新建&quot;&gt;&lt;a href=&quot;#新建&quot; class=&quot;headerlink&quot; title=&quot;新建&quot;&gt;&lt;/a&gt;新建&lt;/h2&gt;&lt;p&gt;Hexo 使用 &lt;code&gt;new&lt;/code&gt; 指令来新建&lt;strong&gt;文章&lt;/strong&gt;、&lt;strong&gt;草稿&lt;/strong&gt;和&lt;strong&gt;页面&lt;/strong&gt;这三种默认layout布局。其中layout 是可选参数，默认值为 post。用户可以通过&lt;a href=&quot;#models&quot;&gt;布局模板&lt;/a&gt;来修改或增加。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>配置 Git for Mac</title>
+    <link href="http://yoursite.com/2015/01/28/setting-git-for-mac/"/>
+    <id>http://yoursite.com/2015/01/28/setting-git-for-mac/</id>
+    <published>2015-01-27T16:03:46.000Z</published>
+    <updated>2016-04-06T08:34:07.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;下载安装-Git-for-Mac&quot;&gt;&lt;a href=&quot;#下载安装-Git-for-Mac&quot; class=&quot;headerlink&quot; title=&quot;下载安装 Git for Mac&quot;&gt;&lt;/a&gt;下载安装 Git for Mac&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://git-scm.com/downloads&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;git-scm.com&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;3-步配置-Git&quot;&gt;&lt;a href=&quot;#3-步配置-Git&quot; class=&quot;headerlink&quot; title=&quot;3 步配置 Git&quot;&gt;&lt;/a&gt;3 步配置 Git&lt;/h2&gt;&lt;p&gt;1、Sets the default name for git to use when you commit&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git config --global user.name &lt;span class=&quot;string&quot;&gt;&quot;Your Name Here&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;2、Sets the default email for git to use when you commit&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git config --global user.email &lt;span class=&quot;string&quot;&gt;&quot;your_email@example.com&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;3、在上述设置完毕后，可通过这两条命令查看自己的设置&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git config user.name&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git config user.email&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;创建仓库&quot;&gt;&lt;a href=&quot;#创建仓库&quot; class=&quot;headerlink&quot; title=&quot;创建仓库&quot;&gt;&lt;/a&gt;创建仓库&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;远程&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在 Github.com 上创建一个repository（例：Hello-World）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;本地&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、在本地的~/目录下创建一个 git 仓库，目录创建在别处也可以&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ mkdir ~/Hello-World&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;2、切换至刚创建好的目录&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; ~/Hello-World&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;3、初始化一个本地的 git仓库，生成隐藏的.git目录&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git init&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;添加&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、Creates a file called “README” in your Hello-World directory（也可以添加.txt .md .html等格式后缀）,找到后可打开编辑。&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ touch README&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;2、Stages your README file, adding it to the list of files to be committed（把README文件添加到仓库中）&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git add README&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;3、Commits your files, adding the message “first commit”（执行提交说明）&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git commit -m &lt;span class=&quot;string&quot;&gt;&#39;first commit&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;提交&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、Creates a remote named “origin” pointing at your GitHub repository（使用https协议指定、连接远程仓库地址）&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git remote add origin https://github.com/username/Hello-World.git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;2、Sends your commits in the “master” branch to GitHub（推送本地仓库到远程指定的master主分支上）&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git push origin master&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://help.github.com/articles/create-a-repo&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;参考一&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.sina.com.cn/s/blog_858820890101939b.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;参考二&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/duxinfeng2010/article/details/8654690&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;参考三&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;下载安装-Git-for-Mac&quot;&gt;&lt;a href=&quot;#下载安装-Git-for-Mac&quot; class=&quot;headerlink&quot; title=&quot;下载安装 Git for Mac&quot;&gt;&lt;/a&gt;下载安装 Git for Mac&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://git-scm.com/downloads&quot;&gt;git-scm.com&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;3-步配置-Git&quot;&gt;&lt;a href=&quot;#3-步配置-Git&quot; class=&quot;headerlink&quot; title=&quot;3 步配置 Git&quot;&gt;&lt;/a&gt;3 步配置 Git&lt;/h2&gt;&lt;p&gt;1、Sets the default name for git to use when you commit&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git config --global user.name &lt;span class=&quot;string&quot;&gt;&quot;Your Name Here&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;2、Sets the default email for git to use when you commit&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git config --global user.email &lt;span class=&quot;string&quot;&gt;&quot;your_email@example.com&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
+    
+    
+      <category term="mac" scheme="http://yoursite.com/tags/mac/"/>
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+  </entry>
+  
+</feed>

@@ -1,0 +1,56 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Hexo 使用指导 · one stark</title><meta name="description" content="Hexo 使用指导 - Hewenwei"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/fav.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/fav.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">HOME</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">存档</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">关于</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">Hexo 使用指导</h1><div class="post-time">Jan 28, 2015</div><div class="post-content"><h2 id="新建"><a href="#新建" class="headerlink" title="新建"></a>新建</h2><p>Hexo 使用 <code>new</code> 指令来新建<strong>文章</strong>、<strong>草稿</strong>和<strong>页面</strong>这三种默认layout布局。其中layout 是可选参数，默认值为 post。用户可以通过<a href="#models">布局模板</a>来修改或增加。</p>
+<a id="more"></a>
+<p>语法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new 布局 <span class="string">"文章名"</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>布局</th>
+<th>解释</th>
+<th>路径</th>
+<th>注释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>post</td>
+<td>文章</td>
+<td>source/_posts</td>
+<td>新建一个文章文件</td>
+</tr>
+<tr>
+<td>draft</td>
+<td>草稿</td>
+<td>source/_drafts</td>
+<td>新建一个草稿文件</td>
+</tr>
+<tr>
+<td>page</td>
+<td>页面</td>
+<td>source</td>
+<td>新建一个页面文件</td>
+</tr>
+</tbody>
+</table>
+<p>注意：页面文件需要在主题的 <code>_config.yml</code> 中配置才能显示出来。</p>
+<p><a href="https://hexo.io/zh-cn/docs/writing.html" target="_blank" rel="external">阅读更多：写作</a></p>
+<h2 id="布局模板"><a href="#布局模板" class="headerlink" title="布局模板"></a><span id="models">布局模板</span></h2><p>layout 布局模板放在 <code>scaffolds/</code> 目录下，文件名称就是 layout 名称。每次新建时，Hexo 会尝试在 scaffolds 文件夹中寻找同名文件，并根据其内容建立文章。所以可以在这里添加自己的 layout，作为常用的新建模板使用。<br>同时你也可以编辑现有的 layout，比如 post 的 layout 默认是 scaffolds\post.md</p>
+<p>这里有一份文章配置信息，可以根据情况修改后作为模板复用，或直接在保存文章的路径新建.md文件中使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 文章名</span><br><span class="line">date: 2013-05-29 07:56:29  #发表日期</span><br><span class="line">updated: 2016-04-06 14:58:03  #更新日期</span><br><span class="line">categories: Life  #文章分类</span><br><span class="line">tags: [tag1,tag2]  #文章标签，多标签时使用英文逗号隔开</span><br><span class="line">photos:  #如果使用Fancybox（文章头部展示图片），如此设置</span><br><span class="line">- URL1</span><br><span class="line">- URL2</span><br><span class="line">---</span><br><span class="line">#从这里开始</span><br><span class="line">#就是正文</span><br><span class="line">#使用markdown</span><br></pre></td></tr></table></figure>
+<p><a href="https://hexo.io/zh-cn/docs/models.html" target="_blank" rel="external">阅读更多：数据模型信息</a></p>
+<h2 id="调试和部署"><a href="#调试和部署" class="headerlink" title="调试和部署"></a>调试和部署</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean #清除静态页面缓存（清除 public 文件夹）</span><br><span class="line">$ hexo g #在本地生成静态页面（生成 public 文件夹）</span><br><span class="line">$ hexo s #启动本地服务 http://localhost:4000，进行预览调试</span><br><span class="line">$ hexo d #远程部署，同步到 GitHub</span><br></pre></td></tr></table></figure>
+<p>如果出现问题，最好先使用 <code>$ hexo clean</code> 来清除 Hexo 的缓存。最后使用组合命令 <code>$ hexo d -g</code> 远程部署网站。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>扩展阅读:</p>
+<ul>
+<li><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">hexo 你的博客</a></li>
+<li><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">Hexo 中文文档</a></li>
+</ul>
+</div></article></div></section><footer><div class="paginator"><a href="/2015/01/31/sina-img-bed/" class="prev">PREV</a><a href="/2015/01/28/setting-git-for-mac/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'onestark';
+var disqus_identifier = '2015/01/28/hexo-tutorial/';
+var disqus_title = 'Hexo 使用指导';
+var disqus_url = 'http://yoursite.com/2015/01/28/hexo-tutorial/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//onestark.disqus.com/count.js" async></script><div class="copyright"><p>© 2015 - 2016 <a href="http://yoursite.com">Hewenwei</a>, unless otherwise noted.</p></div></footer><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-76036635-1",'auto');ga('send','pageview');</script><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?268766a660f25d31ebc2c4a170ca0fa2";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script></body></html>
