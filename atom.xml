@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-04-06T14:47:19.000Z</updated>
+  <updated>2016-04-07T14:04:57.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,28 +16,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>A Simple Test Post</title>
-    <link href="http://yoursite.com/2016/04/06/2016-04-06/"/>
-    <id>http://yoursite.com/2016/04/06/2016-04-06/</id>
-    <published>2016-04-06T14:46:05.000Z</published>
-    <updated>2016-04-06T14:47:19.000Z</updated>
+    <title>获取 Dropbox 共享文件外链</title>
+    <link href="http://yoursite.com/2016/04/07/get-dropbox-external-link/"/>
+    <id>http://yoursite.com/2016/04/07/get-dropbox-external-link/</id>
+    <published>2016-04-07T03:46:38.000Z</published>
+    <updated>2016-04-07T14:04:57.000Z</updated>
     
-    <content type="html">&lt;p&gt;&lt;img src=&quot;/media/sass.png&quot; alt=&quot;sass&quot;&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;Dropbox 过去在共享文件后，可以方便地获取共享文件的外链地址。在本地客户端对共享文件右键选择 &lt;code&gt;Copy Public Link&lt;/code&gt; 即可获取形如 &lt;code&gt;https://dl.dropboxusercontent.com/s/sample.mp3&lt;/code&gt; 这样的外链地址。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;可惜现在已经不能按以前的方法获得文件的外链地址，现在客户端已经取消了获取分享文件 &lt;code&gt;Public Link&lt;/code&gt; 的功能。取而代之的是得到 &lt;code&gt;https://www.dropbox.com/s/ejobxyjrm7p66hd/apps_large.png?dl=0&lt;/code&gt; 这样的链接，这是一条共享链接，不能作为外链使用。&lt;/p&gt;
+&lt;p&gt;为了获取共享文件的外链，可以把得到的共享链接按照过去的外链形式修改，即把&lt;br&gt;&lt;code&gt;https://www.dropbox.com&lt;/code&gt; 部分替换为 &lt;code&gt;https://dl.dropboxusercontent.com&lt;/code&gt;，再去除文件后缀名之后的字段即可。&lt;/p&gt;
+&lt;p&gt;不得不说，这样获取外链的方式很麻烦，即使可以编写一些脚本批量处理，也不建议依赖 Dropbox 的外链，但临时用一下还是可以的。你保不准哪天连这个方法都失效了。&lt;/p&gt;
+&lt;p&gt;题外：过去 Dropbox 共享文件夹还有一个独特的 user ID 可以获取，现在也已经取消了，这令很多较早时期利用  Dropbox API 开发的实用工具都失效了。不能说这几年的 Dropbox 在退步，但是它的发展是看得出来的艰难，企业级覆盖不是对手 Box 的一个量级，个人消费市场各种云服务遍地开花，Google、微软、苹果等的云服务和各自的主打服务接入程度高，体验好，价格也不贵，国内市场就更不言而喻了:)。Dropbox 曾经主打的增量同步功能的优势不再明显，又关闭了高价收购的邮件应用 Mailbox 和没什么特色的相片管理服务 Carousel，现在个人消费者市场也已经没什么可以作为，进军企业级市场比 Box 慢了这么多，也没什么好肉可以吃了。&lt;/p&gt;
+&lt;p&gt;记得在 Dropbox 成立之初时，乔布斯就曾提议 9 位数收购它，并说：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Dropbox 是一项功能，而非产品。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.dropboxforum.com/hc/en-us/community/posts/204505105-How-to-i-find-my-public-folder-unique-user-id-&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;How to i find my public folder unique user id?&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://aptonic.com/dropzone/destinations/help/dropbox.php&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Dropzone：Dropbox setup instructions&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;/media/sass.png&quot; alt=&quot;sass&quot;&gt;&lt;/p&gt;
-
+      &lt;p&gt;Dropbox 过去在共享文件后，可以方便地获取共享文件的外链地址。在本地客户端对共享文件右键选择 &lt;code&gt;Copy Public Link&lt;/code&gt; 即可获取形如 &lt;code&gt;https://dl.dropboxusercontent.com/s/sample.mp3&lt;/code&gt; 这样的外链地址。&lt;br&gt;
     
     </summary>
     
-      <category term="Life" scheme="http://yoursite.com/categories/Life/"/>
+      <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
     
     
-      <category term="tag1" scheme="http://yoursite.com/tags/tag1/"/>
+      <category term="cloud" scheme="http://yoursite.com/tags/cloud/"/>
     
-      <category term="tag2" scheme="http://yoursite.com/tags/tag2/"/>
+      <category term="dropbox" scheme="http://yoursite.com/tags/dropbox/"/>
     
   </entry>
   
