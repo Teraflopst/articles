@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> git diff 命令详解 · one stark</title><meta name="description" content="git diff 命令详解 - Hewenwei"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/fav.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/fav.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">HOME</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">存档</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">关于</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">git diff 命令详解</h1><div class="post-time">Apr 8, 2016</div><div class="post-content"><h3 id="工作目录-vs-暂存区"><a href="#工作目录-vs-暂存区" class="headerlink" title="工作目录 vs 暂存区"></a>工作目录 vs 暂存区</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git diff &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+<p>意义：查看文件在工作目录与暂存区的差别。如果还没 add 进暂存区，则查看文件自身修改前后的差别。也可查看和另一分支的区别。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git diff &lt;branch&gt; &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="暂存区-vs-Git仓库"><a href="#暂存区-vs-Git仓库" class="headerlink" title="暂存区 vs Git仓库"></a>暂存区 vs Git仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff --cached &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+<p>意义：表示查看已经 add 进暂存区但是尚未 commit 的内容同最新一次 commit 时的内容的差异。 也可以指定仓库版本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff --cached &lt;commit&gt; &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="工作目录-vs-Git仓库"><a href="#工作目录-vs-Git仓库" class="headerlink" title="工作目录 vs Git仓库"></a>工作目录 vs Git仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff &lt;commit&gt; &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+<p>意义：查看工作目录同Git仓库指定 commit 的内容的差异。<br><code>&lt;commit&gt;</code>=<code>HEAD</code> 时：查看工作目录同最近一次 commit 的内容的差异。</p>
+<h3 id="Git仓库-vs-Git仓库"><a href="#Git仓库-vs-Git仓库" class="headerlink" title="Git仓库 vs Git仓库"></a>Git仓库 vs Git仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff &lt;commit&gt; &lt;commit&gt;</span><br></pre></td></tr></table></figure>
+<p>意义：Git仓库任意两次 commit 之间的差别。</p>
+<h3 id="扩展："><a href="#扩展：" class="headerlink" title="扩展："></a>扩展：</h3><p>以上命令可以不指定 <code>&lt;filename&gt;</code>，则对全部文件操作。<br>以上命令涉及和 Git仓库 对比的，均可指定 commit 的版本。</p>
+<ul>
+<li><code>HEAD</code> 最近一次 commit</li>
+<li><code>HEAD^</code>  上次提交</li>
+<li><code>HEAD~100</code> 上100次提交</li>
+<li>每次提交产生的哈希值</li>
+</ul>
+<h3 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h3><p>准备工作：</p>
+<ul>
+<li>新建文件 test.txt；</li>
+<li>追踪文件：git add test.txt；</li>
+<li>首次提交：git commit -m “Create file test.txt”</li>
+</ul>
+<p>开始测试：</p>
+<p>1、修改文件内容，例如添加一行“000”<br>2、查看修改：git diff test.txt</p>
+<p>此时由于没有向暂存区暂存此修改，此时作用是查看工作目录文件的修改。</p>
+<p>3、提交一次：git commit -m “add line 000”<br>4、修改文件内容，例如添加一行“111”<br>5、暂存此次修改：git add test.txt，不作 commit<br>6、再次修改文件夹内容，例如添加一行“222”<br>7、查看修改：git diff test.txt</p>
+<p>此时查看文件在工作目录（222）与暂存区（111）的差别。</p>
+<p>其它命令自行测试。</p>
+</div></article></div></section><footer><div class="paginator"><a href="/2016/04/07/get-dropbox-external-link/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'onestark';
+var disqus_identifier = '2016/04/08/git-diff/';
+var disqus_title = 'git diff 命令详解';
+var disqus_url = 'http://yoursite.com/2016/04/08/git-diff/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//onestark.disqus.com/count.js" async></script><div class="copyright"><p>© 2015 - 2016 <a href="http://yoursite.com">Hewenwei</a>, unless otherwise noted.</p></div></footer><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script></body></html>

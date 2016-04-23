@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-04-07T14:04:57.000Z</updated>
+  <updated>2016-04-23T03:08:46.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git diff 命令详解</title>
+    <link href="http://yoursite.com/2016/04/08/git-diff/"/>
+    <id>http://yoursite.com/2016/04/08/git-diff/</id>
+    <published>2016-04-08T07:54:58.000Z</published>
+    <updated>2016-04-23T03:08:46.000Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;工作目录-vs-暂存区&quot;&gt;&lt;a href=&quot;#工作目录-vs-暂存区&quot; class=&quot;headerlink&quot; title=&quot;工作目录 vs 暂存区&quot;&gt;&lt;/a&gt;工作目录 vs 暂存区&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git diff &amp;lt;filename&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;意义：查看文件在工作目录与暂存区的差别。如果还没 add 进暂存区，则查看文件自身修改前后的差别。也可查看和另一分支的区别。&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git diff &amp;lt;branch&amp;gt; &amp;lt;filename&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;暂存区-vs-Git仓库&quot;&gt;&lt;a href=&quot;#暂存区-vs-Git仓库&quot; class=&quot;headerlink&quot; title=&quot;暂存区 vs Git仓库&quot;&gt;&lt;/a&gt;暂存区 vs Git仓库&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git diff --cached &amp;lt;filename&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;意义：表示查看已经 add 进暂存区但是尚未 commit 的内容同最新一次 commit 时的内容的差异。 也可以指定仓库版本：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git diff --cached &amp;lt;commit&amp;gt; &amp;lt;filename&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;工作目录-vs-Git仓库&quot;&gt;&lt;a href=&quot;#工作目录-vs-Git仓库&quot; class=&quot;headerlink&quot; title=&quot;工作目录 vs Git仓库&quot;&gt;&lt;/a&gt;工作目录 vs Git仓库&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git diff &amp;lt;commit&amp;gt; &amp;lt;filename&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;意义：查看工作目录同Git仓库指定 commit 的内容的差异。&lt;br&gt;&lt;code&gt;&amp;lt;commit&amp;gt;&lt;/code&gt;=&lt;code&gt;HEAD&lt;/code&gt; 时：查看工作目录同最近一次 commit 的内容的差异。&lt;/p&gt;
+&lt;h3 id=&quot;Git仓库-vs-Git仓库&quot;&gt;&lt;a href=&quot;#Git仓库-vs-Git仓库&quot; class=&quot;headerlink&quot; title=&quot;Git仓库 vs Git仓库&quot;&gt;&lt;/a&gt;Git仓库 vs Git仓库&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git diff &amp;lt;commit&amp;gt; &amp;lt;commit&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;意义：Git仓库任意两次 commit 之间的差别。&lt;/p&gt;
+&lt;h3 id=&quot;扩展：&quot;&gt;&lt;a href=&quot;#扩展：&quot; class=&quot;headerlink&quot; title=&quot;扩展：&quot;&gt;&lt;/a&gt;扩展：&lt;/h3&gt;&lt;p&gt;以上命令可以不指定 &lt;code&gt;&amp;lt;filename&amp;gt;&lt;/code&gt;，则对全部文件操作。&lt;br&gt;以上命令涉及和 Git仓库 对比的，均可指定 commit 的版本。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;HEAD&lt;/code&gt; 最近一次 commit&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HEAD^&lt;/code&gt;  上次提交&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HEAD~100&lt;/code&gt; 上100次提交&lt;/li&gt;
+&lt;li&gt;每次提交产生的哈希值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;最佳实践&quot;&gt;&lt;a href=&quot;#最佳实践&quot; class=&quot;headerlink&quot; title=&quot;最佳实践&quot;&gt;&lt;/a&gt;最佳实践&lt;/h3&gt;&lt;p&gt;准备工作：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;新建文件 test.txt；&lt;/li&gt;
+&lt;li&gt;追踪文件：git add test.txt；&lt;/li&gt;
+&lt;li&gt;首次提交：git commit -m “Create file test.txt”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;开始测试：&lt;/p&gt;
+&lt;p&gt;1、修改文件内容，例如添加一行“000”&lt;br&gt;2、查看修改：git diff test.txt&lt;/p&gt;
+&lt;p&gt;此时由于没有向暂存区暂存此修改，此时作用是查看工作目录文件的修改。&lt;/p&gt;
+&lt;p&gt;3、提交一次：git commit -m “add line 000”&lt;br&gt;4、修改文件内容，例如添加一行“111”&lt;br&gt;5、暂存此次修改：git add test.txt，不作 commit&lt;br&gt;6、再次修改文件夹内容，例如添加一行“222”&lt;br&gt;7、查看修改：git diff test.txt&lt;/p&gt;
+&lt;p&gt;此时查看文件在工作目录（222）与暂存区（111）的差别。&lt;/p&gt;
+&lt;p&gt;其它命令自行测试。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;工作目录-vs-暂存区&quot;&gt;&lt;a href=&quot;#工作目录-vs-暂存区&quot; class=&quot;headerlink&quot; title=&quot;工作目录 vs 暂存区&quot;&gt;&lt;/a&gt;工作目录 vs 暂存区&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table
+    
+    </summary>
+    
+      <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
+    
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>获取 Dropbox 共享文件外链</title>
@@ -138,6 +189,123 @@
       <category term="cloud" scheme="http://yoursite.com/tags/cloud/"/>
     
       <category term="download" scheme="http://yoursite.com/tags/download/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>移动前端开之像素、viewport 的理解</title>
+    <link href="http://yoursite.com/2016/01/23/pixels-viewport/"/>
+    <id>http://yoursite.com/2016/01/23/pixels-viewport/</id>
+    <published>2016-01-23T01:19:42.000Z</published>
+    <updated>2016-04-23T02:52:40.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;知识&quot;&gt;&lt;a href=&quot;#知识&quot; class=&quot;headerlink&quot; title=&quot;知识&quot;&gt;&lt;/a&gt;知识&lt;/h2&gt;&lt;h3 id=&quot;CSS-像素、物理像素、PPI&quot;&gt;&lt;a href=&quot;#CSS-像素、物理像素、PPI&quot; class=&quot;headerlink&quot; title=&quot;CSS 像素、物理像素、PPI&quot;&gt;&lt;/a&gt;CSS 像素、物理像素、PPI&lt;/h3&gt;&lt;h4 id=&quot;CSS-像素&quot;&gt;&lt;a href=&quot;#CSS-像素&quot; class=&quot;headerlink&quot; title=&quot;CSS 像素&quot;&gt;&lt;/a&gt;CSS 像素&lt;/h4&gt;&lt;p&gt;&lt;code&gt;CSS像素&lt;/code&gt; 是 Web 编程的概念，本质上是为我们 Web 开发者创建的一个抽象结构，是相对的而不是绝对的。&lt;/p&gt;
+&lt;h4 id=&quot;物理像素&quot;&gt;&lt;a href=&quot;#物理像素&quot; class=&quot;headerlink&quot; title=&quot;物理像素&quot;&gt;&lt;/a&gt;物理像素&lt;/h4&gt;&lt;p&gt;&lt;code&gt;物理像素&lt;/code&gt; 是物理概念，屏幕是由很多像素点组成的，各像素点通过发出不同颜色的光来呈现屏幕的色彩。它是物理的，随着设备生产出来就已经被确定下来了，比如 iPhone4 的屏幕分辨率为 640×960，就表示屏幕的横向有640个像素点，纵向有960个像素点。&lt;/p&gt;
+&lt;h4 id=&quot;PPI&quot;&gt;&lt;a href=&quot;#PPI&quot; class=&quot;headerlink&quot; title=&quot;PPI&quot;&gt;&lt;/a&gt;PPI&lt;/h4&gt;&lt;p&gt;PPI（Pixels Per Inch）表示单位面积上的物理像素点数目。分辨率可以表示屏幕包含的像素数目，但要想描述屏幕的显示质量，还需要知道屏幕尺寸，最后算出单位面积上的像素点数目。显然PPI越高，屏幕显示效果越细腻。&lt;/p&gt;
+&lt;p&gt;想要解释 &lt;code&gt;CSS像素&lt;/code&gt; 和 &lt;code&gt;设备像素&lt;/code&gt; 的关系也很简单，想想 PC 浏览器网页上的缩放。如果用户进行放大操作，一个拥有 &lt;code&gt;width: 300px&lt;/code&gt; 的元素将会占有屏幕越来越多的空间，以设备（物理）像素进行度量的话就会变得越来越宽。但对于 CSS 像素来说，无论怎样，宽度的值还是 &lt;code&gt;300px&lt;/code&gt;，缩放效果是通过尽可能的对 CSS 像素进行拉伸来实现的。&lt;/p&gt;
+&lt;p&gt;平时电脑屏幕的 1px CSS 像素对应 1px 物理像素，所以感觉不到两者的区别，会让你误以为CSS 里的 &lt;code&gt;px&lt;/code&gt; 就是实际屏幕像素。而真实情况是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当缩放比例为 100% 时（不缩放），1px CSS 像素对应屏幕物理像素 1px；&lt;/li&gt;
+&lt;li&gt;当缩放比例大于 100% 时（放大），1px CSS 像素对应大于 1px 的屏幕物理像素；&lt;/li&gt;
+&lt;li&gt;当缩放比例小于 100% 时（缩小），1px CSS 像素对应小于 1px 的屏幕物理像素。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下来的两幅图说明了当用户缩放的时候会发生什么。第一幅图展示的是当用户进行缩小操作的时候设备像素（深蓝色背景）和 CSS 像素（半透明前景）的样子。CSS 像素变得小了；一个设备像素覆盖了多个 CSS 像素。第二幅图展示的当用户进行放大操作时候设备像素和CSS像素的样子。一个CSS 像素现在覆盖了多个设备像素。（图左：放大网页，图右：缩小网页）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/media/csspixels_in_out.png&quot; alt=&quot;csspixels_in_out&quot; title=&quot;title&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;逻辑像素、设备像素比&quot;&gt;&lt;a href=&quot;#逻辑像素、设备像素比&quot; class=&quot;headerlink&quot; title=&quot;逻辑像素、设备像素比&quot;&gt;&lt;/a&gt;逻辑像素、设备像素比&lt;/h3&gt;&lt;p&gt;过去 iPhone 3gs 分辨率是 320x480，和平时电脑屏幕一样，1px CSS 像素对应 1px 物理像素，开发者开发网页时只要写上 CSS 像素 &lt;code&gt;width:320px, height:480px&lt;/code&gt; 即可。但是，面对同样屏幕尺寸的 iPhone 4/4s，分辨率提升到 640x960，难道要另外为它写一份网页文档设置 CSS 像素 &lt;code&gt;width:640px, height:960px&lt;/code&gt; 来适配高分辨率吗，显然这是不实际的。如果继续使用旧的网页文件，在高分辨率的设备上，就会显得很小，比如在分辨率为 320×480 的 iPhone 3GS 上，要画一条长度 1 英寸的线条，假设需要 163 个物理像素，即CSS像素设成 163 像素即可；但是在分辨率为 640×960 的 iPhone4/4s 上，163 CSS 像素所在手机表示实际长度只有 iPhone3GS 的一半，即 0.5 英寸。如果照这种方式显示，3GS 上刚刚好的效果，在 4/4s 上就会小到根本看不清了。&lt;/p&gt;
+&lt;p&gt;而在现实中，这两者效果却是一样的！这是因为 Retina 屏幕把 2x2 个像素当 1 个像素使用。比如原本 44 像素高的顶部导航栏，在 Retina 屏上用了 88 个像素的高度来显示。如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/media/iphone3_4.png&quot; alt=&quot;iphone3_4&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;逻辑像素&quot;&gt;&lt;a href=&quot;#逻辑像素&quot; class=&quot;headerlink&quot; title=&quot;逻辑像素&quot;&gt;&lt;/a&gt;逻辑像素&lt;/h4&gt;&lt;p&gt;这里提出&lt;code&gt;逻辑像素&lt;/code&gt;的概念。苹果使用了一套逻辑坐标系统来解决多分辨率屏幕适配问题，&lt;br&gt;例如：4/4s 的逻辑像素设为 320x480 &lt;strong&gt;points&lt;/strong&gt; ，即物理屏幕上左上角为原点，横向为 X 轴 320 points，纵向为 Y 轴 480 points，名为 point (即pt) 单位就是上图中的深灰色部分，显然，PPI 越高的屏幕，1 point 覆盖的物理像素就越多。Android 平台也定义了逻辑像素单位，为&lt;code&gt;device-independent pixel&lt;/code&gt; 即 dip 或 dp。说实话，两者其实是一回事。&lt;/p&gt;
+&lt;h4 id=&quot;设备像素比&quot;&gt;&lt;a href=&quot;#设备像素比&quot; class=&quot;headerlink&quot; title=&quot;设备像素比&quot;&gt;&lt;/a&gt;设备像素比&lt;/h4&gt;&lt;p&gt;设备像素比(devicePixelRatio) = 物理像素 / dp或pt。例如：&lt;br&gt;iPhone 4/4s 设备像素比：640 / 320 = 2&lt;/p&gt;
+&lt;p&gt;单位之间的换算关系：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1倍：1pt=1dp=1px（iPhone 3GS）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2倍：1pt=1dp=2px（iPhone 4s/5/6）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3倍：1pt=1dp=3px（iPhone 6 plus）&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;应用&quot;&gt;&lt;a href=&quot;#应用&quot; class=&quot;headerlink&quot; title=&quot;应用&quot;&gt;&lt;/a&gt;应用&lt;/h2&gt;&lt;h3 id=&quot;CSS-和-图片&quot;&gt;&lt;a href=&quot;#CSS-和-图片&quot; class=&quot;headerlink&quot; title=&quot;CSS 和 图片&quot;&gt;&lt;/a&gt;CSS 和 图片&lt;/h3&gt;&lt;p&gt;对于开发者，实际应用中应该根据屏幕尺寸和 devicePixelRatio 来反推 CSS pixel。&lt;/p&gt;
+&lt;p&gt;也就是说：假设设备像素比为 2，设计图要做成了 720x1280 的，那么 CSS 里所有尺寸都除以 2 即可。&lt;/p&gt;
+&lt;p&gt;而对于图片，比如一张实际大小 100x100px 的图片，并且 width 和 height 都设了 100px(注意这里的px是css pixel)，实际占用了屏幕的像素数就是(假设设备像素比是3) 300x300px (注意这里的 px 是真实的屏幕像素) 所以，如果希望网页的元素在高 PPI 设备上显示不模糊(比如 1080x1920 屏幕的手机)，位图应该做 3 倍的尺寸 (比如做 300x300px 的图，然后在 CSS 中设 width 和 height 为 100px)，svg(矢量图)就无所谓了。&lt;/p&gt;
+&lt;h3 id=&quot;媒体查询&quot;&gt;&lt;a href=&quot;#媒体查询&quot; class=&quot;headerlink&quot; title=&quot;媒体查询&quot;&gt;&lt;/a&gt;媒体查询&lt;/h3&gt;&lt;p&gt;注意这里的 px 是指逻辑像素，即 CSS 文件中的 width、height。&lt;br&gt;&lt;code&gt;max-width&lt;/code&gt; 和 &lt;code&gt;max-device-width&lt;/code&gt; 都可以使用。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;@media all and (max-device-width: 320px) &amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;viewport&quot;&gt;&lt;a href=&quot;#viewport&quot; class=&quot;headerlink&quot; title=&quot;viewport&quot;&gt;&lt;/a&gt;viewport&lt;/h2&gt;&lt;p&gt;别以为当我们为了适配手机端的问题，而特意根据屏幕尺寸和 devicePixelRatio 来反推 CSS pixel，就可以在手机端上优雅地显示网页了，手机浏览器又涉及到有关 viewport 的概念。这里介绍一下 layout viewport 和 visual viewport。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;layout viewport - 为了更好渲染页面所需要的尺寸&lt;/li&gt;
+&lt;li&gt;visual viewport - 浏览器可视区域尺寸&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;layout-viewport&quot;&gt;&lt;a href=&quot;#layout-viewport&quot; class=&quot;headerlink&quot; title=&quot;layout viewport&quot;&gt;&lt;/a&gt;layout viewport&lt;/h3&gt;&lt;p&gt;移动设备上的浏览器认为自己必须能让所有的网站都正常显示，即使是那些不是为移动设备设计的网站。但如果以浏览器的可视区域作为 viewport 的话，因为移动设备的屏幕都不是很宽，所以那些为桌面浏览器设计的网站放到移动设备上显示时，必然会因为移动设备的 viewport 太窄，而挤作一团，甚至布局什么的都会乱掉。所以这些浏览器就决定默认情况下把 viewport 设为一个较宽的值，比如 980px，这样的话即使是那些为桌面设计的网站也能在移动浏览器上正常显示了。ppk 把这个浏览器默认的 viewport 叫做 layout viewport。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/media/layoutviewport.png&quot; alt=&quot;layoutviewport&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;visual-viewport&quot;&gt;&lt;a href=&quot;#visual-viewport&quot; class=&quot;headerlink&quot; title=&quot;visual viewport&quot;&gt;&lt;/a&gt;visual viewport&lt;/h3&gt;&lt;p&gt;layout viewport 的宽度是大于浏览器可视区域的宽度的，所以我们还需要一个 viewport 来代表浏览器可视区域的大小，ppk 把这个 viewport 叫做 visual viewport。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/media/visualviewport.png&quot; alt=&quot;visualviewport&quot;&gt;&lt;/p&gt;
+&lt;p&gt;拿 iPhone 举例。&lt;br&gt;iPhone 创建出了一个 980px 的虚拟窗口——布局窗口(layout viewport)来对页面布局，这时传统的桌面端网页终于能正常布局了(虽然要放大才能看清)，但正是这个 layout viewport 导致专门根据屏幕尺寸和 devicePixelRatio 优化过的页面也只能以缩放的方式显示(可以想象在你的 PC 浏览器宽 980px 窗口里打开一个 320px 的页面的情景…)，那么为了让为移动设备优化过的网页正常显示，就要改变这个 layout viewport。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0, user-scalable=no&amp;quot;/&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;布局窗口定义为：宽度为设备宽度，初始缩放比例为1倍，禁止用户缩放。&lt;/p&gt;
+&lt;h2 id=&quot;参考：&quot;&gt;&lt;a href=&quot;#参考：&quot; class=&quot;headerlink&quot; title=&quot;参考：&quot;&gt;&lt;/a&gt;参考：&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.quirksmode.org/blog/archives/2010/04/a_pixel_is_not.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ppk: A pixel is not a pixel is not a pixel&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.w3cplus.com/css/A-pixel-is-not-a-pixel-is-not-a-pixel.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;W3cplus 译：此像素非彼像素&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://weizhifeng.net/a-pixel-is-not.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;JeremyWei 译：不是像素的像素不是像素&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/2050/p/3877280.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;移动前端开发之viewport的深入理解&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://colachan.com/post/3435&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;移动端尺寸基础知识&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.zhangxinxu.com/wordpress/2012/08/window-devicepixelratio/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;张鑫旭：设备像素比devicePixelRatio简单介绍&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://screensiz.es/phone&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;SCREENSIZ.ES&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://pic3.zhimg.com/9d9467e5f217fe707ce6d03aa1cd6ca6_r.jpg&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;iPhone 分辨率终极指南&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;知识&quot;&gt;&lt;a href=&quot;#知识&quot; class=&quot;headerlink&quot; title=&quot;知识&quot;&gt;&lt;/a&gt;知识&lt;/h2&gt;&lt;h3 id=&quot;CSS-像素、物理像素、PPI&quot;&gt;&lt;a href=&quot;#CSS-像素、物理像素、PPI&quot; class=&quot;headerlink&quot; ti
+    
+    </summary>
+    
+      <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
+    
+    
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
+    
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>区别 px、em、rem</title>
+    <link href="http://yoursite.com/2015/08/23/px-em-rem/"/>
+    <id>http://yoursite.com/2015/08/23/px-em-rem/</id>
+    <published>2015-08-23T02:50:48.000Z</published>
+    <updated>2016-04-23T03:46:15.000Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;有何差别&quot;&gt;&lt;a href=&quot;#有何差别&quot; class=&quot;headerlink&quot; title=&quot;有何差别&quot;&gt;&lt;/a&gt;有何差别&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;px&lt;/code&gt; 在缩放页面时无法调整那些使用它作为单位的字体、按钮等的大小；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;em&lt;/code&gt; 的值并不是固定的，会继承父级元素的字体大小，代表倍数；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rem&lt;/code&gt; 的值并不是固定的，始终是基于根元素 &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; 的，也代表倍数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;em&quot;&gt;&lt;a href=&quot;#em&quot; class=&quot;headerlink&quot; title=&quot;em&quot;&gt;&lt;/a&gt;em&lt;/h3&gt;&lt;p&gt;em 的使用是相对于其父级的字体大小的，即倍数。浏览器的默认字体高都是 16px，未经调整的浏览器显示 1em = 16px。但是有一个问题，如果设置 1.2em 则变成 19.2px，问题是 px 表示大小时数值会忽略掉小数位的（你想像不出来半个像素吧）。而且 1em = 16px 的关系不好转换，因此，常常人为地使 1em = 10px。这里要借助字体的 &lt;code&gt;%&lt;/code&gt; 来作为桥梁。&lt;/p&gt;
+&lt;p&gt;因为默认时字体 16px = 100%，则有 10px = 62.5%。所以首先在 body 中全局声明 font-size=62.5%=10px，也就是定义了网页 body 默认字体大小为 10px，由于 em 有继承父级元素字体大小的特性，如果某元素的父级没有设定字体大小，那么它就继续了 body 默认字体大小 1em = 10px。&lt;/p&gt;
+&lt;p&gt;但是由于 em 是相对于其父级字体的倍数的，当出现有多重嵌套内容时，使用 em 分别给它们设置字体的大小往往要重新计算。比如说你在父级中声明了字体大小为 1.2em，那么在声明子元素的字体大小时设置 1em 才能和父级元素内容字体大小一致，而不是1.2em（避免 1.2*1.2=1.44em）, 因为此 em 非彼 em。再举个例子：&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt;&amp;gt;&lt;/span&gt;Outer &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt;&amp;gt;&lt;/span&gt;inner&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt;&amp;gt;&lt;/span&gt; outer&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;body &amp;#123; font-size: 62.5%; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;span &amp;#123; font-size: 1.6em; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;结果：外层 &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt; 为 body 字体 10px 的 1.6倍 = 16px，内层 &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt; 为外层内容字体 16px 的 1.6倍 = 25px（或26px，不同浏览器取舍小数不同）。&lt;/p&gt;
+&lt;p&gt;明显地，内部 &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt; 内的文字受到了父级 &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt; 的影响。基于这点，在实际使用中给我们的计算带来了很大的不便。&lt;/p&gt;
+&lt;h3 id=&quot;rem&quot;&gt;&lt;a href=&quot;#rem&quot; class=&quot;headerlink&quot; title=&quot;rem&quot;&gt;&lt;/a&gt;rem&lt;/h3&gt;&lt;p&gt;引述 MDN:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;rem&lt;/strong&gt; values are relative to the root html element, not the parent element.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;rem 的出现再也不用担心还要根据父级元素的 font-size 计算 em 值了，因为它始终是基于根元素（&lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt;）的。&lt;br&gt;比如默认的 html font-size=16px，那么想设置 12px 的文字就是：12÷16=0.75(rem)&lt;br&gt;仍然是上面的例子，CSS改为：&lt;/p&gt;
+&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;html&lt;/span&gt; &amp;#123; &lt;span class=&quot;attribute&quot;&gt;font-size&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;62.5%&lt;/span&gt;; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;span&lt;/span&gt; &amp;#123; &lt;span class=&quot;attribute&quot;&gt;font-size&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;16px&lt;/span&gt;; &lt;span class=&quot;attribute&quot;&gt;font-size&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;1.6rem&lt;/span&gt;; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;结果：内外 &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt; 的内容均为 16px。&lt;/p&gt;
+&lt;p&gt;需要注意的是，为了兼容不支持 rem 的浏览器，我们需要在各个使用了 rem 地方前面写上对应的 px 值，这样不支持的浏览器可以优雅降级。&lt;a href=&quot;http://caniuse.com/#feat=rem&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;兼容性详情&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;选择使用什么字体单位主要由你的项目来决定，如果你的用户群都使用最新版的浏览器，那推荐使用 rem，如果要考虑兼容性，那就使用 px，或者两者同时使用。&lt;/p&gt;
+&lt;p&gt;完。&lt;/p&gt;
+&lt;h3 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://ued.taobao.org/blog/2013/05/rem-font-size/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;淘宝UED：响应式十日谈第一日：使用 rem 设置文字大小&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/font-size&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MDN: font-size&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;有何差别&quot;&gt;&lt;a href=&quot;#有何差别&quot; class=&quot;headerlink&quot; title=&quot;有何差别&quot;&gt;&lt;/a&gt;有何差别&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;px&lt;/code&gt; 在缩放页面时无法调整那些使用它作为单位的字体、按钮等的大小；&lt;/li&gt;
+&lt;li&gt;
+    
+    </summary>
+    
+      <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
+    
+    
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
     
   </entry>
   
@@ -368,9 +536,9 @@
       <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
     
     
-      <category term="mac" scheme="http://yoursite.com/tags/mac/"/>
-    
       <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+      <category term="mac" scheme="http://yoursite.com/tags/mac/"/>
     
       <category term="github" scheme="http://yoursite.com/tags/github/"/>
     
