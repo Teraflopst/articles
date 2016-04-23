@@ -416,10 +416,11 @@
     <link href="http://yoursite.com/2015/01/28/hexo-tutorial/"/>
     <id>http://yoursite.com/2015/01/28/hexo-tutorial/</id>
     <published>2015-01-28T14:24:55.000Z</published>
-    <updated>2016-04-06T10:46:59.000Z</updated>
+    <updated>2016-04-23T03:53:08.000Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;新建&quot;&gt;&lt;a href=&quot;#新建&quot; class=&quot;headerlink&quot; title=&quot;新建&quot;&gt;&lt;/a&gt;新建&lt;/h2&gt;&lt;p&gt;Hexo 使用 &lt;code&gt;new&lt;/code&gt; 指令来新建&lt;strong&gt;文章&lt;/strong&gt;、&lt;strong&gt;草稿&lt;/strong&gt;和&lt;strong&gt;页面&lt;/strong&gt;这三种默认layout布局。其中layout 是可选参数，默认值为 post。用户可以通过&lt;a href=&quot;#models&quot;&gt;布局模板&lt;/a&gt;来修改或增加。&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+    <content type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;新建&quot;&gt;&lt;a href=&quot;#新建&quot; class=&quot;headerlink&quot; title=&quot;新建&quot;&gt;&lt;/a&gt;新建&lt;/h2&gt;&lt;p&gt;Hexo 使用 &lt;code&gt;new&lt;/code&gt; 指令来新建&lt;strong&gt;文章&lt;/strong&gt;、&lt;strong&gt;草稿&lt;/strong&gt;和&lt;strong&gt;页面&lt;/strong&gt;这三种默认layout布局。其中layout 是可选参数，默认值为 post。用户可以通过&lt;a href=&quot;#models&quot;&gt;布局模板&lt;/a&gt;来修改或增加。&lt;/p&gt;
+&lt;!-- more --&gt;
 &lt;p&gt;语法：&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new 布局 &lt;span class=&quot;string&quot;&gt;&quot;文章名&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;table&gt;
@@ -469,7 +470,8 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;新建&quot;&gt;&lt;a href=&quot;#新建&quot; class=&quot;headerlink&quot; title=&quot;新建&quot;&gt;&lt;/a&gt;新建&lt;/h2&gt;&lt;p&gt;Hexo 使用 &lt;code&gt;new&lt;/code&gt; 指令来新建&lt;strong&gt;文章&lt;/strong&gt;、&lt;strong&gt;草稿&lt;/strong&gt;和&lt;strong&gt;页面&lt;/strong&gt;这三种默认layout布局。其中layout 是可选参数，默认值为 post。用户可以通过&lt;a href=&quot;#models&quot;&gt;布局模板&lt;/a&gt;来修改或增加。&lt;/p&gt;
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;新建&quot;&gt;&lt;a href=&quot;#新建&quot; class=&quot;headerlink&quot; title=&quot;新建&quot;&gt;&lt;/a&gt;新建&lt;/h2&gt;&lt;p&gt;Hexo 使用 &lt;code&gt;new&lt;/code&gt; 指令来新建&lt;strong&gt;文章&lt;/strong&gt;、&lt;s
     
     </summary>
     
@@ -485,14 +487,15 @@
     <link href="http://yoursite.com/2015/01/28/setting-git-for-mac/"/>
     <id>http://yoursite.com/2015/01/28/setting-git-for-mac/</id>
     <published>2015-01-27T16:03:46.000Z</published>
-    <updated>2016-04-06T08:34:07.000Z</updated>
+    <updated>2016-04-23T03:53:41.000Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;下载安装-Git-for-Mac&quot;&gt;&lt;a href=&quot;#下载安装-Git-for-Mac&quot; class=&quot;headerlink&quot; title=&quot;下载安装 Git for Mac&quot;&gt;&lt;/a&gt;下载安装 Git for Mac&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://git-scm.com/downloads&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;git-scm.com&lt;/a&gt;&lt;/p&gt;
+    <content type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;下载安装-Git-for-Mac&quot;&gt;&lt;a href=&quot;#下载安装-Git-for-Mac&quot; class=&quot;headerlink&quot; title=&quot;下载安装 Git for Mac&quot;&gt;&lt;/a&gt;下载安装 Git for Mac&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://git-scm.com/downloads&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;git-scm.com&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;3-步配置-Git&quot;&gt;&lt;a href=&quot;#3-步配置-Git&quot; class=&quot;headerlink&quot; title=&quot;3 步配置 Git&quot;&gt;&lt;/a&gt;3 步配置 Git&lt;/h2&gt;&lt;p&gt;1、Sets the default name for git to use when you commit&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git config --global user.name &lt;span class=&quot;string&quot;&gt;&quot;Your Name Here&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;2、Sets the default email for git to use when you commit&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git config --global user.email &lt;span class=&quot;string&quot;&gt;&quot;your_email@example.com&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;!-- more --&gt;
 &lt;p&gt;3、在上述设置完毕后，可通过这两条命令查看自己的设置&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git config user.name&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git config user.email&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&quot;创建仓库&quot;&gt;&lt;a href=&quot;#创建仓库&quot; class=&quot;headerlink&quot; title=&quot;创建仓库&quot;&gt;&lt;/a&gt;创建仓库&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;远程&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
@@ -525,11 +528,8 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;下载安装-Git-for-Mac&quot;&gt;&lt;a href=&quot;#下载安装-Git-for-Mac&quot; class=&quot;headerlink&quot; title=&quot;下载安装 Git for Mac&quot;&gt;&lt;/a&gt;下载安装 Git for Mac&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://git-scm.com/downloads&quot;&gt;git-scm.com&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;3-步配置-Git&quot;&gt;&lt;a href=&quot;#3-步配置-Git&quot; class=&quot;headerlink&quot; title=&quot;3 步配置 Git&quot;&gt;&lt;/a&gt;3 步配置 Git&lt;/h2&gt;&lt;p&gt;1、Sets the default name for git to use when you commit&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git config --global user.name &lt;span class=&quot;string&quot;&gt;&quot;Your Name Here&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;2、Sets the default email for git to use when you commit&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git config --global user.email &lt;span class=&quot;string&quot;&gt;&quot;your_email@example.com&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;下载安装-Git-for-Mac&quot;&gt;&lt;a href=&quot;#下载安装-Git-for-Mac&quot; class=&quot;headerlink&quot; title=&quot;下载安装 Git for Mac&quot;&gt;&lt;/a&gt;下载安装 Git for Mac&lt;/h2
     
     </summary>
     
