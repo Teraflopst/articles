@@ -142,13 +142,13 @@
   </entry>
   
   <entry>
-    <title>HTML5 中 &lt;div&gt;、&lt;section&gt;、&lt;article&gt; 的区别</title>
+    <title>HTML5 中 `&lt;div&gt;`、`&lt;section&gt;`、`&lt;article&gt;` 的区别</title>
     <link href="http://yoursite.com/2015/04/23/HTML_structural_elements/"/>
     <id>http://yoursite.com/2015/04/23/HTML_structural_elements/</id>
     <published>2015-04-23T00:29:04.000Z</published>
-    <updated>2016-04-23T00:31:43.000Z</updated>
+    <updated>2016-04-23T00:38:59.000Z</updated>
     
-    <content type="html">&lt;h3 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;\&quot;&gt;&lt;/a&gt;\&lt;div&gt;&lt;/div&gt;&lt;/h3&gt;&lt;blockquote&gt;
+    <content type="html">&lt;h3 id=&quot;lt-div-gt&quot;&gt;&lt;a href=&quot;#lt-div-gt&quot; class=&quot;headerlink&quot; title=&quot;&amp;lt;div&amp;gt;&quot;&gt;&lt;/a&gt;&amp;lt;div&amp;gt;&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;The &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; element has no special meaning at all.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;要点&lt;/strong&gt;：无语义，最后考虑。&lt;/p&gt;
@@ -159,7 +159,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;我更偏向于把 &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; 元素理解为 &lt;code&gt;division&lt;/code&gt;。&lt;/p&gt;
-&lt;h3 id=&quot;-1&quot;&gt;&lt;a href=&quot;#-1&quot; class=&quot;headerlink&quot; title=&quot;\&quot;&gt;&lt;/a&gt;\&lt;section&gt;&lt;/section&gt;&lt;/h3&gt;&lt;blockquote&gt;
+&lt;h3 id=&quot;lt-section-gt&quot;&gt;&lt;a href=&quot;#lt-section-gt&quot; class=&quot;headerlink&quot; title=&quot;&amp;lt;section&amp;gt;&quot;&gt;&lt;/a&gt;&amp;lt;section&amp;gt;&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;The &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; element represents a generic section of a document or application.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;要点&lt;/strong&gt;：有主题性地分组。&lt;/p&gt;
@@ -173,7 +173,7 @@
 &lt;p&gt;  其实也是对网站的页面内容按主题分组。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;-2&quot;&gt;&lt;a href=&quot;#-2&quot; class=&quot;headerlink&quot; title=&quot;\&quot;&gt;&lt;/a&gt;\&lt;article&gt;&lt;/article&gt;&lt;/h3&gt;&lt;p&gt;可以说，&lt;code&gt;&amp;lt;article&amp;gt;&lt;/code&gt; 是一个特殊的 &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id=&quot;lt-article-gt&quot;&gt;&lt;a href=&quot;#lt-article-gt&quot; class=&quot;headerlink&quot; title=&quot;&amp;lt;article&amp;gt;&quot;&gt;&lt;/a&gt;&amp;lt;article&amp;gt;&lt;/h3&gt;&lt;p&gt;可以说，&lt;code&gt;&amp;lt;article&amp;gt;&lt;/code&gt; 是一个特殊的 &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt;。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The &lt;code&gt;&amp;lt;article&amp;gt;&lt;/code&gt; element represents an independent item section of content.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -184,7 +184,7 @@
 &lt;li&gt;博客文章  &lt;a href=&quot;https://www.w3.org/wiki/HTML/Elements/article#Example_A&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;例子A&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;用户提交的评论  &lt;a href=&quot;https://www.w3.org/wiki/HTML/Elements/article#Example_B&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;例子B&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;还是&quot;&gt;&lt;a href=&quot;#还是&quot; class=&quot;headerlink&quot; title=&quot;\ 还是 \ ?&quot;&gt;&lt;/a&gt;\&lt;article&gt; 还是 \&lt;section&gt; ?&lt;/section&gt;&lt;/article&gt;&lt;/h3&gt;&lt;p&gt;阅读&lt;a href=&quot;https://www.w3.org/TR/html5/sections.html#article-or-section?&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这里&lt;/a&gt;的举例，就能有一个大致的判断。&lt;/p&gt;
+&lt;h3 id=&quot;lt-article-gt-还是-lt-section-gt&quot;&gt;&lt;a href=&quot;#lt-article-gt-还是-lt-section-gt&quot; class=&quot;headerlink&quot; title=&quot;&amp;lt;article&amp;gt; 还是 &amp;lt;section&amp;gt; ?&quot;&gt;&lt;/a&gt;&amp;lt;article&amp;gt; 还是 &amp;lt;section&amp;gt; ?&lt;/h3&gt;&lt;p&gt;阅读&lt;a href=&quot;https://www.w3.org/TR/html5/sections.html#article-or-section?&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这里&lt;/a&gt;的举例，就能有一个大致的判断。&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;hr&gt;
 
@@ -201,8 +201,8 @@
     
     <summary type="html">
     
-      &lt;h3 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;\&quot;&gt;&lt;/a&gt;\&lt;div&gt;&lt;/div&gt;&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;The &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; element has no special 
+      &lt;h3 id=&quot;lt-div-gt&quot;&gt;&lt;a href=&quot;#lt-div-gt&quot; class=&quot;headerlink&quot; title=&quot;&amp;lt;div&amp;gt;&quot;&gt;&lt;/a&gt;&amp;lt;div&amp;gt;&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;The &lt;code&gt;&amp;lt;div&amp;gt;&lt;/co
     
     </summary>
     
