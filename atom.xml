@@ -46,9 +46,9 @@
       <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
     
     
-      <category term="cloud" scheme="http://yoursite.com/tags/cloud/"/>
-    
       <category term="dropbox" scheme="http://yoursite.com/tags/dropbox/"/>
+    
+      <category term="cloud" scheme="http://yoursite.com/tags/cloud/"/>
     
   </entry>
   
@@ -57,7 +57,7 @@
     <link href="http://yoursite.com/2016/03/07/baiduyun-download-faster/"/>
     <id>http://yoursite.com/2016/03/07/baiduyun-download-faster/</id>
     <published>2016-03-07T12:50:42.000Z</published>
-    <updated>2016-04-11T05:54:02.000Z</updated>
+    <updated>2016-04-12T11:22:15.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;aria2 is a lightweight multi-protocol &amp;amp; multi-source command-line download utility. It supports HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink.&lt;/p&gt;
@@ -114,7 +114,7 @@
 &lt;h2 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://aria2.github.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;aria2&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://blog.binux.me/2012/12/aria2-examples/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;aria2配置示例 - Binuxの杂货铺&lt;/a&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://blog.binux.me/2012/12/aria2-examples/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;aria2 配置示例 - Binuxの杂货铺&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://sspai.com/32167&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Mac 上使用百度网盘很烦躁？花点时间配置 aria2 吧&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
@@ -133,11 +133,83 @@
       <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
-      <category term="aria2" scheme="http://yoursite.com/tags/aria2/"/>
-    
       <category term="cloud" scheme="http://yoursite.com/tags/cloud/"/>
     
+      <category term="aria2" scheme="http://yoursite.com/tags/aria2/"/>
+    
       <category term="download" scheme="http://yoursite.com/tags/download/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML5 中 &lt;div&gt;、&lt;section&gt;、&lt;article&gt; 的区别</title>
+    <link href="http://yoursite.com/2015/04/23/HTML_structural_elements/"/>
+    <id>http://yoursite.com/2015/04/23/HTML_structural_elements/</id>
+    <published>2015-04-23T00:29:04.000Z</published>
+    <updated>2016-04-23T00:31:43.000Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;\&quot;&gt;&lt;/a&gt;\&lt;div&gt;&lt;/div&gt;&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;The &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; element has no special meaning at all.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;要点&lt;/strong&gt;：无语义，最后考虑。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;除非没有合适的标签可以使用，否则使用 div 会缺乏可读性。&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;配合 class、lang、title 等属性使用（赋予可读性），标记一块区域的内容。&lt;/p&gt;
+&lt;p&gt;  例如进行样式、视觉的处理。常用的比如使用 div 包含并使用 CSS 对网页在浏览器窗口的位置进行居中，或者给整个网页设置背景（图片）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我更偏向于把 &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; 元素理解为 &lt;code&gt;division&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id=&quot;-1&quot;&gt;&lt;a href=&quot;#-1&quot; class=&quot;headerlink&quot; title=&quot;\&quot;&gt;&lt;/a&gt;\&lt;section&gt;&lt;/section&gt;&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;The &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; element represents a generic section of a document or application.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;要点&lt;/strong&gt;：有主题性地分组。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;对 &lt;code&gt;内容&lt;/code&gt; 按 &lt;strong&gt;主题&lt;/strong&gt; 分组：文章的章回、论文中编号的节、标签对话框的多个标签页等。&lt;/p&gt;
+&lt;p&gt;  在文章、论文中，对内容进行主题性的分组（通常会包含标题），例如划分章节。一个简单的评判标准：这个元素的内容体现在文章大纲 (outline) 中时，用 &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; 是合适的。&lt;/p&gt;
+&lt;p&gt;  &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; 也适合在一个标签式对话框中对各种标签页面进行分组。&lt;/p&gt;
+&lt;p&gt;  当一个标签只是为了样式化或者方便脚本使用时，应该使用 &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;网站页面中可以用 &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; 把它划分为网站介绍、主题内容、新闻、联系信息等部分。&lt;/p&gt;
+&lt;p&gt;  其实也是对网站的页面内容按主题分组。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;-2&quot;&gt;&lt;a href=&quot;#-2&quot; class=&quot;headerlink&quot; title=&quot;\&quot;&gt;&lt;/a&gt;\&lt;article&gt;&lt;/article&gt;&lt;/h3&gt;&lt;p&gt;可以说，&lt;code&gt;&amp;lt;article&amp;gt;&lt;/code&gt; 是一个特殊的 &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The &lt;code&gt;&amp;lt;article&amp;gt;&lt;/code&gt; element represents an independent item section of content.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;要点&lt;/strong&gt;：可以单独发布、重用的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;论坛帖子&lt;/li&gt;
+&lt;li&gt;新闻、杂志的文章&lt;/li&gt;
+&lt;li&gt;博客文章  &lt;a href=&quot;https://www.w3.org/wiki/HTML/Elements/article#Example_A&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;例子A&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;用户提交的评论  &lt;a href=&quot;https://www.w3.org/wiki/HTML/Elements/article#Example_B&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;例子B&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;还是&quot;&gt;&lt;a href=&quot;#还是&quot; class=&quot;headerlink&quot; title=&quot;\ 还是 \ ?&quot;&gt;&lt;/a&gt;\&lt;article&gt; 还是 \&lt;section&gt; ?&lt;/section&gt;&lt;/article&gt;&lt;/h3&gt;&lt;p&gt;阅读&lt;a href=&quot;https://www.w3.org/TR/html5/sections.html#article-or-section?&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这里&lt;/a&gt;的举例，就能有一个大致的判断。&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.w3.org/TR/html5/sections.html#the-article-element&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;The article element - W3C Recommendation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.w3.org/TR/html5/sections.html#the-section-element&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;The section element - W3C Recommendation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.w3.org/TR/html5/sections.html#article-or-section?&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Article or section? - W3C Recommendation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.w3.org/wiki/HTML_structural_elements#.3Caside.3E&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HTML structural elements - W3C Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.w3.org/wiki/HTML/Elements/section&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HTML/Elements/section - W3C Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.w3.org/wiki/HTML/Elements/article&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HTML/Elements/article - W3C Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://justineo.github.io/slideshows/semantic-html/#/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Semantic HTML&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;\&quot;&gt;&lt;/a&gt;\&lt;div&gt;&lt;/div&gt;&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;The &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; element has no special 
+    
+    </summary>
+    
+      <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
+    
+    
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
     
   </entry>
   

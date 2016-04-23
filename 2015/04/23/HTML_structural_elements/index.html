@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> HTML5 中 <div>、<section>、<article> 的区别 · one stark</title><meta name="description" content="HTML5 中 &lt;div&gt;、&lt;section&gt;、&lt;article&gt; 的区别 - Hewenwei"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/fav.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/fav.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">HOME</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">存档</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">关于</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">HTML5 中 <div>、<section>、<article> 的区别</h1><div class="post-time">Apr 23, 2015</div><div class="post-content"><h3 id=""><a href="#" class="headerlink" title="\"></a>\<div></div></h3><blockquote>
+<p>The <code>&lt;div&gt;</code> element has no special meaning at all.</p>
+</blockquote>
+<p><strong>要点</strong>：无语义，最后考虑。</p>
+<ul>
+<li>除非没有合适的标签可以使用，否则使用 div 会缺乏可读性。</li>
+<li><p>配合 class、lang、title 等属性使用（赋予可读性），标记一块区域的内容。</p>
+<p>  例如进行样式、视觉的处理。常用的比如使用 div 包含并使用 CSS 对网页在浏览器窗口的位置进行居中，或者给整个网页设置背景（图片）。</p>
+</li>
+</ul>
+<p>我更偏向于把 <code>&lt;div&gt;</code> 元素理解为 <code>division</code>。</p>
+<h3 id="-1"><a href="#-1" class="headerlink" title="\"></a>\<section></section></h3><blockquote>
+<p>The <code>&lt;section&gt;</code> element represents a generic section of a document or application.</p>
+</blockquote>
+<p><strong>要点</strong>：有主题性地分组。</p>
+<ul>
+<li><p>对 <code>内容</code> 按 <strong>主题</strong> 分组：文章的章回、论文中编号的节、标签对话框的多个标签页等。</p>
+<p>  在文章、论文中，对内容进行主题性的分组（通常会包含标题），例如划分章节。一个简单的评判标准：这个元素的内容体现在文章大纲 (outline) 中时，用 <code>&lt;section&gt;</code> 是合适的。</p>
+<p>  <code>&lt;section&gt;</code> 也适合在一个标签式对话框中对各种标签页面进行分组。</p>
+<p>  当一个标签只是为了样式化或者方便脚本使用时，应该使用 <code>&lt;div&gt;</code>。</p>
+</li>
+<li><p>网站页面中可以用 <code>&lt;section&gt;</code> 把它划分为网站介绍、主题内容、新闻、联系信息等部分。</p>
+<p>  其实也是对网站的页面内容按主题分组。</p>
+</li>
+</ul>
+<h3 id="-2"><a href="#-2" class="headerlink" title="\"></a>\<article></article></h3><p>可以说，<code>&lt;article&gt;</code> 是一个特殊的 <code>&lt;section&gt;</code>。</p>
+<blockquote>
+<p>The <code>&lt;article&gt;</code> element represents an independent item section of content.</p>
+</blockquote>
+<p><strong>要点</strong>：可以单独发布、重用的。</p>
+<ul>
+<li>论坛帖子</li>
+<li>新闻、杂志的文章</li>
+<li>博客文章  <a href="https://www.w3.org/wiki/HTML/Elements/article#Example_A" target="_blank" rel="external">例子A</a></li>
+<li>用户提交的评论  <a href="https://www.w3.org/wiki/HTML/Elements/article#Example_B" target="_blank" rel="external">例子B</a></li>
+</ul>
+<h3 id="还是"><a href="#还是" class="headerlink" title="\ 还是 \ ?"></a>\<article> 还是 \<section> ?</section></article></h3><p>阅读<a href="https://www.w3.org/TR/html5/sections.html#article-or-section?" target="_blank" rel="external">这里</a>的举例，就能有一个大致的判断。</p>
+<p><br></p>
+<hr>
+
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://www.w3.org/TR/html5/sections.html#the-article-element" target="_blank" rel="external">The article element - W3C Recommendation</a></li>
+<li><a href="https://www.w3.org/TR/html5/sections.html#the-section-element" target="_blank" rel="external">The section element - W3C Recommendation</a></li>
+<li><a href="https://www.w3.org/TR/html5/sections.html#article-or-section?" target="_blank" rel="external">Article or section? - W3C Recommendation</a></li>
+<li><a href="https://www.w3.org/wiki/HTML_structural_elements#.3Caside.3E" target="_blank" rel="external">HTML structural elements - W3C Wiki</a></li>
+<li><a href="https://www.w3.org/wiki/HTML/Elements/section" target="_blank" rel="external">HTML/Elements/section - W3C Wiki</a></li>
+<li><a href="https://www.w3.org/wiki/HTML/Elements/article" target="_blank" rel="external">HTML/Elements/article - W3C Wiki</a></li>
+<li><a href="http://justineo.github.io/slideshows/semantic-html/#/" target="_blank" rel="external">Semantic HTML</a></li>
+</ul>
+</div></article></div></section><footer><div class="paginator"><a href="/2016/03/07/baiduyun-download-faster/" class="prev">PREV</a><a href="/2015/01/31/sina-img-bed/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'onestark';
+var disqus_identifier = '2015/04/23/HTML_structural_elements/';
+var disqus_title = 'HTML5 中 &lt;div&gt;、&lt;section&gt;、&lt;article&gt; 的区别';
+var disqus_url = 'http://yoursite.com/2015/04/23/HTML_structural_elements/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//onestark.disqus.com/count.js" async></script><div class="copyright"><p>© 2015 - 2016 <a href="http://yoursite.com">Hewenwei</a>, unless otherwise noted.</p></div></footer><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script></body></html>
