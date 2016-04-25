@@ -1,5 +1,27 @@
 <!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> JSON 和 JavaScript 对象 · one stark</title><meta name="description" content="JSON 和 JavaScript 对象 - Hewenwei"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/fav.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/fav.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">HOME</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">存档</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">关于</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">JSON 和 JavaScript 对象</h1><div class="post-time">Apr 25, 2016</div><div class="post-content"><h2 id="JSON-和-JS-对象的区别"><a href="#JSON-和-JS-对象的区别" class="headerlink" title="JSON 和 JS 对象的区别"></a>JSON 和 JS 对象的区别</h2><p>JSON（JavaScript Object Notation）仅仅是一种数据格式（或者叫数据形式）。数据格式其实就是一种规范，按照这种规范来存诸和交换数据。就好像 XML 格式一样。</p>
 <a id="more"></a>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">区别</th>
+<th>Json</th>
+<th>Javascript对象</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">含义</td>
+<td>仅仅是一种数据格式</td>
+<td>对象的实例</td>
+</tr>
+<tr>
+<td style="text-align:center">传输</td>
+<td>可以跨平台数据传输，速度快</td>
+<td>不能传输</td>
+</tr>
+</tbody>
+</table>
+<p>表现|1. 键值对<br>2. 键必须加双引号<br> 3. 值不能为方法函数/undefined/NaN|1.键值对<br> 2.值可以是函数、对象、字符串、数字、boolean 等|<br>|相互转换|Json → JS 对象：<br>1. <code>var obj = JSON.parse(jsonstring);</code><br>2. <code>var obj = eval(&quot;(&quot;+jsonstring+&quot;)&quot;);</code>|JS 对象 → Json：<br><code>JSON.stringify(obj);</code>|</p>
 <p>JSON 文本格式在语法上与创建 JavaScript 对象的代码相同，但本质是不同的。我们不能把以下的对象叫 JSON，比如：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj1 = &#123;&#125;; <span class="comment">// 这只是JS对象</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 可把这个称做：JSON 格式的JavaScript对象 </span></span><br><span class="line"><span class="keyword">var</span> obj2=&#123;<span class="string">"width"</span>:<span class="number">100</span>,<span class="string">"height"</span>:<span class="number">200</span>,<span class="string">"name"</span>:<span class="string">"rose"</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 可把这个称做：JSON 格式的字符串</span></span><br><span class="line"><span class="keyword">var</span> str1=<span class="string">'&#123;"width":100,"height":200,"name":"rose"&#125;'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这个可叫 JSON 格式的数组，是JSON的稍复杂一点的形式</span></span><br><span class="line"><span class="keyword">var</span> arr=[</span><br><span class="line">	&#123;<span class="string">"width"</span>:<span class="number">100</span>,<span class="string">"height"</span>:<span class="number">200</span>,<span class="string">"name"</span>:<span class="string">"rose"</span>&#125;,</span><br><span class="line">	&#123;<span class="string">"width"</span>:<span class="number">100</span>,<span class="string">"height"</span>:<span class="number">200</span>,<span class="string">"name"</span>:<span class="string">"rose"</span>&#125;,</span><br><span class="line">	&#123;<span class="string">"width"</span>:<span class="number">100</span>,<span class="string">"height"</span>:<span class="number">200</span>,<span class="string">"name"</span>:<span class="string">"rose"</span>&#125;,</span><br><span class="line">];</span><br><span class="line">        </span><br><span class="line"><span class="comment">// 这个可叫稍复杂一点的 JSON 格式的字符串     </span></span><br><span class="line"><span class="keyword">var</span> str2=<span class="string">'['</span>+</span><br><span class="line">	<span class="string">'&#123;"width":100,"height":200,"name":"rose"&#125;,'</span>+</span><br><span class="line">	<span class="string">'&#123;"width":100,"height":200,"name":"rose"&#125;,'</span>+</span><br><span class="line">	<span class="string">'&#123;"width":100,"height":200,"name":"rose"&#125;,'</span>+</span><br><span class="line"><span class="string">']'</span>;</span><br></pre></td></tr></table></figure>
 <p>但 JSON 和 JavaScript 确实存在渊源，JSON 本身的意思就是 JavaScript 对象表示法（JavaScript Object Notation），可以说这种数据格式是从 JavaScript 对象中演变出来的。<strong>JSON 语法是 JavaScript 对象表示法语法的子集</strong>。</p>
@@ -27,11 +49,11 @@
 <p>使用 eval() 函数时，必须为传入的 JSON 数据参数添加括号’()’，否则会报语法错误。</p>
 <p>2、 解析器：parse()函数</p>
 <p>但 eval()的问题在于，除了可以解析 JSON 数据，也可以用于执行 JavaScript 脚本片段，这就会带来潜在的安全问题。JSON 提供了专门的 JSON Parser 来实现只用于解析 JSON 数据，不会执行 JavaScript 脚本，而且速度更快。如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">obj = <span class="built_in">JSON</span>.parse(txt);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="built_in">JSON</span>.parse(txt);</span><br></pre></td></tr></table></figure>
 <p>较新的浏览器和最新的 ECMAScript (JavaScript) 标准中均包含了原生的对 JSON 的支持。</p>
 <h3 id="JavaScript-数据转换为-JSON-对象"><a href="#JavaScript-数据转换为-JSON-对象" class="headerlink" title="JavaScript 数据转换为 JSON 对象"></a>JavaScript 数据转换为 JSON 对象</h3><p>使用 JSON.strigify() 函数，将 Javascript 对象转换为 JSON 文本数据。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;a:<span class="number">1</span>,b:<span class="number">2</span>&#125;</span><br><span class="line"><span class="keyword">var</span> txt = <span class="built_in">JSON</span>.stringify(obj);</span><br><span class="line"><span class="built_in">console</span>.log(txt);</span><br><span class="line">结果：</span><br><span class="line"><span class="string">"&#123;"</span>a<span class="string">":1,"</span>b<span class="string">":2&#125;"</span></span><br></pre></td></tr></table></figure>
-</div></article></div></section><footer><div class="paginator"><a href="/2016/04/08/git-diff/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'onestark';
+</div></article></div></section><footer><div class="paginator"><a href="/2016/04/08/git-diff/" class="next">下一篇</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'onestark';
 var disqus_identifier = '2016/04/25/json-and-javascript-obj/';
 var disqus_title = 'JSON 和 JavaScript 对象';
 var disqus_url = 'http://yoursite.com/2016/04/25/json-and-javascript-obj/';
