@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-04-23T03:08:46.000Z</updated>
+  <updated>2016-04-25T12:56:22.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,63 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JSON 和 JavaScript 对象</title>
+    <link href="http://yoursite.com/2016/04/25/json-and-javascript-obj/"/>
+    <id>http://yoursite.com/2016/04/25/json-and-javascript-obj/</id>
+    <published>2016-04-25T12:54:28.000Z</published>
+    <updated>2016-04-25T12:56:22.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;JSON-和-JS-对象的区别&quot;&gt;&lt;a href=&quot;#JSON-和-JS-对象的区别&quot; class=&quot;headerlink&quot; title=&quot;JSON 和 JS 对象的区别&quot;&gt;&lt;/a&gt;JSON 和 JS 对象的区别&lt;/h2&gt;&lt;p&gt;JSON（JavaScript Object Notation）仅仅是一种数据格式（或者叫数据形式）。数据格式其实就是一种规范，按照这种规范来存诸和交换数据。就好像 XML 格式一样。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;JSON 文本格式在语法上与创建 JavaScript 对象的代码相同，但本质是不同的。我们不能把以下的对象叫 JSON，比如：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;var obj1 = &amp;#123;&amp;#125;; // 这只是JS对象&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// 可把这个称做：JSON 格式的JavaScript对象 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var obj2=&amp;#123;&amp;quot;width&amp;quot;:100,&amp;quot;height&amp;quot;:200,&amp;quot;name&amp;quot;:&amp;quot;rose&amp;quot;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// 可把这个称做：JSON 格式的字符串&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var str1=&amp;apos;&amp;#123;&amp;quot;width&amp;quot;:100,&amp;quot;height&amp;quot;:200,&amp;quot;name&amp;quot;:&amp;quot;rose&amp;quot;&amp;#125;&amp;apos;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// 这个可叫 JSON 格式的数组，是JSON的稍复杂一点的形式&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var arr=[&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#123;&amp;quot;width&amp;quot;:100,&amp;quot;height&amp;quot;:200,&amp;quot;name&amp;quot;:&amp;quot;rose&amp;quot;&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#123;&amp;quot;width&amp;quot;:100,&amp;quot;height&amp;quot;:200,&amp;quot;name&amp;quot;:&amp;quot;rose&amp;quot;&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#123;&amp;quot;width&amp;quot;:100,&amp;quot;height&amp;quot;:200,&amp;quot;name&amp;quot;:&amp;quot;rose&amp;quot;&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// 这个可叫稍复杂一点的 JSON 格式的字符串     &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var str2=&amp;apos;[&amp;apos;+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;apos;&amp;#123;&amp;quot;width&amp;quot;:100,&amp;quot;height&amp;quot;:200,&amp;quot;name&amp;quot;:&amp;quot;rose&amp;quot;&amp;#125;,&amp;apos;+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;apos;&amp;#123;&amp;quot;width&amp;quot;:100,&amp;quot;height&amp;quot;:200,&amp;quot;name&amp;quot;:&amp;quot;rose&amp;quot;&amp;#125;,&amp;apos;+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;apos;&amp;#123;&amp;quot;width&amp;quot;:100,&amp;quot;height&amp;quot;:200,&amp;quot;name&amp;quot;:&amp;quot;rose&amp;quot;&amp;#125;,&amp;apos;+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;apos;]&amp;apos;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;但 JSON 和 JavaScript 确实存在渊源，JSON 本身的意思就是 JavaScript 对象表示法（JavaScript Object Notation），可以说这种数据格式是从 JavaScript 对象中演变出来的。&lt;strong&gt;JSON 语法是 JavaScript 对象表示法语法的子集&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;JSON 格式的数据，主要是为了跨平台交流数据用的。JSON 独立于语言和平台，JSON 解析器和 JSON 库支持许多不同的编程语言。&lt;/p&gt;
+&lt;h2 id=&quot;JSON-语法&quot;&gt;&lt;a href=&quot;#JSON-语法&quot; class=&quot;headerlink&quot; title=&quot;JSON 语法&quot;&gt;&lt;/a&gt;JSON 语法&lt;/h2&gt;&lt;p&gt;1、JSON 语法规则：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据在名称/值对中&lt;/li&gt;
+&lt;li&gt;数据由逗号分隔&lt;/li&gt;
+&lt;li&gt;花括号保存对象&lt;/li&gt;
+&lt;li&gt;方括号保存数组&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2、JSON 数据值：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数字（整数或浮点数）&lt;/li&gt;
+&lt;li&gt;字符串（在双引号中）&lt;/li&gt;
+&lt;li&gt;逻辑值（true 或 false）&lt;/li&gt;
+&lt;li&gt;数组（在方括号中）&lt;/li&gt;
+&lt;li&gt;对象（在花括号中）&lt;/li&gt;
+&lt;li&gt;null&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;JSON 数据结构有两种，这两种结构就是对象和数组，通过这两种结构可以表示各种复杂的结构。&lt;br&gt;JSON 使用严格的 JavaScript 对象表示法来表示结构化的数据，因此 &lt;strong&gt;JSON 的属性名必须有双引号&lt;/strong&gt;。&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&quot;company&quot;: &quot;Apple&quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&quot;age&quot;: 18,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&quot;IPO&quot;, true,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&quot;employees&quot;: [&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#123; &quot;firstName&quot;:&quot;John&quot; , &quot;lastName&quot;:&quot;Doe&quot; &amp;#125;, &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#123; &quot;firstName&quot;:&quot;Anna&quot; , &quot;lastName&quot;:&quot;Smith&quot; &amp;#125;, &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#123; &quot;firstName&quot;:&quot;Peter&quot; , &quot;lastName&quot;:&quot;Jones&quot; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;JSON-数据转换&quot;&gt;&lt;a href=&quot;#JSON-数据转换&quot; class=&quot;headerlink&quot; title=&quot;JSON 数据转换&quot;&gt;&lt;/a&gt;JSON 数据转换&lt;/h2&gt;&lt;h3 id=&quot;JSON-数据转换为-JavaScript-对象&quot;&gt;&lt;a href=&quot;#JSON-数据转换为-JavaScript-对象&quot; class=&quot;headerlink&quot; title=&quot;JSON 数据转换为 JavaScript 对象&quot;&gt;&lt;/a&gt;JSON 数据转换为 JavaScript 对象&lt;/h3&gt;&lt;p&gt;1、JS 解析器：eval()函数&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 创建包含 JSON 语法的 JavaScript 字符串&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; txt = &lt;span class=&quot;string&quot;&gt;&#39;&amp;#123; &quot;employees&quot; : [&#39;&lt;/span&gt; +  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&#39;&amp;#123; &quot;firstName&quot;:&quot;John&quot; , &quot;lastName&quot;:&quot;Doe&quot; &amp;#125;,&#39;&lt;/span&gt; +  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&#39;&amp;#123; &quot;firstName&quot;:&quot;Anna&quot; , &quot;lastName&quot;:&quot;Smith&quot; &amp;#125;,&#39;&lt;/span&gt; +  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&#39;&amp;#123; &quot;firstName&quot;:&quot;Peter&quot; , &quot;lastName&quot;:&quot;Jones&quot; &amp;#125; ]&amp;#125;&#39;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//使用 JS 解析器，解析 JSON 文本并生成 JS 对象&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; obj = &lt;span class=&quot;built_in&quot;&gt;eval&lt;/span&gt; (&lt;span class=&quot;string&quot;&gt;&quot;(&quot;&lt;/span&gt; + txt + &lt;span class=&quot;string&quot;&gt;&quot;)&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;使用 eval() 函数时，必须为传入的 JSON 数据参数添加括号’()’，否则会报语法错误。&lt;/p&gt;
+&lt;p&gt;2、 解析器：parse()函数&lt;/p&gt;
+&lt;p&gt;但 eval()的问题在于，除了可以解析 JSON 数据，也可以用于执行 JavaScript 脚本片段，这就会带来潜在的安全问题。JSON 提供了专门的 JSON Parser 来实现只用于解析 JSON 数据，不会执行 JavaScript 脚本，而且速度更快。如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;obj = &lt;span class=&quot;built_in&quot;&gt;JSON&lt;/span&gt;.parse(txt);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;较新的浏览器和最新的 ECMAScript (JavaScript) 标准中均包含了原生的对 JSON 的支持。&lt;/p&gt;
+&lt;h3 id=&quot;JavaScript-数据转换为-JSON-对象&quot;&gt;&lt;a href=&quot;#JavaScript-数据转换为-JSON-对象&quot; class=&quot;headerlink&quot; title=&quot;JavaScript 数据转换为 JSON 对象&quot;&gt;&lt;/a&gt;JavaScript 数据转换为 JSON 对象&lt;/h3&gt;&lt;p&gt;使用 JSON.strigify() 函数，将 Javascript 对象转换为 JSON 文本数据。&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; obj = &amp;#123;a:&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,b:&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; txt = &lt;span class=&quot;built_in&quot;&gt;JSON&lt;/span&gt;.stringify(obj);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(txt);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;结果：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&quot;&amp;#123;&quot;&lt;/span&gt;a&lt;span class=&quot;string&quot;&gt;&quot;:1,&quot;&lt;/span&gt;b&lt;span class=&quot;string&quot;&gt;&quot;:2&amp;#125;&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;JSON-和-JS-对象的区别&quot;&gt;&lt;a href=&quot;#JSON-和-JS-对象的区别&quot; class=&quot;headerlink&quot; title=&quot;JSON 和 JS 对象的区别&quot;&gt;&lt;/a&gt;JSON 和 JS 对象的区别&lt;/h2&gt;&lt;p&gt;JSON（JavaScript Object Notation）仅仅是一种数据格式（或者叫数据形式）。数据格式其实就是一种规范，按照这种规范来存诸和交换数据。就好像 XML 格式一样。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
+    
+    
+      <category term="json" scheme="http://yoursite.com/tags/json/"/>
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>git diff 命令详解</title>
@@ -97,9 +154,9 @@
       <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
     
     
-      <category term="cloud" scheme="http://yoursite.com/tags/cloud/"/>
-    
       <category term="dropbox" scheme="http://yoursite.com/tags/dropbox/"/>
+    
+      <category term="cloud" scheme="http://yoursite.com/tags/cloud/"/>
     
   </entry>
   
@@ -184,9 +241,9 @@
       <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
-      <category term="aria2" scheme="http://yoursite.com/tags/aria2/"/>
-    
       <category term="cloud" scheme="http://yoursite.com/tags/cloud/"/>
+    
+      <category term="aria2" scheme="http://yoursite.com/tags/aria2/"/>
     
       <category term="download" scheme="http://yoursite.com/tags/download/"/>
     
