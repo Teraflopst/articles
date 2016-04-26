@@ -1,0 +1,71 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 常用终端命令的含义 · onestark</title><meta name="description" content="常用终端命令的含义 - Hewenwei"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/fav.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/fav.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">HOME</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">存档</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">关于</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">常用终端命令的含义</h1><div class="post-time">Mar 8, 2016</div><div class="post-content"><!-- # 常用终端命令的含义 -->
+<!-- @todo -->
+<a id="more"></a>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>这里记录的是 Mac 终端命令行的介绍，方便大家了解终端的常用操作、各个命令的全称、历史和发展，达到更好理解、熟悉运用这些命令的目的。</p>
+<p>命令的附带参数这里不作详细介绍，可以使用手册页命令 <code>man</code> 查询各个命令的详情，如有需要请自行深入了解。这里的内容有 <a href="https://www.wikiwand.com/en/Cheat_sheet" target="_blank" rel="external">Cheat sheet</a> 的意味。</p>
+<p><strong>维基百科</strong> 为主要参考资料。</p>
+<h2 id="忠告"><a href="#忠告" class="headerlink" title="忠告"></a>忠告</h2><p>永远不要执行你不清楚的命令！</p>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>这里不会列出快捷键大全，因为你根本记不住多少个，经常使用和值得使用的命令才是好的命令。学习快捷键（或者其它）的正确方式是，你每次花费时间在做重复的事情并感到不耐烦，那么你最好花些时间精力了解和学习一下提高效率的方法，毕竟好心情是很重要的。</p>
+<ul>
+<li>光标左移：<code>Ctrl</code> + <code>B</code></li>
+<li>光标右移：<code>Ctrl</code> + <code>F</code></li>
+<li>光标至行首：<code>Ctrl</code> + <code>A</code></li>
+<li>光标至行尾：<code>Ctrl</code> + <code>E</code></li>
+<li>删除至行首：<code>Ctrl</code> + <code>U</code></li>
+<li>删除至行尾：<code>Ctrl</code> + <code>K</code></li>
+<li>删除至单词开始：<code>Ctrl</code> + <code>W</code></li>
+<li>清屏：<code>Ctrl</code> + <code>L</code></li>
+<li>插入最近删除：<code>Ctrl</code> + <code>Y</code></li>
+<li>历史命令：<code>↑</code> 或 <code>↓</code>箭头，或 <code>⌃</code> + <code>P</code>、<code>Ctrl</code> + <code>N</code></li>
+<li>搜索历史命令：<code>Ctrl</code> + <code>R</code></li>
+<li>中止执行：<code>Ctrl</code> + <code>C</code></li>
+<li>选中即复制，单击滚轮粘贴</li>
+<li>按住 <code>⌘</code>，单击路径可以在 Finder 中打开</li>
+</ul>
+<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><h3 id="man"><a href="#man" class="headerlink" title="$ man"></a>$ man</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ man mkdir</span><br></pre></td></tr></table></figure>
+<p>作用：查阅某个命令的手册页，<code>q</code> 退出<br>英文：Manual pages</p>
+<h3 id="sudo"><a href="#sudo" class="headerlink" title="$ sudo"></a>$ sudo</h3><p>作用：通过安全的方式使用特殊的权限运行程序（通常为系统的超级用户）<br>英文：substitute user do 或 superuser do</p>
+<h3 id="cd"><a href="#cd" class="headerlink" title="$ cd"></a>$ cd</h3><p>作用：用于改变工作目录<br>英文：change directory</p>
+<h3 id="mkdir"><a href="#mkdir" class="headerlink" title="$ mkdir"></a>$ mkdir</h3><p>作用：新建目录<br>英文：make directories</p>
+<h3 id="pwd"><a href="#pwd" class="headerlink" title="$ pwd"></a>$ pwd</h3><p>作用：输出当前工作目录的绝对路径<br>英文：print working directory</p>
+<h3 id="ls"><a href="#ls" class="headerlink" title="$ ls"></a>$ ls</h3><p>作用：列出文件<br>英文：list segment</p>
+<h3 id="nano"><a href="#nano" class="headerlink" title="$ nano"></a>$ nano</h3><p>作用：把终端作为一个简单的文本编辑器<br>含义：一个文本编辑器<br>历史：nano 最早在1999年发布，名字叫 TIP。2000年1月10日，正式改名为nano。nano 这个名字来自于国际单位制词头 nano（10^-9 ，“纳”，如“纳米”），意思是 nano 是 pico（10^-12 ，“皮”，如“皮米”）的一千倍。</p>
+<h3 id="curl"><a href="#curl" class="headerlink" title="$ curl"></a>$ curl</h3><p>作用：利用 URL 语法在命令行下工作的文件传输工具<br>英文：<strong>[kɝl]</strong> 或 <strong>[kə:l]</strong><br>使用：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ curl www.foo.com  <span class="comment">#查看网站源码</span></span><br><span class="line">$ curl -o [文件名] www.sina.com  <span class="comment">#下载</span></span><br></pre></td></tr></table></figure>
+<h3 id="cat"><a href="#cat" class="headerlink" title="$ cat"></a>$ cat</h3><p>作用：<quote>“Reads files sequentially, writing them to standard output.”</quote><br>英文：catenate<br>参数：<code>-n</code> 对所有行显示行号<br>使用：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#显示文件全部内容</span></span><br><span class="line">$ cat foo.txt</span><br><span class="line"></span><br><span class="line"><span class="comment">#创建文件并进入编辑模式</span></span><br><span class="line">$ cat &gt; filename</span><br><span class="line"><span class="comment">#对文件追加内容</span></span><br><span class="line">$ cat &gt;&gt; filename</span><br><span class="line"></span><br><span class="line"><span class="comment">#合并文件内容</span></span><br><span class="line">$ cat foo.txt bar.txt &gt; foobar.txt</span><br></pre></td></tr></table></figure>
+<h3 id="more"><a href="#more" class="headerlink" title="more"></a>more</h3><p>功能：类似 <code>cat</code>，以一页一页的显示方便使用者逐页阅读<br>使用：下一页按 <code>Space</code>，上一页按 <code>b</code>，退出 <code>q</code>，vi 编辑器模式按 <code>v</code>，</p>
+<h3 id="less"><a href="#less" class="headerlink" title="$ less"></a>$ less</h3><p>功能：类似 <code>more</code>，<br>使用：退出 <code>Q</code></p>
+<h3 id="which"><a href="#which" class="headerlink" title="$ which"></a>$ which</h3><p>作用：在环境变量 <code>$PATH</code> 设置的目录里查找符合条件的文件<br>使用：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">which</span> bash  <span class="comment">#输出 /bin/bash </span></span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line"><span class="comment">### $ file</span></span><br><span class="line">作用：辨识该文件的类型</span><br><span class="line">参数：`-b` 不显示文件名称</span><br><span class="line">使用：</span><br><span class="line"></span><br><span class="line">```bash</span><br><span class="line">$ file foo.txt</span><br><span class="line"><span class="comment">#输出 foo.txt: UTF-8 Unicode text</span></span><br></pre></td></tr></table></figure>
+<h3 id="who"><a href="#who" class="headerlink" title="who"></a>who</h3><p>作用：显示系统中有哪些使用者</p>
+<h3 id="cp"><a href="#cp" class="headerlink" title="$ cp"></a>$ cp</h3><p>作用：复制文件或目录<br>参数：<code>-r</code> 若源文件是一个目录文件，此时将复制该目录下所有的子目录和文件<br>使用：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cp –r foo/ newfoo</span><br><span class="line"><span class="comment">#将当前目录"foo/"下的所有文件复制到新目录"newfoo"下</span></span><br><span class="line"><span class="comment">#注意：用户使用该指令复制目录时，必须使用参数"-r"</span></span><br></pre></td></tr></table></figure>
+<h3 id="mv"><a href="#mv" class="headerlink" title="$ mv"></a>$ mv</h3><p>作用：为文件或目录改名、或将文件或目录移入其它位置<br>使用：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mv foo bar  <span class="comment">#将文件foo更名为bar</span></span><br><span class="line">$ mv foo/ bar  <span class="comment">#将foo目录放入bar目录中</span></span><br><span class="line"><span class="comment">#如果bar目录不存在，则该命令将foo改名为bar</span></span><br></pre></td></tr></table></figure>
+<h3 id="rm"><a href="#rm" class="headerlink" title="$ rm"></a>$ rm</h3><p>作用：删除一个文件或者目录，且无法恢复<br>参数：<code>-r</code> 删除目录时必需参数；<code>-i</code> 删除前逐一询问确认<br>使用：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ rm  foo.txt  <span class="comment">#删除一般文件  </span></span><br><span class="line">$ rm  -r  foofolder  <span class="comment">#删除目录</span></span><br><span class="line">$ rm  -r  *  <span class="comment">#删除当前目录下的所有文件及目录</span></span><br></pre></td></tr></table></figure>
+<h3 id="open"><a href="#open" class="headerlink" title="$ open"></a>$ open</h3><p>作用：使用 Finder 打开文件目录或程序<br>使用：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ open /Applications/Safari.app/  <span class="comment">#打开应用</span></span><br><span class="line">$ open .  <span class="comment">#打开当前目录。</span></span><br></pre></td></tr></table></figure>
+<h3 id="history"><a href="#history" class="headerlink" title="$ history"></a>$ history</h3><p>作用：显示指定数目的历史命令<br>使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ history  #列出所有历史命令</span><br><span class="line">$ history 10 #列出最近的10条历史命令</span><br></pre></td></tr></table></figure>
+<p>  </p>
+<h3 id="touch"><a href="#touch" class="headerlink" title="$ touch"></a>$ touch</h3><p>作用：修改文件或者目录的时间属性，若文件不存在，新建文件<br>使用：</p>
+<pre><code class="bash">$ ls <span class="_">-l</span> testfile  <span class="comment">#使用ls命令查看文件的属性  </span>
+$ touch testfile  <span class="comment">#修改文件时间属性为当前系统时间  </span>
+$ ls <span class="_">-l</span> testfile  <span class="comment">#查看文件的时间属性</span>
+</code></pre>
+<h3 id="say"><a href="#say" class="headerlink" title="$ say"></a>$ say</h3><p>作用：朗读一段文字，即文本转语音（TTS）<br>妙用：等程序运行完毕语音提醒。$ sleep 10 &amp;&amp; say “hello”</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://www.ruanyifeng.com/blog/2011/09/curl.html" target="_blank" rel="external">阮一峰：curl 网站开发指南</a></li>
+<li><a href="http://www.runoob.com/linux/linux-tutorial.html" target="_blank" rel="external">Linux 教程 | 菜鸟教程</a></li>
+</ul>
+</div></article></div></section><footer><div class="paginator"><a href="/2016/03/08/git-handbook/" class="prev">上一篇</a><a href="/2016/03/07/baiduyun-download-faster/" class="next">下一篇</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'onestark';
+var disqus_identifier = '2016/03/08/common-cmd-line/';
+var disqus_title = '常用终端命令的含义';
+var disqus_url = 'http://yoursite.com/2016/03/08/common-cmd-line/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//onestark.disqus.com/count.js" async></script><div class="copyright"><p>© 2015 - 2016 <a href="http://yoursite.com">Hewenwei</a>, unless otherwise noted.</p></div></footer></div><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script></body></html>

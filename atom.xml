@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>one stark</title>
+  <title>onestark</title>
   <subtitle>走走停停，写写画画</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-04-25T22:43:06.000Z</updated>
+  <updated>2016-04-26T22:52:22.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="http://yoursite.com/2016/04/25/json-and-javascript-obj/"/>
     <id>http://yoursite.com/2016/04/25/json-and-javascript-obj/</id>
     <published>2016-04-25T12:54:28.000Z</published>
-    <updated>2016-04-25T22:43:06.000Z</updated>
+    <updated>2016-04-26T22:52:22.000Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;JSON-和-JS-对象的区别&quot;&gt;&lt;a href=&quot;#JSON-和-JS-对象的区别&quot; class=&quot;headerlink&quot; title=&quot;JSON 和 JS 对象的区别&quot;&gt;&lt;/a&gt;JSON 和 JS 对象的区别&lt;/h2&gt;&lt;p&gt;JSON（JavaScript Object Notation）仅仅是一种数据格式（或者叫数据形式）。数据格式其实就是一种规范，按照这种规范来存诸和交换数据。就好像 XML 格式一样。&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+    <content type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;JSON-和-JS-对象的区别&quot;&gt;&lt;a href=&quot;#JSON-和-JS-对象的区别&quot; class=&quot;headerlink&quot; title=&quot;JSON 和 JS 对象的区别&quot;&gt;&lt;/a&gt;JSON 和 JS 对象的区别&lt;/h2&gt;&lt;p&gt;JSON（JavaScript Object Notation）仅仅是一种数据格式（或者叫数据形式）。数据格式其实就是一种规范，按照这种规范来存诸和交换数据。就好像 XML 格式一样。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -81,16 +81,126 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;JSON-和-JS-对象的区别&quot;&gt;&lt;a href=&quot;#JSON-和-JS-对象的区别&quot; class=&quot;headerlink&quot; title=&quot;JSON 和 JS 对象的区别&quot;&gt;&lt;/a&gt;JSON 和 JS 对象的区别&lt;/h2&gt;&lt;p&gt;JSON（JavaScript Object Notation）仅仅是一种数据格式（或者叫数据形式）。数据格式其实就是一种规范，按照这种规范来存诸和交换数据。就好像 XML 格式一样。&lt;/p&gt;
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;JSON-和-JS-对象的区别&quot;&gt;&lt;a href=&quot;#JSON-和-JS-对象的区别&quot; class=&quot;headerlink&quot; title=&quot;JSON 和 JS 对象的区别&quot;&gt;&lt;/a&gt;JSON 和 JS 对象的区别&lt;/h2&gt;&lt;p&gt;
     
     </summary>
     
       <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
     
     
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
       <category term="json" scheme="http://yoursite.com/tags/json/"/>
     
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+  </entry>
+  
+  <entry>
+    <title>Anki 插件 Power format pack 的使用</title>
+    <link href="http://yoursite.com/2016/04/25/anki/"/>
+    <id>http://yoursite.com/2016/04/25/anki/</id>
+    <published>2016-04-24T18:27:09.000Z</published>
+    <updated>2016-04-26T22:52:34.000Z</updated>
+    
+    <content type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;Anki-插件-Power-format-pack-的使用&quot;&gt;&lt;a href=&quot;#Anki-插件-Power-format-pack-的使用&quot; class=&quot;headerlink&quot; title=&quot;Anki 插件 Power format pack 的使用&quot;&gt;&lt;/a&gt;Anki 插件 Power format pack 的使用&lt;/h1&gt;&lt;p&gt;Power format pack 是用于 Anki 格式化增强的插件。其主要功能：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;渲染 Markdown 语法&lt;/li&gt;
+&lt;li&gt;提供格式化按钮&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;需要注意的是，使用时务必不要将以上两种功能混用在同一个 Flascard 中，否则可能会导致格式混乱，并难以撤销错误操作！&lt;/p&gt;
+&lt;p&gt;插件设置面板在 &lt;code&gt;Tools&lt;/code&gt; &amp;gt; &lt;code&gt;Supplementary buttons add-on (options)&lt;/code&gt; 中。&lt;/p&gt;
+&lt;h2 id=&quot;Markdown&quot;&gt;&lt;a href=&quot;#Markdown&quot; class=&quot;headerlink&quot; title=&quot;Markdown&quot;&gt;&lt;/a&gt;Markdown&lt;/h2&gt;&lt;p&gt;Power format pack 的 Markdown 使用 &lt;a href=&quot;https://pythonhosted.org/Markdown/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Python-Markdown&lt;/a&gt; 来实现渲染。&lt;/p&gt;
+&lt;h4 id=&quot;代码高亮&quot;&gt;&lt;a href=&quot;#代码高亮&quot; class=&quot;headerlink&quot; title=&quot;代码高亮&quot;&gt;&lt;/a&gt;代码高亮&lt;/h4&gt;&lt;p&gt;语法：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;```python&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;def print_me(this):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    print &amp;quot;Printing: &amp;quot;, this&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;![anki-plugin-button](media/anki-plugin-button.png)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;然后上图点一下最右边的 markdown 按钮，即可渲染为 HTML 格式。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;由于 Python-Markdown 的 CodeHilite 源码 HTML 为：&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;div class=&quot;codehilite&quot;&gt;&lt;pre&gt;&lt;code&gt;# Code goes here …&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;所以如果你需要对其渲染出来后的样式进行调整，可以对其进行 CSS 修改。例如，在 Anki 软件中的`浏览` - `卡片...` - 样式框中：&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;.codehilite pre {&lt;br&gt;  padding: 10px 14px;&lt;br&gt;  line-height: 14px!important;&lt;br&gt;}&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;![anki-browse](media/anki-browse.png)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#### 定义列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;语法：&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Orange&lt;br&gt;:   The fruit of an evergreen tree of the genus Citrus.&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#### 脚注&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;语法：&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Footnotes[^1] have a label[^@#$%] and the footnote’s content.&lt;/p&gt;
+&lt;p&gt;[^1]: This is a footnote content.&lt;br&gt;[^@#$%]: A footnote on the label: “@#$%”.&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#### 缩写&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;语法：&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;The HTML specification&lt;br&gt;is maintained by the W3C.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;[HTML]: Hyper Text Markup Language
+&lt;/em&gt;[W3C]:  World Wide Web Consortium&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;渲染成:&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;p&gt;The &lt;abbr title=&quot;Hyper Text Markup Language&quot;&gt;HTML&lt;/abbr&gt; specification&lt;br&gt;is maintained by the &lt;abbr title=&quot;World Wide Web Consortium&quot;&gt;W3C&lt;/abbr&gt;.&lt;/p&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#### 属性&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;下面隆重介绍 `属性` 这个十分好用的功能。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;在编写 Markdown 时，如下格式：&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;Some text some text.&lt;br&gt;{: #someid .someclass somekey=’some value’ }&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;则渲染出来的 HTML 元素会带有属性，如 id，class 等，也就是说，只要我们定义好 CSS，就可以对其内容进行样式修改。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;例如：&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;This is a paragraph.&lt;br&gt;{: #an_id .large }&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;渲染成：&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;p id=&quot;an_id&quot; class=&quot;large&quot;&gt;This is a paragraph.&lt;/p&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;那么只要在 Anki 软件中的 `浏览` - `卡片...` - 样式框中添加：&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;.large { font-size: 32px; }&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;很多语法格式请参考[这里][2]。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;## 格式按钮&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;除了 Markdown，插件内置了很多实用的 `格式化按钮`。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;![anki-plugin-button](media/anki-plugin-button.png)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;但千万记住，使用这些按钮时，就不要在写 Markdwon 语法的内容了，只需要再写纯文本后，选中要格式化的内容，点击相应的格式按钮即可。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#### 非 Markdown 的代码样式&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;如果不实用 Markdown 的语法高亮和样式，可以配合 CSS 和 `格式化按钮` 来定义你喜欢的代码样式。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;这个功能是插件提供给用户的，需要一些设置。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;进入插件设置面板 `Tools` &amp;gt; `Supplementary buttons add-on (options)`，&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;设置一个自用的代码块的 class，例如：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;![anki-plugin-own-cssname](media/anki-plugin-own-cssname.png)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;则只需要在上面提到的 Anki 软件样式框中写上相应的样式：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;```css&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;.code &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    background-color: #f2f2f2;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    padding: 10px 14px;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    border:1px dashed #ddd;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    border-radius: 4px;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后对编辑器中的纯文本代码选中，点击上图 &lt;code&gt;{}&lt;/code&gt; 代码块按钮，即可对代码设置样式。行内代码是 &lt;code&gt;&amp;lt;/&amp;gt;&lt;/code&gt; 按钮。&lt;/p&gt;
+&lt;h4 id=&quot;非-Markdown-的表格样式&quot;&gt;&lt;a href=&quot;#非-Markdown-的表格样式&quot; class=&quot;headerlink&quot; title=&quot;非 Markdown 的表格样式&quot;&gt;&lt;/a&gt;非 Markdown 的表格样式&lt;/h4&gt;&lt;p&gt;编辑区纯文本为：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;header1 | header2 | header3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-|-|-&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;elem1 | elem2 | elem2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;其中 &lt;code&gt;-|-|-&lt;/code&gt; 是可选，它是用于对其作用的，左右中对齐分别为 &lt;code&gt;:-&lt;/code&gt;、&lt;code&gt;-:&lt;/code&gt;、&lt;code&gt;:-:&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;点击 &lt;code&gt;表格&lt;/code&gt; 格式化按钮，即可生成表格。如果不选中内容就点击按钮，会弹出可选行列数的对话框。&lt;/p&gt;
+&lt;h4 id=&quot;按键样式&quot;&gt;&lt;a href=&quot;#按键样式&quot; class=&quot;headerlink&quot; title=&quot;按键样式&quot;&gt;&lt;/a&gt;按键样式&lt;/h4&gt;&lt;p&gt;想实现下图的样式吗？&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;media/anki-plugin-kbd.png&quot; alt=&quot;anki-plugin-kbd&quot;&gt;&lt;/p&gt;
+&lt;p&gt;在 Anki 软件样式对话框中写入 CSS：&lt;/p&gt;
+&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;kbd&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attribute&quot;&gt;box-shadow&lt;/span&gt;: inset &lt;span class=&quot;number&quot;&gt;0px&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0px&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0px&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;#ffffff&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attribute&quot;&gt;background&lt;/span&gt;: &lt;span class=&quot;built_in&quot;&gt;-webkit-gradient&lt;/span&gt;(linear, left top, left bottom, color-stop(0.05, #f9f9f9), &lt;span class=&quot;built_in&quot;&gt;color-stop&lt;/span&gt;(1, #e9e9e9) );&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attribute&quot;&gt;background-color&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;#f9f9f9&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attribute&quot;&gt;border-radius&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;5px&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attribute&quot;&gt;border&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;1px&lt;/span&gt; solid &lt;span class=&quot;number&quot;&gt;#dcdcdc&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attribute&quot;&gt;display&lt;/span&gt;: inline-block;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attribute&quot;&gt;font-size&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0.8em&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attribute&quot;&gt;height&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;30px&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attribute&quot;&gt;line-height&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;30px&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attribute&quot;&gt;padding&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0px&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;10px&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attribute&quot;&gt;text-align&lt;/span&gt;: center;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attribute&quot;&gt;text-shadow&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0px&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;#ffffff&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;然后选择文字，点击键盘形状的格式化按钮即可。&lt;/p&gt;
+&lt;h2 id=&quot;后话&quot;&gt;&lt;a href=&quot;#后话&quot; class=&quot;headerlink&quot; title=&quot;后话&quot;&gt;&lt;/a&gt;后话&lt;/h2&gt;&lt;p&gt;此插件具体的使用请参考插件的&lt;a href=&quot;https://ankiweb.net/shared/info/162313389&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官方文档&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;最后，想说的是 Anki 是一款十分优秀的帮助学习和记忆的应用，我建议词典应该自己定制，一次性导入大量别人的词典，学习和记忆效果肯定是没有自己收集和整理的词条的好，虽然麻烦而且慢，但是就像笔记一样，自己的永远比别人的要好，因为这里面的知识在收集和整理的过程中，就已经学习过了。&lt;/p&gt;
+&lt;p&gt;剩下的就是坚持了。&lt;/p&gt;
+&lt;h2 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://ankiweb.net/shared/info/162313389&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Power format pack: Markdown, code blocks, lists, tables, syntax highlight &amp;amp; more&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://pythonhosted.org/Markdown/extensions/attr_list.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Attribute Lists Extension — Python Markdown&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://pythonhosted.org/Markdown/extensions/code_hilite.html#setup&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CodeHilite Extension — Python Markdown&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;Anki-插件-Power-format-pack-的使用&quot;&gt;&lt;a href=&quot;#Anki-插件-Power-format-pack-的使用&quot; class=&quot;headerlink&quot; title=&quot;Anki 插件 Power fo
+    
+    </summary>
+    
+      <category term="Learn" scheme="http://yoursite.com/categories/Learn/"/>
+    
+    
+      <category term="anki" scheme="http://yoursite.com/tags/anki/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 Alfred 搜索系统文件</title>
+    <link href="http://yoursite.com/2016/04/10/afred-search-system-file/"/>
+    <id>http://yoursite.com/2016/04/10/afred-search-system-file/</id>
+    <published>2016-04-10T02:23:50.000Z</published>
+    <updated>2016-04-26T22:52:55.000Z</updated>
+    
+    <content type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;搜索不到系统文件&quot;&gt;&lt;a href=&quot;#搜索不到系统文件&quot; class=&quot;headerlink&quot; title=&quot;搜索不到系统文件&quot;&gt;&lt;/a&gt;搜索不到系统文件&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;Apple actually treats files within this folder as system files and as such they aren’t visible within Alfred or Spotlight.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;以 Alfred 查找 &lt;code&gt;~/Library&lt;/code&gt; 文件夹中的文件为例。&lt;br&gt;OS X 通常会把在 &lt;code&gt;~/Library&lt;/code&gt; 文件夹中的文件当作 &lt;strong&gt;系统文件&lt;/strong&gt;，标记 &lt;code&gt;MDSystemFile&lt;/code&gt;，对 Alfred 和 Spotlight 的搜索都是不可见的。&lt;/p&gt;
+&lt;h3 id=&quot;解决方案&quot;&gt;&lt;a href=&quot;#解决方案&quot; class=&quot;headerlink&quot; title=&quot;解决方案&quot;&gt;&lt;/a&gt;解决方案&lt;/h3&gt;&lt;p&gt;基于上诉原因，Alfred 自带的文件搜索功能是不能搜索出这些系统文件的。解决方法：&lt;br&gt;1、创建一个新的 &lt;code&gt;Workflow&lt;/code&gt;（高级功能，需付费开启）；&lt;br&gt;2、添加一个 &lt;code&gt;File Filter&lt;/code&gt;，在 &lt;em&gt;Search Scope&lt;/em&gt; 选项中添加搜索范围，并且勾选 &lt;code&gt;Show files marked as System File&lt;/code&gt;；&lt;br&gt;3、添加 Keyword 用于触发搜索，或为其添加一个 &lt;code&gt;Hotkey&lt;/code&gt; 快捷键。&lt;/p&gt;
+&lt;p&gt;注意 &lt;code&gt;Show files marked as System File&lt;/code&gt; 下的小字部分，大意为太多的系统文件会导致太多的搜索结果，对搜索结果进行干扰。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/media/alfred-search-system-file.png&quot; alt=&quot;alfred-search-system-file&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.alfredforum.com/topic/2678-alfred-wont-search-library-folder/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Alfred won’t search ~/Library folder&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.alfredforum.com/topic/1111-add-libraryscripts-to-alfred-search-scope/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;add ~/Library/Scripts to Alfred Search Scope?&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.alfredforum.com/topic/5865-alfred-does-not-search-fordisplay-applescripts-in-libraryscripts-folder/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Alfred does not search for/display AppleScripts in ~/Library/Scripts folder&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;搜索不到系统文件&quot;&gt;&lt;a href=&quot;#搜索不到系统文件&quot; class=&quot;headerlink&quot; title=&quot;搜索不到系统文件&quot;&gt;&lt;/a&gt;搜索不到系统文件&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;Apple actually 
+    
+    </summary>
+    
+    
+      <category term="alfred" scheme="http://yoursite.com/tags/alfred/"/>
+    
+      <category term="spotlight" scheme="http://yoursite.com/tags/spotlight/"/>
     
   </entry>
   
@@ -99,9 +209,10 @@
     <link href="http://yoursite.com/2016/04/08/git-diff/"/>
     <id>http://yoursite.com/2016/04/08/git-diff/</id>
     <published>2016-04-08T07:54:58.000Z</published>
-    <updated>2016-04-23T03:08:46.000Z</updated>
+    <updated>2016-04-26T22:55:30.000Z</updated>
     
-    <content type="html">&lt;h3 id=&quot;工作目录-vs-暂存区&quot;&gt;&lt;a href=&quot;#工作目录-vs-暂存区&quot; class=&quot;headerlink&quot; title=&quot;工作目录 vs 暂存区&quot;&gt;&lt;/a&gt;工作目录 vs 暂存区&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git diff &amp;lt;filename&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    <content type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;工作目录-vs-暂存区&quot;&gt;&lt;a href=&quot;#工作目录-vs-暂存区&quot; class=&quot;headerlink&quot; title=&quot;工作目录 vs 暂存区&quot;&gt;&lt;/a&gt;工作目录 vs 暂存区&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git diff &amp;lt;filename&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;意义：查看文件在工作目录与暂存区的差别。如果还没 add 进暂存区，则查看文件自身修改前后的差别。也可查看和另一分支的区别。&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git diff &amp;lt;branch&amp;gt; &amp;lt;filename&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;暂存区-vs-Git仓库&quot;&gt;&lt;a href=&quot;#暂存区-vs-Git仓库&quot; class=&quot;headerlink&quot; title=&quot;暂存区 vs Git仓库&quot;&gt;&lt;/a&gt;暂存区 vs Git仓库&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git diff --cached &amp;lt;filename&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -134,7 +245,8 @@
     
     <summary type="html">
     
-      &lt;h3 id=&quot;工作目录-vs-暂存区&quot;&gt;&lt;a href=&quot;#工作目录-vs-暂存区&quot; class=&quot;headerlink&quot; title=&quot;工作目录 vs 暂存区&quot;&gt;&lt;/a&gt;工作目录 vs 暂存区&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;工作目录-vs-暂存区&quot;&gt;&lt;a href=&quot;#工作目录-vs-暂存区&quot; class=&quot;headerlink&quot; title=&quot;工作目录 vs 暂存区&quot;&gt;&lt;/a&gt;工作目录 vs 暂存区&lt;/h3&gt;&lt;figure class=&quot;high
     
     </summary>
     
@@ -176,9 +288,194 @@
       <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
     
     
+      <category term="cloud" scheme="http://yoursite.com/tags/cloud/"/>
+    
       <category term="dropbox" scheme="http://yoursite.com/tags/dropbox/"/>
     
-      <category term="cloud" scheme="http://yoursite.com/tags/cloud/"/>
+  </entry>
+  
+  <entry>
+    <title>Git Handbook</title>
+    <link href="http://yoursite.com/2016/03/08/git-handbook/"/>
+    <id>http://yoursite.com/2016/03/08/git-handbook/</id>
+    <published>2016-03-08T06:21:23.000Z</published>
+    <updated>2016-04-26T22:54:02.000Z</updated>
+    
+    <content type="html">&lt;!-- # Git Handbook --&gt;
+&lt;!-- @todo --&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;基本概念&quot;&gt;&lt;a href=&quot;#基本概念&quot; class=&quot;headerlink&quot; title=&quot;基本概念&quot;&gt;&lt;/a&gt;基本概念&lt;/h2&gt;&lt;p&gt;在 Git 的世界里，有三个地方：&lt;code&gt;工作目录&lt;/code&gt;、&lt;code&gt;暂存区&lt;/code&gt;、&lt;code&gt;Git仓库&lt;/code&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;工作目录（working directory）：你看得见的、就是平时使用的文件夹/目录&lt;/li&gt;
+&lt;li&gt;暂存区（staging area）：保存了下次将提交的文件列表信息。&lt;/li&gt;
+&lt;li&gt;Git仓库（Git directory）：保存版本数据的地方。这是最重要的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;状态&quot;&gt;&lt;a href=&quot;#状态&quot; class=&quot;headerlink&quot; title=&quot;状态&quot;&gt;&lt;/a&gt;状态&lt;/h4&gt;&lt;p&gt;对应地，工作目录中的文件就有三种状态：已修改、已暂存、已提交&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;已修改（modified）：工作目录下的文件每次修改后，就处于已修改状态；&lt;/li&gt;
+&lt;li&gt;和已暂存（staged）：把修改后文件提交到暂存区后的状态，反之称 unstaged；&lt;/li&gt;
+&lt;li&gt;已提交（committed）：把修改提交到版本数据库后的状态。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;另外要注意的一点是，以上三种状态均建立在文件已被 Git 追踪的前提下。在工作目录新建一个文件，此时文件的状态为未追踪（untracked）。&lt;br&gt;删除被追踪的文件后，可以查看到的状态是已删除（deleted）&lt;/p&gt;
+&lt;h4 id=&quot;流程&quot;&gt;&lt;a href=&quot;#流程&quot; class=&quot;headerlink&quot; title=&quot;流程&quot;&gt;&lt;/a&gt;流程&lt;/h4&gt;&lt;p&gt;基本的 Git 工作流程如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在工作目录中修改文件；&lt;/li&gt;
+&lt;li&gt;暂存文件，将文件的快照放入暂存区域；&lt;/li&gt;
+&lt;li&gt;提交更新，找到暂存区域的文件，将快照永久性存储到 Git 仓库目录。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;创建&quot;&gt;&lt;a href=&quot;#创建&quot; class=&quot;headerlink&quot; title=&quot;创建&quot;&gt;&lt;/a&gt;创建&lt;/h2&gt;&lt;h4 id=&quot;创建仓库&quot;&gt;&lt;a href=&quot;#创建仓库&quot; class=&quot;headerlink&quot; title=&quot;创建仓库&quot;&gt;&lt;/a&gt;创建仓库&lt;/h4&gt;&lt;p&gt;选择一个合适的地方，创建一个空目录，或者使用命令：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ mkdir learngit&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; learngit&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;pwd&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;code&gt;pwd&lt;/code&gt; 命令只是用于显示当前目录。&lt;/p&gt;
+&lt;h4 id=&quot;初始化仓库&quot;&gt;&lt;a href=&quot;#初始化仓库&quot; class=&quot;headerlink&quot; title=&quot;初始化仓库&quot;&gt;&lt;/a&gt;初始化仓库&lt;/h4&gt;&lt;p&gt;把这个目录变成 &lt;code&gt;Git&lt;/code&gt; 可以管理的仓库：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git init&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;可以发现当前目录下多了一个 &lt;code&gt;.git&lt;/code&gt; 的目录，这个目录是 &lt;code&gt;Git&lt;/code&gt; 来跟踪管理版本库的，不要手动修改/删除这个目录里面的文件。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ls -a&lt;/code&gt; 命令就可以列出包括隐藏文件在内的文件。&lt;/p&gt;
+&lt;h2 id=&quot;暂存&quot;&gt;&lt;a href=&quot;#暂存&quot; class=&quot;headerlink&quot; title=&quot;暂存&quot;&gt;&lt;/a&gt;暂存&lt;/h2&gt;&lt;h4 id=&quot;添加修改到暂存区&quot;&gt;&lt;a href=&quot;#添加修改到暂存区&quot; class=&quot;headerlink&quot; title=&quot;添加修改到暂存区&quot;&gt;&lt;/a&gt;添加修改到暂存区&lt;/h4&gt;&lt;p&gt;暂存区就好像一个码头，先把货物运到这里，再往目的地（版本库）运输。&lt;br&gt;现在编写一个 &lt;code&gt;README.md&lt;/code&gt; 文件，放到 &lt;code&gt;learngit&lt;/code&gt; 目录/子目录下，或者使用命令新建：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ touch README.md&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;用编辑器打开添加点内容，或在终端中编辑：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;variable&quot;&gt;$nano&lt;/span&gt; README.md&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;把修改的文件暂存，用于提交：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git add README.md&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;可以一次性添加所有同类型文件的修改：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git add &lt;span class=&quot;string&quot;&gt;&#39;*.md&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;也可以一次性添加所有文件的修改：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git add .&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;提交&quot;&gt;&lt;a href=&quot;#提交&quot; class=&quot;headerlink&quot; title=&quot;提交&quot;&gt;&lt;/a&gt;提交&lt;/h2&gt;&lt;h4 id=&quot;向版本库提交修改&quot;&gt;&lt;a href=&quot;#向版本库提交修改&quot; class=&quot;headerlink&quot; title=&quot;向版本库提交修改&quot;&gt;&lt;/a&gt;向版本库提交修改&lt;/h4&gt;&lt;p&gt;每次向版本库提交修改最好添加提交信息，&lt;code&gt;first commit&lt;/code&gt; 就是一次提交的信息。&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git commit -m &lt;span class=&quot;string&quot;&gt;&quot;first commit&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;查看&quot;&gt;&lt;a href=&quot;#查看&quot; class=&quot;headerlink&quot; title=&quot;查看&quot;&gt;&lt;/a&gt;查看&lt;/h2&gt;&lt;h4 id=&quot;查看文件状态&quot;&gt;&lt;a href=&quot;#查看文件状态&quot; class=&quot;headerlink&quot; title=&quot;查看文件状态&quot;&gt;&lt;/a&gt;查看文件状态&lt;/h4&gt;&lt;p&gt;显示工作目录下文件所处状态，这时经常用到的命令：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git status&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;查看文件内容&quot;&gt;&lt;a href=&quot;#查看文件内容&quot; class=&quot;headerlink&quot; title=&quot;查看文件内容&quot;&gt;&lt;/a&gt;查看文件内容&lt;/h4&gt;&lt;p&gt;显示工作区文件与上次提交版本的内容有什么不同。&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git diff README.md&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;查看提交记录&quot;&gt;&lt;a href=&quot;#查看提交记录&quot; class=&quot;headerlink&quot; title=&quot;查看提交记录&quot;&gt;&lt;/a&gt;查看提交记录&lt;/h4&gt;&lt;p&gt;显示从最近到最远的提交日志，可查看到每次提交的 40 位 &lt;code&gt;commit id&lt;/code&gt;（版本号）：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git &lt;span class=&quot;built_in&quot;&gt;log&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;查看命令记录&quot;&gt;&lt;a href=&quot;#查看命令记录&quot; class=&quot;headerlink&quot; title=&quot;查看命令记录&quot;&gt;&lt;/a&gt;查看命令记录&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Git&lt;/code&gt; 提供了一个命令用来查看你每一次命令的记录：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git reflog&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;code&gt;重返未来&lt;/code&gt;：假如你回退到某个版本，这个版本之后的修改都会被抛弃（其实这很有道理），再想恢复到这个版本之后的版本，这个命令可以查看到所需的 &lt;strong&gt;未来&lt;/strong&gt; 版本号。&lt;/p&gt;
+&lt;h2 id=&quot;撤销、回退&quot;&gt;&lt;a href=&quot;#撤销、回退&quot; class=&quot;headerlink&quot; title=&quot;撤销、回退&quot;&gt;&lt;/a&gt;撤销、回退&lt;/h2&gt;&lt;p&gt;撤消文件修改的暂存。可以把添加到暂存区的修改撤销掉（unstage）。&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git reset HEAD &amp;lt;file&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;撤消对工作目录文件的修改。此命令会使用暂存区中的内容替换掉你的工作目录中的文件。&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git checkout -- &amp;lt;file&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;丢弃在本地的所有改动与提交&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git reset --hard HEAD&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;回退到某个版本，并抛弃该版本之后的修改&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git reset --hard &amp;lt;commit id&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;commit id 可以换成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;HEAD^&lt;/code&gt; 上一个版本，&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HEAD^^&lt;/code&gt; 上上一个版本&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HEAD~100&lt;/code&gt; 上100个版本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注意：&lt;code&gt;Git&lt;/code&gt; 使用 &lt;code&gt;HEAD&lt;/code&gt; 指向当前版本。&lt;/p&gt;
+&lt;h2 id=&quot;远程仓库&quot;&gt;&lt;a href=&quot;#远程仓库&quot; class=&quot;headerlink&quot; title=&quot;远程仓库&quot;&gt;&lt;/a&gt;远程仓库&lt;/h2&gt;&lt;p&gt;Git 在本地就已经可以实现版本管理的功能，远程仓库有别于存储在你硬盘里的版本库，它存储在网络服务器中，它的发明是为了 Git 的协作和防止本地数据的丢失。&lt;/p&gt;
+&lt;p&gt;远端服务器上的仓库，克隆一份来本地：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git &lt;span class=&quot;built_in&quot;&gt;clone&lt;/span&gt; username@host:/path/to/repository&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;其实 &lt;code&gt;clone&lt;/code&gt; 命令也可以拷贝本地的仓库，但最常用的还是从远程服务器拷贝。&lt;/p&gt;
+&lt;h3 id=&quot;推送&quot;&gt;&lt;a href=&quot;#推送&quot; class=&quot;headerlink&quot; title=&quot;推送&quot;&gt;&lt;/a&gt;推送&lt;/h3&gt;&lt;p&gt;把本地的修改提交到远程仓库的操作叫做推送（push）。要推送的前提是，必须给当前工作目录指定远程仓库的地址。&lt;br&gt;使用命令连接一个远程仓库：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git remote add origin &amp;lt;server&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;这里的 &lt;code&gt;origin&lt;/code&gt; 可以是其它你想到的名字，它只不过是用来标识远程仓库的别名而已。但是最常用这个一看就了解的名字。使用 &lt;code&gt;$ git remote&lt;/code&gt; 命令可以列出已连接的远程仓库的别名，加 &lt;code&gt;-v&lt;/code&gt; 参数可以查看具体地址：&lt;code&gt;$ git remote -v&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;推送命令：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git push -u origin master&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;把本地分支 master 推送到名为 origin 的远程仓库的。可以把 master 换成你想要推送的任何分支。&lt;br&gt;注：&lt;code&gt;-u&lt;/code&gt; 参数为第一次提交使用，作用是把本地的master分支和远程的master分支关联起来，简化命令，之后提交不需要这个参数。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;!-- # Git Handbook --&gt;
+&lt;!-- @todo --&gt;
+    
+    </summary>
+    
+      <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
+    
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常用终端命令的含义</title>
+    <link href="http://yoursite.com/2016/03/08/common-cmd-line/"/>
+    <id>http://yoursite.com/2016/03/08/common-cmd-line/</id>
+    <published>2016-03-07T22:16:46.000Z</published>
+    <updated>2016-04-26T22:54:38.000Z</updated>
+    
+    <content type="html">&lt;!-- # 常用终端命令的含义 --&gt;
+&lt;!-- @todo --&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot; title=&quot;说明&quot;&gt;&lt;/a&gt;说明&lt;/h2&gt;&lt;p&gt;这里记录的是 Mac 终端命令行的介绍，方便大家了解终端的常用操作、各个命令的全称、历史和发展，达到更好理解、熟悉运用这些命令的目的。&lt;/p&gt;
+&lt;p&gt;命令的附带参数这里不作详细介绍，可以使用手册页命令 &lt;code&gt;man&lt;/code&gt; 查询各个命令的详情，如有需要请自行深入了解。这里的内容有 &lt;a href=&quot;https://www.wikiwand.com/en/Cheat_sheet&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Cheat sheet&lt;/a&gt; 的意味。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;维基百科&lt;/strong&gt; 为主要参考资料。&lt;/p&gt;
+&lt;h2 id=&quot;忠告&quot;&gt;&lt;a href=&quot;#忠告&quot; class=&quot;headerlink&quot; title=&quot;忠告&quot;&gt;&lt;/a&gt;忠告&lt;/h2&gt;&lt;p&gt;永远不要执行你不清楚的命令！&lt;/p&gt;
+&lt;h2 id=&quot;快捷键&quot;&gt;&lt;a href=&quot;#快捷键&quot; class=&quot;headerlink&quot; title=&quot;快捷键&quot;&gt;&lt;/a&gt;快捷键&lt;/h2&gt;&lt;p&gt;这里不会列出快捷键大全，因为你根本记不住多少个，经常使用和值得使用的命令才是好的命令。学习快捷键（或者其它）的正确方式是，你每次花费时间在做重复的事情并感到不耐烦，那么你最好花些时间精力了解和学习一下提高效率的方法，毕竟好心情是很重要的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;光标左移：&lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;B&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;光标右移：&lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;F&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;光标至行首：&lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;A&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;光标至行尾：&lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;E&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;删除至行首：&lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;U&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;删除至行尾：&lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;K&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;删除至单词开始：&lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;W&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;清屏：&lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;L&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;插入最近删除：&lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;Y&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;历史命令：&lt;code&gt;↑&lt;/code&gt; 或 &lt;code&gt;↓&lt;/code&gt;箭头，或 &lt;code&gt;⌃&lt;/code&gt; + &lt;code&gt;P&lt;/code&gt;、&lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;N&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;搜索历史命令：&lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;R&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;中止执行：&lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;C&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;选中即复制，单击滚轮粘贴&lt;/li&gt;
+&lt;li&gt;按住 &lt;code&gt;⌘&lt;/code&gt;，单击路径可以在 Finder 中打开&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;命令&quot;&gt;&lt;a href=&quot;#命令&quot; class=&quot;headerlink&quot; title=&quot;命令&quot;&gt;&lt;/a&gt;命令&lt;/h2&gt;&lt;h3 id=&quot;man&quot;&gt;&lt;a href=&quot;#man&quot; class=&quot;headerlink&quot; title=&quot;$ man&quot;&gt;&lt;/a&gt;$ man&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ man mkdir&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;作用：查阅某个命令的手册页，&lt;code&gt;q&lt;/code&gt; 退出&lt;br&gt;英文：Manual pages&lt;/p&gt;
+&lt;h3 id=&quot;sudo&quot;&gt;&lt;a href=&quot;#sudo&quot; class=&quot;headerlink&quot; title=&quot;$ sudo&quot;&gt;&lt;/a&gt;$ sudo&lt;/h3&gt;&lt;p&gt;作用：通过安全的方式使用特殊的权限运行程序（通常为系统的超级用户）&lt;br&gt;英文：substitute user do 或 superuser do&lt;/p&gt;
+&lt;h3 id=&quot;cd&quot;&gt;&lt;a href=&quot;#cd&quot; class=&quot;headerlink&quot; title=&quot;$ cd&quot;&gt;&lt;/a&gt;$ cd&lt;/h3&gt;&lt;p&gt;作用：用于改变工作目录&lt;br&gt;英文：change directory&lt;/p&gt;
+&lt;h3 id=&quot;mkdir&quot;&gt;&lt;a href=&quot;#mkdir&quot; class=&quot;headerlink&quot; title=&quot;$ mkdir&quot;&gt;&lt;/a&gt;$ mkdir&lt;/h3&gt;&lt;p&gt;作用：新建目录&lt;br&gt;英文：make directories&lt;/p&gt;
+&lt;h3 id=&quot;pwd&quot;&gt;&lt;a href=&quot;#pwd&quot; class=&quot;headerlink&quot; title=&quot;$ pwd&quot;&gt;&lt;/a&gt;$ pwd&lt;/h3&gt;&lt;p&gt;作用：输出当前工作目录的绝对路径&lt;br&gt;英文：print working directory&lt;/p&gt;
+&lt;h3 id=&quot;ls&quot;&gt;&lt;a href=&quot;#ls&quot; class=&quot;headerlink&quot; title=&quot;$ ls&quot;&gt;&lt;/a&gt;$ ls&lt;/h3&gt;&lt;p&gt;作用：列出文件&lt;br&gt;英文：list segment&lt;/p&gt;
+&lt;h3 id=&quot;nano&quot;&gt;&lt;a href=&quot;#nano&quot; class=&quot;headerlink&quot; title=&quot;$ nano&quot;&gt;&lt;/a&gt;$ nano&lt;/h3&gt;&lt;p&gt;作用：把终端作为一个简单的文本编辑器&lt;br&gt;含义：一个文本编辑器&lt;br&gt;历史：nano 最早在1999年发布，名字叫 TIP。2000年1月10日，正式改名为nano。nano 这个名字来自于国际单位制词头 nano（10^-9 ，“纳”，如“纳米”），意思是 nano 是 pico（10^-12 ，“皮”，如“皮米”）的一千倍。&lt;/p&gt;
+&lt;h3 id=&quot;curl&quot;&gt;&lt;a href=&quot;#curl&quot; class=&quot;headerlink&quot; title=&quot;$ curl&quot;&gt;&lt;/a&gt;$ curl&lt;/h3&gt;&lt;p&gt;作用：利用 URL 语法在命令行下工作的文件传输工具&lt;br&gt;英文：&lt;strong&gt;[kɝl]&lt;/strong&gt; 或 &lt;strong&gt;[kə:l]&lt;/strong&gt;&lt;br&gt;使用：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ curl www.foo.com  &lt;span class=&quot;comment&quot;&gt;#查看网站源码&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ curl -o [文件名] www.sina.com  &lt;span class=&quot;comment&quot;&gt;#下载&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;cat&quot;&gt;&lt;a href=&quot;#cat&quot; class=&quot;headerlink&quot; title=&quot;$ cat&quot;&gt;&lt;/a&gt;$ cat&lt;/h3&gt;&lt;p&gt;作用：&lt;quote&gt;“Reads files sequentially, writing them to standard output.”&lt;/quote&gt;&lt;br&gt;英文：catenate&lt;br&gt;参数：&lt;code&gt;-n&lt;/code&gt; 对所有行显示行号&lt;br&gt;使用：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#显示文件全部内容&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ cat foo.txt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#创建文件并进入编辑模式&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ cat &amp;gt; filename&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#对文件追加内容&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ cat &amp;gt;&amp;gt; filename&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#合并文件内容&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ cat foo.txt bar.txt &amp;gt; foobar.txt&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;more&quot;&gt;&lt;a href=&quot;#more&quot; class=&quot;headerlink&quot; title=&quot;more&quot;&gt;&lt;/a&gt;more&lt;/h3&gt;&lt;p&gt;功能：类似 &lt;code&gt;cat&lt;/code&gt;，以一页一页的显示方便使用者逐页阅读&lt;br&gt;使用：下一页按 &lt;code&gt;Space&lt;/code&gt;，上一页按 &lt;code&gt;b&lt;/code&gt;，退出 &lt;code&gt;q&lt;/code&gt;，vi 编辑器模式按 &lt;code&gt;v&lt;/code&gt;，&lt;/p&gt;
+&lt;h3 id=&quot;less&quot;&gt;&lt;a href=&quot;#less&quot; class=&quot;headerlink&quot; title=&quot;$ less&quot;&gt;&lt;/a&gt;$ less&lt;/h3&gt;&lt;p&gt;功能：类似 &lt;code&gt;more&lt;/code&gt;，&lt;br&gt;使用：退出 &lt;code&gt;Q&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&quot;which&quot;&gt;&lt;a href=&quot;#which&quot; class=&quot;headerlink&quot; title=&quot;$ which&quot;&gt;&lt;/a&gt;$ which&lt;/h3&gt;&lt;p&gt;作用：在环境变量 &lt;code&gt;$PATH&lt;/code&gt; 设置的目录里查找符合条件的文件&lt;br&gt;使用：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;which&lt;/span&gt; bash  &lt;span class=&quot;comment&quot;&gt;#输出 /bin/bash &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;``` &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;### $ file&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;作用：辨识该文件的类型&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;参数：`-b` 不显示文件名称&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;使用：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;```bash&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ file foo.txt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#输出 foo.txt: UTF-8 Unicode text&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;who&quot;&gt;&lt;a href=&quot;#who&quot; class=&quot;headerlink&quot; title=&quot;who&quot;&gt;&lt;/a&gt;who&lt;/h3&gt;&lt;p&gt;作用：显示系统中有哪些使用者&lt;/p&gt;
+&lt;h3 id=&quot;cp&quot;&gt;&lt;a href=&quot;#cp&quot; class=&quot;headerlink&quot; title=&quot;$ cp&quot;&gt;&lt;/a&gt;$ cp&lt;/h3&gt;&lt;p&gt;作用：复制文件或目录&lt;br&gt;参数：&lt;code&gt;-r&lt;/code&gt; 若源文件是一个目录文件，此时将复制该目录下所有的子目录和文件&lt;br&gt;使用：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ cp –r foo/ newfoo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#将当前目录&quot;foo/&quot;下的所有文件复制到新目录&quot;newfoo&quot;下&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#注意：用户使用该指令复制目录时，必须使用参数&quot;-r&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;mv&quot;&gt;&lt;a href=&quot;#mv&quot; class=&quot;headerlink&quot; title=&quot;$ mv&quot;&gt;&lt;/a&gt;$ mv&lt;/h3&gt;&lt;p&gt;作用：为文件或目录改名、或将文件或目录移入其它位置&lt;br&gt;使用：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ mv foo bar  &lt;span class=&quot;comment&quot;&gt;#将文件foo更名为bar&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ mv foo/ bar  &lt;span class=&quot;comment&quot;&gt;#将foo目录放入bar目录中&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#如果bar目录不存在，则该命令将foo改名为bar&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;rm&quot;&gt;&lt;a href=&quot;#rm&quot; class=&quot;headerlink&quot; title=&quot;$ rm&quot;&gt;&lt;/a&gt;$ rm&lt;/h3&gt;&lt;p&gt;作用：删除一个文件或者目录，且无法恢复&lt;br&gt;参数：&lt;code&gt;-r&lt;/code&gt; 删除目录时必需参数；&lt;code&gt;-i&lt;/code&gt; 删除前逐一询问确认&lt;br&gt;使用：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ rm  foo.txt  &lt;span class=&quot;comment&quot;&gt;#删除一般文件  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ rm  -r  foofolder  &lt;span class=&quot;comment&quot;&gt;#删除目录&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ rm  -r  *  &lt;span class=&quot;comment&quot;&gt;#删除当前目录下的所有文件及目录&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;open&quot;&gt;&lt;a href=&quot;#open&quot; class=&quot;headerlink&quot; title=&quot;$ open&quot;&gt;&lt;/a&gt;$ open&lt;/h3&gt;&lt;p&gt;作用：使用 Finder 打开文件目录或程序&lt;br&gt;使用：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ open /Applications/Safari.app/  &lt;span class=&quot;comment&quot;&gt;#打开应用&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ open .  &lt;span class=&quot;comment&quot;&gt;#打开当前目录。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;history&quot;&gt;&lt;a href=&quot;#history&quot; class=&quot;headerlink&quot; title=&quot;$ history&quot;&gt;&lt;/a&gt;$ history&lt;/h3&gt;&lt;p&gt;作用：显示指定数目的历史命令&lt;br&gt;使用：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ history  #列出所有历史命令&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ history 10 #列出最近的10条历史命令&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;  &lt;/p&gt;
+&lt;h3 id=&quot;touch&quot;&gt;&lt;a href=&quot;#touch&quot; class=&quot;headerlink&quot; title=&quot;$ touch&quot;&gt;&lt;/a&gt;$ touch&lt;/h3&gt;&lt;p&gt;作用：修改文件或者目录的时间属性，若文件不存在，新建文件&lt;br&gt;使用：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;$ ls &lt;span class=&quot;_&quot;&gt;-l&lt;/span&gt; testfile  &lt;span class=&quot;comment&quot;&gt;#使用ls命令查看文件的属性  &lt;/span&gt;
+$ touch testfile  &lt;span class=&quot;comment&quot;&gt;#修改文件时间属性为当前系统时间  &lt;/span&gt;
+$ ls &lt;span class=&quot;_&quot;&gt;-l&lt;/span&gt; testfile  &lt;span class=&quot;comment&quot;&gt;#查看文件的时间属性&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;say&quot;&gt;&lt;a href=&quot;#say&quot; class=&quot;headerlink&quot; title=&quot;$ say&quot;&gt;&lt;/a&gt;$ say&lt;/h3&gt;&lt;p&gt;作用：朗读一段文字，即文本转语音（TTS）&lt;br&gt;妙用：等程序运行完毕语音提醒。$ sleep 10 &amp;amp;&amp;amp; say “hello”&lt;/p&gt;
+&lt;h2 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2011/09/curl.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;阮一峰：curl 网站开发指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.runoob.com/linux/linux-tutorial.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Linux 教程 | 菜鸟教程&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;!-- # 常用终端命令的含义 --&gt;
+&lt;!-- @todo --&gt;
+    
+    </summary>
+    
+      <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
+    
+    
+      <category term="terminal" scheme="http://yoursite.com/tags/terminal/"/>
+    
+      <category term="shell" scheme="http://yoursite.com/tags/shell/"/>
     
   </entry>
   
@@ -263,9 +560,9 @@
       <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
-      <category term="cloud" scheme="http://yoursite.com/tags/cloud/"/>
-    
       <category term="aria2" scheme="http://yoursite.com/tags/aria2/"/>
+    
+      <category term="cloud" scheme="http://yoursite.com/tags/cloud/"/>
     
       <category term="download" scheme="http://yoursite.com/tags/download/"/>
     
@@ -276,9 +573,10 @@
     <link href="http://yoursite.com/2016/01/23/pixels-viewport/"/>
     <id>http://yoursite.com/2016/01/23/pixels-viewport/</id>
     <published>2016-01-23T01:19:42.000Z</published>
-    <updated>2016-04-23T02:52:40.000Z</updated>
+    <updated>2016-04-26T22:55:51.000Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;知识&quot;&gt;&lt;a href=&quot;#知识&quot; class=&quot;headerlink&quot; title=&quot;知识&quot;&gt;&lt;/a&gt;知识&lt;/h2&gt;&lt;h3 id=&quot;CSS-像素、物理像素、PPI&quot;&gt;&lt;a href=&quot;#CSS-像素、物理像素、PPI&quot; class=&quot;headerlink&quot; title=&quot;CSS 像素、物理像素、PPI&quot;&gt;&lt;/a&gt;CSS 像素、物理像素、PPI&lt;/h3&gt;&lt;h4 id=&quot;CSS-像素&quot;&gt;&lt;a href=&quot;#CSS-像素&quot; class=&quot;headerlink&quot; title=&quot;CSS 像素&quot;&gt;&lt;/a&gt;CSS 像素&lt;/h4&gt;&lt;p&gt;&lt;code&gt;CSS像素&lt;/code&gt; 是 Web 编程的概念，本质上是为我们 Web 开发者创建的一个抽象结构，是相对的而不是绝对的。&lt;/p&gt;
+    <content type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;知识&quot;&gt;&lt;a href=&quot;#知识&quot; class=&quot;headerlink&quot; title=&quot;知识&quot;&gt;&lt;/a&gt;知识&lt;/h2&gt;&lt;h3 id=&quot;CSS-像素、物理像素、PPI&quot;&gt;&lt;a href=&quot;#CSS-像素、物理像素、PPI&quot; class=&quot;headerlink&quot; title=&quot;CSS 像素、物理像素、PPI&quot;&gt;&lt;/a&gt;CSS 像素、物理像素、PPI&lt;/h3&gt;&lt;h4 id=&quot;CSS-像素&quot;&gt;&lt;a href=&quot;#CSS-像素&quot; class=&quot;headerlink&quot; title=&quot;CSS 像素&quot;&gt;&lt;/a&gt;CSS 像素&lt;/h4&gt;&lt;p&gt;&lt;code&gt;CSS像素&lt;/code&gt; 是 Web 编程的概念，本质上是为我们 Web 开发者创建的一个抽象结构，是相对的而不是绝对的。&lt;/p&gt;
 &lt;h4 id=&quot;物理像素&quot;&gt;&lt;a href=&quot;#物理像素&quot; class=&quot;headerlink&quot; title=&quot;物理像素&quot;&gt;&lt;/a&gt;物理像素&lt;/h4&gt;&lt;p&gt;&lt;code&gt;物理像素&lt;/code&gt; 是物理概念，屏幕是由很多像素点组成的，各像素点通过发出不同颜色的光来呈现屏幕的色彩。它是物理的，随着设备生产出来就已经被确定下来了，比如 iPhone4 的屏幕分辨率为 640×960，就表示屏幕的横向有640个像素点，纵向有960个像素点。&lt;/p&gt;
 &lt;h4 id=&quot;PPI&quot;&gt;&lt;a href=&quot;#PPI&quot; class=&quot;headerlink&quot; title=&quot;PPI&quot;&gt;&lt;/a&gt;PPI&lt;/h4&gt;&lt;p&gt;PPI（Pixels Per Inch）表示单位面积上的物理像素点数目。分辨率可以表示屏幕包含的像素数目，但要想描述屏幕的显示质量，还需要知道屏幕尺寸，最后算出单位面积上的像素点数目。显然PPI越高，屏幕显示效果越细腻。&lt;/p&gt;
 &lt;p&gt;想要解释 &lt;code&gt;CSS像素&lt;/code&gt; 和 &lt;code&gt;设备像素&lt;/code&gt; 的关系也很简单，想想 PC 浏览器网页上的缩放。如果用户进行放大操作，一个拥有 &lt;code&gt;width: 300px&lt;/code&gt; 的元素将会占有屏幕越来越多的空间，以设备（物理）像素进行度量的话就会变得越来越宽。但对于 CSS 像素来说，无论怎样，宽度的值还是 &lt;code&gt;300px&lt;/code&gt;，缩放效果是通过尽可能的对 CSS 像素进行拉伸来实现的。&lt;/p&gt;
@@ -326,7 +624,8 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;知识&quot;&gt;&lt;a href=&quot;#知识&quot; class=&quot;headerlink&quot; title=&quot;知识&quot;&gt;&lt;/a&gt;知识&lt;/h2&gt;&lt;h3 id=&quot;CSS-像素、物理像素、PPI&quot;&gt;&lt;a href=&quot;#CSS-像素、物理像素、PPI&quot; class=&quot;headerlink&quot; ti
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;知识&quot;&gt;&lt;a href=&quot;#知识&quot; class=&quot;headerlink&quot; title=&quot;知识&quot;&gt;&lt;/a&gt;知识&lt;/h2&gt;&lt;h3 id=&quot;CSS-像素、物理像素、PPI&quot;&gt;&lt;a href=&quot;#CSS-像素、物理像素、PPI&quot; cla
     
     </summary>
     
@@ -344,9 +643,10 @@
     <link href="http://yoursite.com/2015/08/23/px-em-rem/"/>
     <id>http://yoursite.com/2015/08/23/px-em-rem/</id>
     <published>2015-08-23T02:50:48.000Z</published>
-    <updated>2016-04-23T03:46:15.000Z</updated>
+    <updated>2016-04-26T22:55:02.000Z</updated>
     
-    <content type="html">&lt;h3 id=&quot;有何差别&quot;&gt;&lt;a href=&quot;#有何差别&quot; class=&quot;headerlink&quot; title=&quot;有何差别&quot;&gt;&lt;/a&gt;有何差别&lt;/h3&gt;&lt;ul&gt;
+    <content type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;有何差别&quot;&gt;&lt;a href=&quot;#有何差别&quot; class=&quot;headerlink&quot; title=&quot;有何差别&quot;&gt;&lt;/a&gt;有何差别&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;px&lt;/code&gt; 在缩放页面时无法调整那些使用它作为单位的字体、按钮等的大小；&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;em&lt;/code&gt; 的值并不是固定的，会继承父级元素的字体大小，代表倍数；&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;rem&lt;/code&gt; 的值并不是固定的，始终是基于根元素 &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; 的，也代表倍数。&lt;/li&gt;
@@ -375,9 +675,89 @@
     
     <summary type="html">
     
-      &lt;h3 id=&quot;有何差别&quot;&gt;&lt;a href=&quot;#有何差别&quot; class=&quot;headerlink&quot; title=&quot;有何差别&quot;&gt;&lt;/a&gt;有何差别&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;px&lt;/code&gt; 在缩放页面时无法调整那些使用它作为单位的字体、按钮等的大小；&lt;/li&gt;
-&lt;li&gt;
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;有何差别&quot;&gt;&lt;a href=&quot;#有何差别&quot; class=&quot;headerlink&quot; title=&quot;有何差别&quot;&gt;&lt;/a&gt;有何差别&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;px&lt;/code&gt; 在缩放页面时无法调整那些使用它作为单位的字体
+    
+    </summary>
+    
+      <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
+    
+    
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS 权重</title>
+    <link href="http://yoursite.com/2015/04/27/css-specificity/"/>
+    <id>http://yoursite.com/2015/04/27/css-specificity/</id>
+    <published>2015-04-26T19:12:05.000Z</published>
+    <updated>2016-04-26T22:54:48.000Z</updated>
+    
+    <content type="html">&lt;!-- # CSS 权重 --&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;权重等级&quot;&gt;&lt;a href=&quot;#权重等级&quot; class=&quot;headerlink&quot; title=&quot;权重等级&quot;&gt;&lt;/a&gt;权重等级&lt;/h2&gt;&lt;p&gt;4 个等级的定义如下：&lt;/p&gt;
+&lt;p&gt;第一等：代表内联样式，如: &lt;code&gt;style=&amp;quot;&amp;quot;&lt;/code&gt;，权值为1000。&lt;br&gt;第二等：代表ID选择器，如：&lt;code&gt;#content&lt;/code&gt;，权值为100。&lt;br&gt;第三等：代表类，伪类和属性选择器，如 &lt;code&gt;.content&lt;/code&gt;，权值为10。&lt;br&gt;第四等：代表元素和伪元素选择器，如 &lt;code&gt;h2&lt;/code&gt;、&lt;code&gt;:before&lt;/code&gt; 与 &lt;code&gt;:after&lt;/code&gt;，权值为1。&lt;/p&gt;
+&lt;h2 id=&quot;权重值&quot;&gt;&lt;a href=&quot;#权重值&quot; class=&quot;headerlink&quot; title=&quot;权重值&quot;&gt;&lt;/a&gt;权重值&lt;/h2&gt;&lt;p&gt;从 0 开始，一个行内样式 +1000，一个 ID +100，一个属性选择器/class/伪类 +10，一个元素名/伪元素 +1。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;等级&lt;/th&gt;
+&lt;th&gt;例子&lt;/th&gt;
+&lt;th&gt;权重值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;行内样式&lt;/td&gt;
+&lt;td&gt;style&lt;/td&gt;
+&lt;td&gt;1000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ID&lt;/td&gt;
+&lt;td&gt;#nav&lt;/td&gt;
+&lt;td&gt;100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;属性选择器/class/伪类&lt;/td&gt;
+&lt;td&gt;:hover&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;元素名/伪元素&lt;/td&gt;
+&lt;td&gt;::after&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&quot;权重的基本规则&quot;&gt;&lt;a href=&quot;#权重的基本规则&quot; class=&quot;headerlink&quot; title=&quot;权重的基本规则&quot;&gt;&lt;/a&gt;权重的基本规则&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;相同的权重：以后面出现的选择器为最后规则&lt;/li&gt;
+&lt;li&gt;不同的权重，权重值高则生效&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;CSS-权重规则&quot;&gt;&lt;a href=&quot;#CSS-权重规则&quot; class=&quot;headerlink&quot; title=&quot;CSS 权重规则&quot;&gt;&lt;/a&gt;CSS 权重规则&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;包含更高权重选择器的一条规则拥有更高的权重。&lt;/li&gt;
+&lt;li&gt;ID 选择器的权重比属性选择器高。&lt;/li&gt;
+&lt;li&gt;带有上下文关系的选择器比单纯的元素选择器权重要高。&lt;/li&gt;
+&lt;li&gt;与元素 &lt;code&gt;挨得近&lt;/code&gt; 的规则生效，html 中规则的比 CSS 文件的优先。&lt;/li&gt;
+&lt;li&gt;最后定义的这条规则会覆盖上面与之冲突的规则。&lt;/li&gt;
+&lt;li&gt;无论多少个元素组成的选择器，都没有一个class选择器权重高。&lt;/li&gt;
+&lt;li&gt;通配符选择器也有权重，权重被认为是 0。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;永远都不要使用 &lt;code&gt;!important&lt;/code&gt;。&lt;/p&gt;
+&lt;h2 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://coding.smashingmagazine.com/2007/07/27/css-specificity-things-you-should-know&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;你应该知道的一些事情——CSS权重：原文&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.w3cplus.com/css/css-specificity-things-you-should-know.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;你应该知道的一些事情——CSS权重：译文&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.nowamagic.net/librarys/veda/detail/1606&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CSS选择器的权重计算规则&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;!-- # CSS 权重 --&gt;
     
     </summary>
     
@@ -390,12 +770,13 @@
   
   <entry>
     <title>HTML5 中 div、section、article 的区别</title>
-    <link href="http://yoursite.com/2015/04/23/HTML_structural_elements/"/>
-    <id>http://yoursite.com/2015/04/23/HTML_structural_elements/</id>
+    <link href="http://yoursite.com/2015/04/23/div-section-article/"/>
+    <id>http://yoursite.com/2015/04/23/div-section-article/</id>
     <published>2015-04-23T00:29:04.000Z</published>
-    <updated>2016-04-23T00:41:31.000Z</updated>
+    <updated>2016-04-26T22:55:17.000Z</updated>
     
-    <content type="html">&lt;h3 id=&quot;lt-div-gt&quot;&gt;&lt;a href=&quot;#lt-div-gt&quot; class=&quot;headerlink&quot; title=&quot;&amp;lt;div&amp;gt;&quot;&gt;&lt;/a&gt;&amp;lt;div&amp;gt;&lt;/h3&gt;&lt;blockquote&gt;
+    <content type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;lt-div-gt&quot;&gt;&lt;a href=&quot;#lt-div-gt&quot; class=&quot;headerlink&quot; title=&quot;&amp;lt;div&amp;gt;&quot;&gt;&lt;/a&gt;&amp;lt;div&amp;gt;&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;The &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; element has no special meaning at all.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;要点&lt;/strong&gt;：无语义，最后考虑。&lt;/p&gt;
@@ -448,8 +829,9 @@
     
     <summary type="html">
     
-      &lt;h3 id=&quot;lt-div-gt&quot;&gt;&lt;a href=&quot;#lt-div-gt&quot; class=&quot;headerlink&quot; title=&quot;&amp;lt;div&amp;gt;&quot;&gt;&lt;/a&gt;&amp;lt;div&amp;gt;&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;The &lt;code&gt;&amp;lt;div&amp;gt;&lt;/co
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;lt-div-gt&quot;&gt;&lt;a href=&quot;#lt-div-gt&quot; class=&quot;headerlink&quot; title=&quot;&amp;lt;div&amp;gt;&quot;&gt;&lt;/a&gt;&amp;lt;div&amp;gt;&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;The &lt;co
     
     </summary>
     
@@ -457,6 +839,51 @@
     
     
       <category term="html" scheme="http://yoursite.com/tags/html/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript 基本概念</title>
+    <link href="http://yoursite.com/2015/03/01/js-basic/"/>
+    <id>http://yoursite.com/2015/03/01/js-basic/</id>
+    <published>2015-03-01T07:24:08.000Z</published>
+    <updated>2016-04-26T22:55:56.000Z</updated>
+    
+    <content type="html">&lt;!-- # JavaScript 基本概念 --&gt;
+&lt;!-- @todo --&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;变量&quot;&gt;&lt;a href=&quot;#变量&quot; class=&quot;headerlink&quot; title=&quot;变量&quot;&gt;&lt;/a&gt;变量&lt;/h2&gt;&lt;h3 id=&quot;声明变量&quot;&gt;&lt;a href=&quot;#声明变量&quot; class=&quot;headerlink&quot; title=&quot;声明变量&quot;&gt;&lt;/a&gt;声明变量&lt;/h3&gt;&lt;p&gt;命名规定：&lt;code&gt;字母&lt;/code&gt; 、&lt;code&gt;_&lt;/code&gt; 或 &lt;code&gt;$&lt;/code&gt; 开头，后面可以包含 &lt;code&gt;数字&lt;/code&gt;。&lt;br&gt;&lt;code&gt;var&lt;/code&gt; 在函数外声明为全局变量，在函数内声明为局部变量。&lt;br&gt;&lt;code&gt;let&lt;/code&gt; 语句块作用域，在如 &lt;code&gt;if&lt;/code&gt;、&lt;code&gt;for&lt;/code&gt; 等语句块中声明即可以变成局部变量。&lt;/p&gt;
+&lt;h3 id=&quot;变量提升&quot;&gt;&lt;a href=&quot;#变量提升&quot; class=&quot;headerlink&quot; title=&quot;变量提升&quot;&gt;&lt;/a&gt;变量提升&lt;/h3&gt;&lt;p&gt;你可以引用稍后声明的变量，重点是变量的值不会被提升。&lt;br&gt;一个函数中所有var语句应尽可能地放在接近函数顶部的地方。&lt;/p&gt;
+&lt;h3 id=&quot;全局变量&quot;&gt;&lt;a href=&quot;#全局变量&quot; class=&quot;headerlink&quot; title=&quot;全局变量&quot;&gt;&lt;/a&gt;全局变量&lt;/h3&gt;&lt;p&gt;实际上是全局对象的属性，全局对象是 &lt;code&gt;window&lt;/code&gt;。&lt;br&gt;一般来说，在函数外用 &lt;code&gt;var&lt;/code&gt; 声明的变量为全局变量，在函数内部声明的为局部变量。&lt;br&gt;值得注意的是，不是用 &lt;code&gt;var&lt;/code&gt; 在函数内部声明的变量变成了全局变量。&lt;/p&gt;
+&lt;h2 id=&quot;常量&quot;&gt;&lt;a href=&quot;#常量&quot; class=&quot;headerlink&quot; title=&quot;常量&quot;&gt;&lt;/a&gt;常量&lt;/h2&gt;&lt;p&gt;终于可以声明常量(constant)了，使用 &lt;code&gt;const&lt;/code&gt;。&lt;br&gt;声明时必须被初始化为某个值。以后不可以通过赋值改变其值，也不可以在脚本运行时重新声明。&lt;br&gt;兼容性：Firefox 和 Chrome 很早就支持了，IE11 才支持。&lt;/p&gt;
+&lt;h2 id=&quot;数据类型&quot;&gt;&lt;a href=&quot;#数据类型&quot; class=&quot;headerlink&quot; title=&quot;数据类型&quot;&gt;&lt;/a&gt;数据类型&lt;/h2&gt;&lt;p&gt;JavaScript语言可以识别下面 &lt;strong&gt;7&lt;/strong&gt; 种不同类型的值：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;6 种是 &lt;code&gt;原型&lt;/code&gt; 的数据类型:&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Null&lt;/strong&gt;. 一个表明 null 值的特殊关键字。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Undefined&lt;/strong&gt;.  变量未定义时的属性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Boolean&lt;/strong&gt;.  布尔值，true 和 false.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Number&lt;/strong&gt;.  表示数字，例如： 42 或者 3.14159。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;String&lt;/strong&gt;.  表示字符串，例如：”Howdy”&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Symbol&lt;/strong&gt;. (ECMAScript 6)。它的实例是唯一且不可改变的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;以及 &lt;strong&gt;Object&lt;/strong&gt; 对象&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;!-- # JavaScript 基本概念 --&gt;
+&lt;!-- @todo --&gt;
+    
+    </summary>
+    
+      <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="tag2" scheme="http://yoursite.com/tags/tag2/"/>
     
   </entry>
   
@@ -487,6 +914,41 @@
     
     
       <category term="image-hosting" scheme="http://yoursite.com/tags/image-hosting/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo 主题 light 中添加多说评论</title>
+    <link href="http://yoursite.com/2015/01/30/duoshuo-commend-for-hexo/"/>
+    <id>http://yoursite.com/2015/01/30/duoshuo-commend-for-hexo/</id>
+    <published>2015-01-29T16:31:31.000Z</published>
+    <updated>2016-04-26T19:40:00.000Z</updated>
+    
+    <content type="html">&lt;p&gt;随着越来越多第三方 Hexo 主题的出现，很多主题都已经支持多说评论，而且简单地配置就能接通多说评论后台管理并匹配好文章标题和地址。但如果对不支持多说或者没有较好支持性的主题来说，往往要在此主题的源码中进行修改，并修改在多说获得的通用代码以匹配好文章标题和地址。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;下面内容针对的是 Hexo 自带主题 “light” 设置多说评论。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在多说获得通用代码&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;修改通用代码&lt;/p&gt;
+ &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;data-thread-key=&amp;quot;请将此处替换成文章在你的站点中的ID&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;改为：data-thread-key=&amp;quot;&amp;lt;%- item.path %&amp;gt;&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;data-title=&amp;quot;请替换成文章的标题&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;改为：data-title=&amp;quot;&amp;lt;%= item.title %&amp;gt;&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;data-url=&amp;quot;请替换成文章的网址&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;改为：data-url=&amp;quot;&amp;lt;%- item.permalink %&amp;gt;&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;或者：data-url=&amp;quot;&amp;lt;%- config.url %&amp;gt;&amp;lt;%- config.root%&amp;gt;&amp;lt;%- item.path %&amp;gt;&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;将通用代码粘贴到 &lt;code&gt;themes\light\layout\_partial\comment.ejs&lt;/code&gt; 里面，如下：&lt;/p&gt;
+ &lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;if&lt;/span&gt; ( &lt;span class=&quot;attr&quot;&gt;page.comments&lt;/span&gt;)&amp;#123; %&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;section&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;comment&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;通用代码&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;section&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;%&lt;/span&gt; &amp;#125; %&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;配置 _config.yml 文件&lt;br&gt; 打开根目录下 &lt;code&gt;_config.yml&lt;/code&gt; 文件，按以下配置：&lt;/p&gt;
+ &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;url: http://yoursite.com&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#配置域名，配置错误会使多说后台查看评论时，定位文章地址错误&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;root: /&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;permalink: :year/:month/:day/:title/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;随着越来越多第三方 Hexo 主题的出现，很多主题都已经支持多说评论，而且简单地配置就能接通多说评论后台管理并匹配好文章标题和地址。但如果对不支持多说或者没有较好支持性的主题来说，往往要在此主题的源码中进行修改，并修改在多说获得的通用代码以匹配好文章标题和地址。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
+    
     
   </entry>
   

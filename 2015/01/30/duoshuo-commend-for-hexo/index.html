@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Hexo 主题 light 中添加多说评论 · onestark</title><meta name="description" content="Hexo 主题 light 中添加多说评论 - Hewenwei"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/fav.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/fav.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">HOME</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">存档</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">关于</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">Hexo 主题 light 中添加多说评论</h1><div class="post-time">Jan 30, 2015</div><div class="post-content"><p>随着越来越多第三方 Hexo 主题的出现，很多主题都已经支持多说评论，而且简单地配置就能接通多说评论后台管理并匹配好文章标题和地址。但如果对不支持多说或者没有较好支持性的主题来说，往往要在此主题的源码中进行修改，并修改在多说获得的通用代码以匹配好文章标题和地址。</p>
+<a id="more"></a>
+<p>下面内容针对的是 Hexo 自带主题 “light” 设置多说评论。</p>
+<ol>
+<li>在多说获得通用代码</li>
+<li><p>修改通用代码</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">data-thread-key=&quot;请将此处替换成文章在你的站点中的ID&quot;</span><br><span class="line">改为：data-thread-key=&quot;&lt;%- item.path %&gt;&quot;</span><br><span class="line"></span><br><span class="line">data-title=&quot;请替换成文章的标题&quot;</span><br><span class="line">改为：data-title=&quot;&lt;%= item.title %&gt;&quot;</span><br><span class="line"></span><br><span class="line">data-url=&quot;请替换成文章的网址&quot;</span><br><span class="line">改为：data-url=&quot;&lt;%- item.permalink %&gt;&quot;</span><br><span class="line">或者：data-url=&quot;&lt;%- config.url %&gt;&lt;%- config.root%&gt;&lt;%- item.path %&gt;&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将通用代码粘贴到 <code>themes\light\layout\_partial\comment.ejs</code> 里面，如下：</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> ( <span class="attr">page.comments</span>)&#123; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">id</span>=<span class="string">"comment"</span>&gt;</span></span><br><span class="line">通用代码</span><br><span class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置 _config.yml 文件<br> 打开根目录下 <code>_config.yml</code> 文件，按以下配置：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">url: http://yoursite.com</span><br><span class="line">#配置域名，配置错误会使多说后台查看评论时，定位文章地址错误</span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</div></article></div></section><footer><div class="paginator"><a href="/2015/01/31/sina-img-bed/" class="prev">上一篇</a><a href="/2015/01/28/hexo-tutorial/" class="next">下一篇</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'onestark';
+var disqus_identifier = '2015/01/30/duoshuo-commend-for-hexo/';
+var disqus_title = 'Hexo 主题 light 中添加多说评论';
+var disqus_url = 'http://yoursite.com/2015/01/30/duoshuo-commend-for-hexo/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//onestark.disqus.com/count.js" async></script><div class="copyright"><p>© 2015 - 2016 <a href="http://yoursite.com">Hewenwei</a>, unless otherwise noted.</p></div></footer></div><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script></body></html>

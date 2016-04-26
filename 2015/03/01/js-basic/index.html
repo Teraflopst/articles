@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> JavaScript 基本概念 · onestark</title><meta name="description" content="JavaScript 基本概念 - Hewenwei"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/fav.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/fav.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">HOME</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">存档</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">关于</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">JavaScript 基本概念</h1><div class="post-time">Mar 1, 2015</div><div class="post-content"><!-- # JavaScript 基本概念 -->
+<!-- @todo -->
+<a id="more"></a>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h3 id="声明变量"><a href="#声明变量" class="headerlink" title="声明变量"></a>声明变量</h3><p>命名规定：<code>字母</code> 、<code>_</code> 或 <code>$</code> 开头，后面可以包含 <code>数字</code>。<br><code>var</code> 在函数外声明为全局变量，在函数内声明为局部变量。<br><code>let</code> 语句块作用域，在如 <code>if</code>、<code>for</code> 等语句块中声明即可以变成局部变量。</p>
+<h3 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h3><p>你可以引用稍后声明的变量，重点是变量的值不会被提升。<br>一个函数中所有var语句应尽可能地放在接近函数顶部的地方。</p>
+<h3 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h3><p>实际上是全局对象的属性，全局对象是 <code>window</code>。<br>一般来说，在函数外用 <code>var</code> 声明的变量为全局变量，在函数内部声明的为局部变量。<br>值得注意的是，不是用 <code>var</code> 在函数内部声明的变量变成了全局变量。</p>
+<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><p>终于可以声明常量(constant)了，使用 <code>const</code>。<br>声明时必须被初始化为某个值。以后不可以通过赋值改变其值，也不可以在脚本运行时重新声明。<br>兼容性：Firefox 和 Chrome 很早就支持了，IE11 才支持。</p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>JavaScript语言可以识别下面 <strong>7</strong> 种不同类型的值：</p>
+<ul>
+<li>6 种是 <code>原型</code> 的数据类型:<ul>
+<li><strong>Null</strong>. 一个表明 null 值的特殊关键字。</li>
+<li><strong>Undefined</strong>.  变量未定义时的属性。</li>
+<li><strong>Boolean</strong>.  布尔值，true 和 false.</li>
+<li><strong>Number</strong>.  表示数字，例如： 42 或者 3.14159。</li>
+<li><strong>String</strong>.  表示字符串，例如：”Howdy”</li>
+<li><strong>Symbol</strong>. (ECMAScript 6)。它的实例是唯一且不可改变的。</li>
+</ul>
+</li>
+<li>以及 <strong>Object</strong> 对象</li>
+</ul>
+</div></article></div></section><footer><div class="paginator"><a href="/2015/04/23/div-section-article/" class="prev">上一篇</a><a href="/2015/01/31/sina-img-bed/" class="next">下一篇</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'onestark';
+var disqus_identifier = '2015/03/01/js-basic/';
+var disqus_title = 'JavaScript 基本概念';
+var disqus_url = 'http://yoursite.com/2015/03/01/js-basic/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//onestark.disqus.com/count.js" async></script><div class="copyright"><p>© 2015 - 2016 <a href="http://yoursite.com">Hewenwei</a>, unless otherwise noted.</p></div></footer></div><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script></body></html>

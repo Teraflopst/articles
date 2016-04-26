@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Git Handbook · onestark</title><meta name="description" content="Git Handbook - Hewenwei"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/fav.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/fav.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">HOME</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">存档</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">关于</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">Git Handbook</h1><div class="post-time">Mar 8, 2016</div><div class="post-content"><!-- # Git Handbook -->
+<!-- @todo -->
+<a id="more"></a>
+<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>在 Git 的世界里，有三个地方：<code>工作目录</code>、<code>暂存区</code>、<code>Git仓库</code>。</p>
+<ul>
+<li>工作目录（working directory）：你看得见的、就是平时使用的文件夹/目录</li>
+<li>暂存区（staging area）：保存了下次将提交的文件列表信息。</li>
+<li>Git仓库（Git directory）：保存版本数据的地方。这是最重要的。</li>
+</ul>
+<h4 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h4><p>对应地，工作目录中的文件就有三种状态：已修改、已暂存、已提交</p>
+<ul>
+<li>已修改（modified）：工作目录下的文件每次修改后，就处于已修改状态；</li>
+<li>和已暂存（staged）：把修改后文件提交到暂存区后的状态，反之称 unstaged；</li>
+<li>已提交（committed）：把修改提交到版本数据库后的状态。</li>
+</ul>
+<p>另外要注意的一点是，以上三种状态均建立在文件已被 Git 追踪的前提下。在工作目录新建一个文件，此时文件的状态为未追踪（untracked）。<br>删除被追踪的文件后，可以查看到的状态是已删除（deleted）</p>
+<h4 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h4><p>基本的 Git 工作流程如下：</p>
+<ol>
+<li>在工作目录中修改文件；</li>
+<li>暂存文件，将文件的快照放入暂存区域；</li>
+<li>提交更新，找到暂存区域的文件，将快照永久性存储到 Git 仓库目录。</li>
+</ol>
+<h2 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h2><h4 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h4><p>选择一个合适的地方，创建一个空目录，或者使用命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir learngit</span><br><span class="line">$ <span class="built_in">cd</span> learngit</span><br><span class="line">$ <span class="built_in">pwd</span></span><br></pre></td></tr></table></figure>
+<p><code>pwd</code> 命令只是用于显示当前目录。</p>
+<h4 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a>初始化仓库</h4><p>把这个目录变成 <code>Git</code> 可以管理的仓库：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
+<p>可以发现当前目录下多了一个 <code>.git</code> 的目录，这个目录是 <code>Git</code> 来跟踪管理版本库的，不要手动修改/删除这个目录里面的文件。</p>
+<p><code>ls -a</code> 命令就可以列出包括隐藏文件在内的文件。</p>
+<h2 id="暂存"><a href="#暂存" class="headerlink" title="暂存"></a>暂存</h2><h4 id="添加修改到暂存区"><a href="#添加修改到暂存区" class="headerlink" title="添加修改到暂存区"></a>添加修改到暂存区</h4><p>暂存区就好像一个码头，先把货物运到这里，再往目的地（版本库）运输。<br>现在编写一个 <code>README.md</code> 文件，放到 <code>learngit</code> 目录/子目录下，或者使用命令新建：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ touch README.md</span><br></pre></td></tr></table></figure>
+<p>用编辑器打开添加点内容，或在终端中编辑：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$nano</span> README.md</span><br></pre></td></tr></table></figure>
+<p>把修改的文件暂存，用于提交：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add README.md</span><br></pre></td></tr></table></figure>
+<p>可以一次性添加所有同类型文件的修改：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add <span class="string">'*.md'</span></span><br></pre></td></tr></table></figure>
+<p>也可以一次性添加所有文件的修改：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add .</span><br></pre></td></tr></table></figure>
+<h2 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h2><h4 id="向版本库提交修改"><a href="#向版本库提交修改" class="headerlink" title="向版本库提交修改"></a>向版本库提交修改</h4><p>每次向版本库提交修改最好添加提交信息，<code>first commit</code> 就是一次提交的信息。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m <span class="string">"first commit"</span></span><br></pre></td></tr></table></figure>
+<h2 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h2><h4 id="查看文件状态"><a href="#查看文件状态" class="headerlink" title="查看文件状态"></a>查看文件状态</h4><p>显示工作目录下文件所处状态，这时经常用到的命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br></pre></td></tr></table></figure>
+<h4 id="查看文件内容"><a href="#查看文件内容" class="headerlink" title="查看文件内容"></a>查看文件内容</h4><p>显示工作区文件与上次提交版本的内容有什么不同。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git diff README.md</span><br></pre></td></tr></table></figure>
+<h4 id="查看提交记录"><a href="#查看提交记录" class="headerlink" title="查看提交记录"></a>查看提交记录</h4><p>显示从最近到最远的提交日志，可查看到每次提交的 40 位 <code>commit id</code>（版本号）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
+<h4 id="查看命令记录"><a href="#查看命令记录" class="headerlink" title="查看命令记录"></a>查看命令记录</h4><p><code>Git</code> 提供了一个命令用来查看你每一次命令的记录：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reflog</span><br></pre></td></tr></table></figure>
+<p><code>重返未来</code>：假如你回退到某个版本，这个版本之后的修改都会被抛弃（其实这很有道理），再想恢复到这个版本之后的版本，这个命令可以查看到所需的 <strong>未来</strong> 版本号。</p>
+<h2 id="撤销、回退"><a href="#撤销、回退" class="headerlink" title="撤销、回退"></a>撤销、回退</h2><p>撤消文件修改的暂存。可以把添加到暂存区的修改撤销掉（unstage）。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset HEAD &lt;file&gt;</span><br></pre></td></tr></table></figure>
+<p>撤消对工作目录文件的修改。此命令会使用暂存区中的内容替换掉你的工作目录中的文件。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -- &lt;file&gt;</span><br></pre></td></tr></table></figure>
+<p>丢弃在本地的所有改动与提交</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard HEAD</span><br></pre></td></tr></table></figure>
+<p>回退到某个版本，并抛弃该版本之后的修改</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard &lt;commit id&gt;</span><br></pre></td></tr></table></figure>
+<p>commit id 可以换成：</p>
+<ul>
+<li><code>HEAD^</code> 上一个版本，</li>
+<li><code>HEAD^^</code> 上上一个版本</li>
+<li><code>HEAD~100</code> 上100个版本</li>
+</ul>
+<p>注意：<code>Git</code> 使用 <code>HEAD</code> 指向当前版本。</p>
+<h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><p>Git 在本地就已经可以实现版本管理的功能，远程仓库有别于存储在你硬盘里的版本库，它存储在网络服务器中，它的发明是为了 Git 的协作和防止本地数据的丢失。</p>
+<p>远端服务器上的仓库，克隆一份来本地：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> username@host:/path/to/repository</span><br></pre></td></tr></table></figure>
+<p>其实 <code>clone</code> 命令也可以拷贝本地的仓库，但最常用的还是从远程服务器拷贝。</p>
+<h3 id="推送"><a href="#推送" class="headerlink" title="推送"></a>推送</h3><p>把本地的修改提交到远程仓库的操作叫做推送（push）。要推送的前提是，必须给当前工作目录指定远程仓库的地址。<br>使用命令连接一个远程仓库：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add origin &lt;server&gt;</span><br></pre></td></tr></table></figure>
+<p>这里的 <code>origin</code> 可以是其它你想到的名字，它只不过是用来标识远程仓库的别名而已。但是最常用这个一看就了解的名字。使用 <code>$ git remote</code> 命令可以列出已连接的远程仓库的别名，加 <code>-v</code> 参数可以查看具体地址：<code>$ git remote -v</code></p>
+<p>推送命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
+<p>把本地分支 master 推送到名为 origin 的远程仓库的。可以把 master 换成你想要推送的任何分支。<br>注：<code>-u</code> 参数为第一次提交使用，作用是把本地的master分支和远程的master分支关联起来，简化命令，之后提交不需要这个参数。</p>
+</div></article></div></section><footer><div class="paginator"><a href="/2016/04/07/get-dropbox-external-link/" class="prev">上一篇</a><a href="/2016/03/08/common-cmd-line/" class="next">下一篇</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'onestark';
+var disqus_identifier = '2016/03/08/git-handbook/';
+var disqus_title = 'Git Handbook';
+var disqus_url = 'http://yoursite.com/2016/03/08/git-handbook/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//onestark.disqus.com/count.js" async></script><div class="copyright"><p>© 2015 - 2016 <a href="http://yoursite.com">Hewenwei</a>, unless otherwise noted.</p></div></footer></div><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script></body></html>
