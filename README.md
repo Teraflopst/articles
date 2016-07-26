@@ -5,7 +5,7 @@
 
 点此阅读：
 
-[![](./btn_read.png)][issue_link]
+[![](./btn_read.svg)][issue_link]
 
 
 ## 作者
