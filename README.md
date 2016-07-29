@@ -1,16 +1,30 @@
-## 博客
-博文均以 Issue 的形式发布。
+# 关于
 
-坚持写作，专注内容。
+> 坚持写作，专注内容。
 
-点此阅读：
-
-[![](./btn_read.png)][issue_link]
+GitHub 中的文章均以 `Issue` 的形式发布。点此阅读：[![][readme_badge]][issue_link]
 
 
-## 作者
-- [【segmentfault】文章](https://segmentfault.com/blog/onestark)
-- [【简书】主页](http://www.jianshu.com/users/kxLbyQ/latest_articles)
+## 写作 &nbsp; [![](./img/github.png)][issue_link]  [![](./img/segmentfault.png)][segmentfault]  [![](./img/jianshu.png)][jianshu]
+
+- [【GitHub】博客][issue_link]
+- [【SegmentFault】文章][segmentfault]
+- [【简书】文章][jianshu]
 
 
-[issue_link]: https://github.com/onestark/onestark.github.io/issues
+## 作者 &nbsp; ![](./img/favicon.png)
+
+```javascript
+var OneStark = {
+    name: "He Wenwei",
+    email: "wentgd@gmail.com",
+    homepage: "http://onestark.github.io",
+    github: "https://github.com/onestark"
+}
+```
+
+
+[issue_link]: https://github.com/onestark/blog/issues
+[readme_badge]: https://img.shields.io/badge/%E5%8D%9A%E5%AE%A2-Issues-brightgreen.svg
+[jianshu]: http://www.jianshu.com/users/kxLbyQ/latest_articles
+[segmentfault]: https://segmentfault.com/blog/onestark
