@@ -12,14 +12,14 @@ GitHub 中的文章均以 `Issue` 的形式发布。点此阅读：[![][readme_b
 - [【简书】文章][jianshu]
 
 
-## 作者 &nbsp; [![](./img/fav.png)][issue_link]
+## 作者 &nbsp; [![](./img/fav.png)](https://github.com/onestark)
 
 ```javascript
 var OneStark = {
     name: "He Wenwei",
     email: "wentgd@gmail.com",
-    homepage: "http://onestark.github.io",
-    github: "https://github.com/onestark"
+    github: "https://github.com/onestark",
+    homepage: "https://onestark.github.io"
 }
 ```
 
