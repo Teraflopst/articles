@@ -12,7 +12,7 @@ GitHub 中的文章均以 `Issue` 的形式发布。点此阅读：[![][readme_b
 - [【简书】文章][jianshu]
 
 
-## 作者 &nbsp; ![](./img/favicon.png)
+## 作者 &nbsp; ![](./img/fav.png)
 
 ```javascript
 var OneStark = {
