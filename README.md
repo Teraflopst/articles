@@ -20,7 +20,7 @@ var OneStark = {
     email: "wentgd@gmail.com",
     github: "https://github.com/onestark",
     homepage: "https://onestark.github.io"
-}
+};
 ```
 
 
