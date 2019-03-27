@@ -12,19 +12,19 @@ GitHub 中的文章均以 `Issue` 的形式发布。点此阅读：[![][readme_b
 - [【简书】文章][jianshu]
 
 
-## 作者 &nbsp; [![](./img/fav.png)](https://github.com/onestark)
+## 作者 &nbsp; [![](./img/fav.png)](https://github.com/teraflopst)
 
 ```javascript
-var OneStark = {
+var Teraflopst = {
     name: "He Wenwei",
     email: "wentgd@gmail.com",
-    github: "https://github.com/onestark",
-    homepage: "https://onestark.github.io"
+    github: "https://github.com/teraflopst",
+    homepage: "https://teraflopst.github.io"
 };
 ```
 
 
-[issue_link]: https://github.com/onestark/blog/issues
+[issue_link]: https://github.com/teraflopst/blog/issues
 [readme_badge]: https://img.shields.io/badge/%E5%8D%9A%E5%AE%A2-Issues-brightgreen.svg
 [jianshu]: http://www.jianshu.com/users/kxLbyQ/latest_articles
 [segmentfault]: https://segmentfault.com/blog/onestark
