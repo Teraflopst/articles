@@ -3,7 +3,7 @@
 文章和笔记均以 GitHub Issue 的形式发布。[![点此阅读][github_articles_badge]][github_articles]
 
 
-## 发布
+## Mirror
 
 - [GitHub articles][github_articles]
 - [思否 SegmentFault][segmentfault_blog]
@@ -16,8 +16,7 @@
 var Teraflopst = {
     name: "He Wenwei",
     email: "wentgd@gmail.com",
-    github: "https://github.com/teraflopst",
-    homepage: "https://teraflopst.github.io"
+    github: "https://github.com/teraflopst"
 };
 ```
 
