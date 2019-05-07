@@ -1,18 +1,16 @@
 # 关于
 
-> 坚持写作，专注内容。
-
-GitHub 中的文章均以 `Issue` 的形式发布。点此阅读：[![][readme_badge]][issue_link]
+文章和笔记均以 GitHub Issue 的形式发布。[![点此阅读][github_articles_badge]][github_articles]
 
 
-## 写作 &nbsp; [![](./img/github.png)][issue_link]  [![](./img/segmentfault.png)][segmentfault]  [![](./img/jianshu.png)][jianshu]
+## 发布
 
-- [【GitHub】博客][issue_link]
-- [【SegmentFault】文章][segmentfault]
-- [【简书】文章][jianshu]
+- [GitHub articles][github_articles]
+- [思否 SegmentFault][segmentfault_blog]
+- [简书 Jianshu][jianshu_articles]
 
 
-## 作者 &nbsp; [![](./img/fav.png)](https://github.com/teraflopst)
+## 关于我
 
 ```javascript
 var Teraflopst = {
@@ -24,7 +22,8 @@ var Teraflopst = {
 ```
 
 
-[issue_link]: https://github.com/teraflopst/blog/issues
-[readme_badge]: https://img.shields.io/badge/%E5%8D%9A%E5%AE%A2-Issues-brightgreen.svg
-[jianshu]: http://www.jianshu.com/users/kxLbyQ/latest_articles
-[segmentfault]: https://segmentfault.com/blog/onestark
+[github_articles]: https://github.com/Teraflopst/articles/issues
+[jianshu_articles]: http://www.jianshu.com/users/kxLbyQ/latest_articles
+[segmentfault_blog]: https://segmentfault.com/blog/teraflopst
+
+[github_articles_badge]: https://img.shields.io/badge/%E9%98%85%E8%AF%BB-issues-brightgreen.svg?style=flat-square
