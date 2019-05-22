@@ -22,10 +22,10 @@ Proxy:
     password: 't.me/SSRSUB'
   - name: ss3
     type: ss
-    server: 3.1.80.143
-    port: '80'
-    cipher: aes-128-ctr
-    password: xiao
+    server: 45.79.94.57
+    port: '443'
+    cipher: aes-256-cfb
+    password: 9d6cceaa373bf2c8acb22e60b6a58be6
   - name: Namaho_JP
     type: ss
     server: jp.ohmyv2.win
@@ -49,7 +49,7 @@ Proxy:
     type: vmess
     server: www.kernels.bid
     port: 443
-    uuid: e5fb9bec-b77f-a4f6-d234-dd2c3034402d
+    uuid: 23872440-74c6-5bb2-f03b-fd28170c9f9f
     alterId: 0
     cipher: auto
     network: ws
