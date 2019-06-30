@@ -8,76 +8,107 @@ external-controller: '127.0.0.1:9090'
 secret: ''
 
 Proxy:
-  - name: 10086ss
+  - name: ss1
     type: ss
-    server: 10086ss.ml
-    port: '9999'
-    cipher: aes-256-gcm
-    password: '20191920'
+    server: 45.82.166.39
+    port: '2133'
+    cipher: aes-256-cfb
+    password: 'www.eieee.cn'
   - name: ss2
     type: ss
-    server: 185.243.57.221
-    port: '80'
-    cipher: rc4-md5
-    password: 't.me/SSRSUB'
-  - name: ss3
-    type: ss
-    server: 45.79.94.57
+    server: 5.183.177.126
     port: '443'
     cipher: aes-256-cfb
-    password: 9d6cceaa373bf2c8acb22e60b6a58be6
-  - name: Namaho_JP
+    password: 'www.xbvpn.com'
+  - name: ss3
     type: ss
-    server: jp.ohmyv2.win
+    server: 172.104.70.233
+    port: '8097'
+    cipher: aes-256-cfb
+    password: 'eIW0Dnk69454e6nSwuspv9DmS201tQ0D'
+
+  - name: nama_jp_81
+    type: ss
+    server: jp.v234.xyz
+    port: '81'
+    cipher: CHACHA20-IETF-POLY1305
+    password: namaho.org+LNVTU
+  - name: nama_us_81
+    type: ss
+    server: us.v234.xyz
+    port: '81'
+    cipher: CHACHA20-IETF-POLY1305
+    password: namaho.org+LNVTU
+  - name: nama_jp
+    type: ss
+    server: jp.v234.xyz
     port: '16741'
     cipher: aes-128-gcm
     password: namahoYOEGM
-  - name: Namaho_US
+  - name: nama_us
     type: ss
-    server: us.ohmyv2.win
+    server: us.v234.xyz
     port: '16741'
     cipher: aes-128-gcm
     password: namahoYOEGM
-  - name: Namaho_Vmess
+  - name: nama_vmess
     type: vmess
-    server: vus.ohmyv2.win
+    server: jp.v234.xyz
     port: 82
     uuid: 03042ad7-6316-46a0-8473-65768b0f1fb2
     alterId: 0
     cipher: auto
-  - name: FSS_Vmess
+
+  - name: fss_vmess
     type: vmess
     server: www.kernels.bid
     port: 443
-    uuid: 23872440-74c6-5bb2-f03b-fd28170c9f9f
+    uuid: 1429da7b-c039-d904-0109-8f029fdeee21
     alterId: 0
     cipher: auto
     network: ws
     ws-path: /ws
     tls: true
+  - name: fss_vmess_2
+    type: vmess
+    server: www.kernels.bid
+    port: 80
+    uuid: 293ac703-1292-c757-53ba-afee2caadf8c
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-path: /ws
+    tls: false
+
 Proxy Group:
   - name: AUTO
     proxies:
-      - 10086ss
+      - ss1
       - ss2
       - ss3
-      - Namaho_JP
-      - Namaho_US
-      - Namaho_Vmess
-      - FSS_Vmess
+      - nama_jp_81
+      - nama_us_81
+      - nama_jp
+      - nama_us
+      - nama_vmess
+      - fss_vmess
+      - fss_vmess_2
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
     interval: '600'
   - name: Proxy
     type: select
     proxies:
-      - 10086ss
+      - ss1
       - ss2
       - ss3
-      - Namaho_JP
-      - Namaho_US
-      - Namaho_Vmess
-      - FSS_Vmess
+      - nama_jp_81
+      - nama_us_81
+      - nama_jp
+      - nama_us
+      - nama_vmess
+      - fss_vmess
+      - fss_vmess_2
       - AUTO
   - name: FnProxy
     proxies:
@@ -94,7 +125,10 @@ Rule:
   # 网络优化
   - DOMAIN,tencent.com,DIRECT
   - DOMAIN,gist.github.com,Proxy
-  
+  - DOMAIN,dmm.co.jp,Proxy
+  - DOMAIN-SUFFIX,cc3001.dmm.co.jp,DIRECT
+
+
   # Apple 服务优化
   - DOMAIN,gs.apple.com,Proxy
   - DOMAIN-SUFFIX,mzstatic.com,DIRECT
@@ -567,7 +601,6 @@ Rule:
   - DOMAIN-SUFFIX,disq.us,Proxy
   - DOMAIN-SUFFIX,disqus.com,Proxy
   - DOMAIN-SUFFIX,disquscdn.com,Proxy
-  - DOMAIN-SUFFIX,dmm.co.jp,Proxy
   - DOMAIN-SUFFIX,dnsimple.com,Proxy
   - DOMAIN-SUFFIX,docker.com,Proxy
   - DOMAIN-SUFFIX,doub.io,Proxy
