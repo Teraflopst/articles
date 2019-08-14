@@ -32,6 +32,12 @@ Proxy:
     port: '8097'
     cipher: aes-256-cfb
     password: 'eIW0Dnk69454e6nSwuspv9DmS201tQ0D'
+  - name: ss4
+    type: ss
+    server: 45.56.83.105
+    port: '8099'
+    cipher: aes-256-cfb
+    password: 'eIW0Dnk69454e6nSwuspv9DmS201tQ0D'
 
   - name: nama_jp_81
     type: ss
@@ -92,6 +98,7 @@ Proxy Group:
       - ss1
       - ss2
       - ss3
+      - ss4
       - nama_jp_81
       - nama_us_81
       - nama_jp
@@ -108,6 +115,7 @@ Proxy Group:
       - ss1
       - ss2
       - ss3
+      - ss4
       - nama_jp_81
       - nama_us_81
       - nama_jp
@@ -129,10 +137,13 @@ Rule:
   - DOMAIN,coderunnerapp.com,REJECT
   
   # 网络优化
+  - DOMAIN,douban.fm,DIRECT
   - DOMAIN,tencent.com,DIRECT
   - DOMAIN,gist.github.com,Proxy
   - DOMAIN,dmm.co.jp,Proxy
   - DOMAIN-SUFFIX,cc3001.dmm.co.jp,DIRECT
+  - DOMAIN-SUFFIX,xclient.info,DIRECT
+  - DOMAIN-SUFFIX,nvshens.net,DIRECT
 
 
   # Apple 服务优化
@@ -1035,7 +1046,6 @@ Rule:
   - DOMAIN-SUFFIX,wsj.net,Proxy
   - DOMAIN-SUFFIX,wwitv.com,Proxy
   - DOMAIN-SUFFIX,xanga.com,Proxy
-  - DOMAIN-SUFFIX,xclient.info,Proxy
   - DOMAIN-SUFFIX,xda-developers.com,Proxy
   - DOMAIN-SUFFIX,xeeno.com,Proxy
   - DOMAIN-SUFFIX,xiti.com,Proxy
