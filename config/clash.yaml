@@ -10,19 +10,25 @@ secret: ''
 Proxy:
   - name: ss1
     type: ss
-    server: 45.82.166.39
-    port: '2133'
-    cipher: aes-256-cfb
-    password: 'www.eieee.cn'
-  - name: ss2
-    type: ss
     server: 5.183.177.126
     port: '443'
     cipher: aes-256-cfb
     password: 'www.xbvpn.com'
+  - name: ss2
+    type: ss
+    server: 45.77.234.231
+    port: '8099'
+    cipher: aes-256-cfb
+    password: 'eIW0Dnk69454e6nSwuspv9DmS201tQ0D'
   - name: ss3
     type: ss
-    server: 172.104.70.233
+    server: 45.56.89.181
+    port: '8099'
+    cipher: aes-256-cfb
+    password: 'eIW0Dnk69454e6nSwuspv9DmS201tQ0D'
+  - name: ss4
+    type: ss
+    server: 23.239.20.120
     port: '8097'
     cipher: aes-256-cfb
     password: 'eIW0Dnk69454e6nSwuspv9DmS201tQ0D'
@@ -63,7 +69,7 @@ Proxy:
     type: vmess
     server: www.kernels.bid
     port: 443
-    uuid: 1429da7b-c039-d904-0109-8f029fdeee21
+    uuid: f311d9a3-227d-185f-4fc4-3e797156d1c1
     alterId: 0
     cipher: auto
     network: ws
@@ -73,7 +79,7 @@ Proxy:
     type: vmess
     server: www.kernels.bid
     port: 80
-    uuid: 293ac703-1292-c757-53ba-afee2caadf8c
+    uuid: 32f1259c-d4d3-3ce3-8acb-8844b0c831d6
     alterId: 0
     cipher: auto
     network: ws
