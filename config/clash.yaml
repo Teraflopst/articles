@@ -32,12 +32,6 @@ Proxy:
     port: '8097'
     cipher: aes-256-cfb
     password: 'eIW0Dnk69454e6nSwuspv9DmS201tQ0D'
-  - name: ss4
-    type: ss
-    server: 45.56.83.105
-    port: '8099'
-    cipher: aes-256-cfb
-    password: 'eIW0Dnk69454e6nSwuspv9DmS201tQ0D'
 
   - name: nama_jp_81
     type: ss
