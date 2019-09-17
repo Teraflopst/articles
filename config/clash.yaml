@@ -10,33 +10,33 @@ secret: ''
 Proxy:
   - name: fss-a1
     type: ss
-    server: 5.183.177.69
-    port: '443'
-    cipher: aes-256-cfb
-    password: 'www.xbvpn.com'
+    server: 96.8.121.149
+    port: '65201'
+    cipher: chacha20-ietf
+    password: 'xiaofeiji520'
   - name: fss-a2
     type: ss
-    server: 46.29.162.124
-    port: '1026'
-    cipher: rc4-md5
-    password: '91vpn.cf'
+    server: a.qlolp.ml
+    port: '233'
+    cipher: aes-128-ctr
+    password: '12321'
 
   - name: fss-b1
     type: ss
-    server: 172.104.86.60
+    server: 172.104.131.24
     port: '8099'
     cipher: aes-256-cfb
     password: 'eIW0Dnk69454e6nSwuspv9DmS201tQ0D'
   - name: fss-b2
     type: ss
-    server: 139.162.25.148
+    server: 45.56.80.191
     port: '8097'
     cipher: aes-256-cfb
     password: 'eIW0Dnk69454e6nSwuspv9DmS201tQ0D'
   - name: fss-b3
     type: ss
-    server: 45.77.234.231
-    port: '8099'
+    server: 69.30.201.82
+    port: '8097'
     cipher: aes-256-cfb
     password: 'eIW0Dnk69454e6nSwuspv9DmS201tQ0D'
 
@@ -56,9 +56,9 @@ Proxy:
   - name: nama_jp
     type: ss
     server: jp.v234.xyz
-    port: '16741'
-    cipher: aes-128-gcm
-    password: namahoYOEGM
+    port: '81'
+    cipher: CHACHA20-IETF-POLY1305
+    password: namaho.org+LNVTU
   - name: nama_us
     type: ss
     server: us.v234.xyz
@@ -84,12 +84,30 @@ Proxy:
     type: vmess
     server: www.kernels.bid
     port: 443
-    uuid: 5314d291-0127-1859-aa36-38a08b576753
+    uuid: 805f8040-7f09-575e-4323-c7269778ea72
     alterId: 0
     cipher: auto
     network: ws
     ws-path: /ws
     tls: true
+  - name: fss_vmess_2
+    type: vmess
+    server: www.kernels.bid
+    port: 80
+    uuid: 502e9d14-8d8c-ecf2-ecda-362e8acddbff
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-path: /ws
+    tls: false
+  - name: fss_vmess_3
+    type: vmess
+    server: auto.freev2.top
+    port: 39805
+    uuid: 4fe45663-0855-44b8-b847-66bda35010e9
+    alterId: 1
+    cipher: auto
+    tls: false
 
 Proxy Group:
   - name: AUTO
@@ -106,6 +124,8 @@ Proxy Group:
       - nama_v_jp
       - nama_v_vus
       - fss_vmess
+      - fss_vmess_2
+      - fss_vmess_3
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
     interval: '600'
@@ -124,6 +144,8 @@ Proxy Group:
       - nama_v_jp
       - nama_v_vus
       - fss_vmess
+      - fss_vmess_2
+      - fss_vmess_3
       - AUTO
   - name: FnProxy
     proxies:
