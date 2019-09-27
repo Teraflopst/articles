@@ -1,78 +1,59 @@
 port: 7890
 socks-port: 7891
 redir-port: 7892
-allow-lan: false
+allow-lan: true
 mode: Rule
 log-level: info
 external-controller: '127.0.0.1:9090'
 secret: ''
 
 Proxy:
-  - name: fss-a1
+  - name: FreeS_A1
     type: ss
-    server: 96.8.121.149
-    port: '65201'
-    cipher: chacha20-ietf
-    password: 'xiaofeiji520'
-  - name: fss-a2
-    type: ss
-    server: a.qlolp.ml
-    port: '233'
-    cipher: aes-128-ctr
-    password: '12321'
-
-  - name: fss-b1
-    type: ss
-    server: 172.104.131.24
-    port: '8099'
+    server: 0ef76f2f.andns.xyz
+    port: '31066'
     cipher: aes-256-cfb
-    password: 'eIW0Dnk69454e6nSwuspv9DmS201tQ0D'
-  - name: fss-b2
+    password: 'Ykqye8NV'
+  - name: FreeS_A2
     type: ss
-    server: 45.56.80.191
-    port: '8097'
+    server: 5b186651.andns.xyz
+    port: '31066'
     cipher: aes-256-cfb
-    password: 'eIW0Dnk69454e6nSwuspv9DmS201tQ0D'
-  - name: fss-b3
+    password: 'Ykqye8NV'
+
+  - name: FreeS_B1
     type: ss
-    server: 69.30.201.82
-    port: '8097'
+    server: 172.105.75.22
+    port: '11954'
     cipher: aes-256-cfb
-    password: 'eIW0Dnk69454e6nSwuspv9DmS201tQ0D'
-
-  - name: fss-c1
+    password: 'x9HmBAbrX5mr'
+  - name: FreeS_B2
     type: ss
-    server: 172.105.219.84
-    port: '10910'
-    cipher: rc4-md5
-    password: '123456'
-  - name: fss-c2
-    type: ss
-    server: 46.173.215.146
-    port: '48888'
-    cipher: aes-128-ctr
-    password: 't.me/ssrquiz'
+    server: 178.79.180.136
+    port: '27516'
+    cipher: aes-256-cfb
+    password: 'lVOAj9AkpMGG'
 
-  - name: nama_jp
+  - name: NamaS_JP
     type: ss
     server: jp.v234.xyz
     port: '81'
     cipher: CHACHA20-IETF-POLY1305
     password: namaho.org+LNVTU
-  - name: nama_us
+  - name: NamaS_US
     type: ss
     server: us.v234.xyz
     port: '16741'
     cipher: aes-128-gcm
     password: namahoYOEGM
-  - name: nama_v_jp
+  - name: NamaV_JP
     type: vmess
     server: jp.v234.xyz
     port: 82
     uuid: 03042ad7-6316-46a0-8473-65768b0f1fb2
     alterId: 0
     cipher: auto
-  - name: nama_v_vus
+  - name: NamaV_VUS
     type: vmess
     server: vus.v234.xyz
     port: 82
@@ -80,72 +61,79 @@ Proxy:
     alterId: 0
     cipher: auto
 
-  - name: fss_vmess
+  - name: FreeV_1
+    type: vmess
+    server: www.eieee.cf
+    port: 80
+    uuid: dda8e363-879c-4a7c-f9eb-df1734fa9945
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-path: /
+    tls: false
+  - name: FreeV_2
     type: vmess
     server: www.kernels.bid
     port: 443
-    uuid: 805f8040-7f09-575e-4323-c7269778ea72
+    uuid: 159354e8-75aa-99ea-5809-748bbd0548f8
     alterId: 0
     cipher: auto
     network: ws
     ws-path: /ws
     tls: true
-  - name: fss_vmess_2
+  - name: FreeV_3
     type: vmess
     server: www.kernels.bid
     port: 80
-    uuid: 502e9d14-8d8c-ecf2-ecda-362e8acddbff
+    uuid: 3dd784e2-1b8b-1782-ea10-18a8da6a1bea
     alterId: 0
     cipher: auto
     network: ws
     ws-path: /ws
     tls: false
-  - name: fss_vmess_3
+  - name: FreeV_R
     type: vmess
     server: auto.freev2.top
-    port: 39805
-    uuid: 4fe45663-0855-44b8-b847-66bda35010e9
+    port: 52364
+    uuid: 13a5e40c-15a7-4f13-bbb6-71430af46eee
     alterId: 1
     cipher: auto
     tls: false
 
+  - name: AneoV_HK1_NF
+    type: vmess
+    server: 6f18e728.andns.co 
+    port: 443
+    uuid: 3dfee16c-4cac-4f70-910d-2384c094992e
+    alterId: 1
+    cipher: none
+    tls: true
+    network: ws
+    ws-path: /v2
+
 Proxy Group:
   - name: AUTO
     proxies:
-      - fss-a1
-      - fss-a2
-      - fss-b1
-      - fss-b2
-      - fss-b3
-      - fss-c1
-      - fss-c2
-      - nama_jp
-      - nama_us
-      - nama_v_jp
-      - nama_v_vus
-      - fss_vmess
-      - fss_vmess_2
-      - fss_vmess_3
+      - FreeS_A1
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
     interval: '600'
   - name: Proxy
     type: select
     proxies:
-      - fss-a1
-      - fss-a2
-      - fss-b1
-      - fss-b2
-      - fss-b3
-      - fss-c1
-      - fss-c2
-      - nama_jp
-      - nama_us
-      - nama_v_jp
-      - nama_v_vus
-      - fss_vmess
-      - fss_vmess_2
-      - fss_vmess_3
+      - FreeS_A1
+      - FreeS_A2
+      - FreeS_B1
+      - FreeS_B2
+      - NamaS_JP
+      - NamaS_US
+      - NamaV_JP
+      - NamaV_VUS
+      - FreeV_1
+      - FreeV_2
+      - FreeV_3
+      - FreeV_R
+      - AneoV_HK1_NF
       - AUTO
   - name: FnProxy
     proxies:
@@ -160,6 +148,7 @@ Rule:
   - DOMAIN,coderunnerapp.com,REJECT
   
   # 网络优化
+  - DOMAIN-SUFFIX,trello.com,Proxy
   - DOMAIN,douban.fm,DIRECT
   - DOMAIN-SUFFIX,tencent.com,DIRECT
   - DOMAIN,gist.github.com,Proxy
@@ -401,7 +390,6 @@ Rule:
   - DOMAIN-SUFFIX,tietuku.com,DIRECT
   - DOMAIN-SUFFIX,tmall.com,DIRECT
   - DOMAIN-SUFFIX,tmzvps.com,DIRECT
-  - DOMAIN-SUFFIX,trello.com,DIRECT
   - DOMAIN-SUFFIX,trellocdn.com,DIRECT
   - DOMAIN-SUFFIX,ttmeiju.com,DIRECT
   - DOMAIN-SUFFIX,tudou.com,DIRECT
