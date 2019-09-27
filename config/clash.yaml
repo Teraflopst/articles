@@ -61,7 +61,7 @@ Proxy:
     alterId: 0
     cipher: auto
 
-  - name: FreeV_1
+  - name: FreeV_T3
     type: vmess
     server: www.eieee.cf
     port: 80
@@ -71,7 +71,7 @@ Proxy:
     network: ws
     ws-path: /
     tls: false
-  - name: FreeV_2
+  - name: FreeV_T1
     type: vmess
     server: www.kernels.bid
     port: 443
@@ -81,7 +81,7 @@ Proxy:
     network: ws
     ws-path: /ws
     tls: true
-  - name: FreeV_3
+  - name: FreeV_T2
     type: vmess
     server: www.kernels.bid
     port: 80
@@ -129,9 +129,9 @@ Proxy Group:
       - NamaS_US
       - NamaV_JP
       - NamaV_VUS
-      - FreeV_1
-      - FreeV_2
-      - FreeV_3
+      - FreeV_T1
+      - FreeV_T2
+      - FreeV_T3
       - FreeV_R
       - AneoV_HK1_NF
       - AUTO
