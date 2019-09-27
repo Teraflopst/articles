@@ -94,8 +94,8 @@ Proxy:
   - name: FreeV_R
     type: vmess
     server: auto.freev2.top
-    port: 52364
-    uuid: 13a5e40c-15a7-4f13-bbb6-71430af46eee
+    port: 36864
+    uuid: d61fbbe3-8726-4b02-b2a1-7bc196a451d6
     alterId: 1
     cipher: auto
     tls: false
@@ -103,6 +103,16 @@ Proxy:
   - name: AneoV_HK1_NF
     type: vmess
     server: 6f18e728.andns.co 
+    port: 443
+    uuid: 3dfee16c-4cac-4f70-910d-2384c094992e
+    alterId: 1
+    cipher: none
+    tls: true
+    network: ws
+    ws-path: /v2
+  - name: AneoV_US1_CN2
+    type: vmess
+    server: 2cfeefb6.andns.co
     port: 443
     uuid: 3dfee16c-4cac-4f70-910d-2384c094992e
     alterId: 1
@@ -134,6 +144,7 @@ Proxy Group:
       - FreeV_T3
       - FreeV_R
       - AneoV_HK1_NF
+      - AneoV_US1_CN2
       - AUTO
   - name: FnProxy
     proxies:
