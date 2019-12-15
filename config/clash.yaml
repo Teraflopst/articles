@@ -10,41 +10,41 @@ secret: ''
 Proxy:
   - name: FreeS_A1
     type: ss
-    server: 0ef76f2f.andns.xyz
-    port: '31066'
+    server: 139.162.113.199
+    port: 31797
     cipher: aes-256-cfb
-    password: 'Ykqye8NV'
+    password: jIpPlpR5v6MJ
   - name: FreeS_A2
     type: ss
-    server: 5b186651.andns.xyz
-    port: '31066'
-    cipher: aes-256-cfb
-    password: 'Ykqye8NV'
+    server: 173.82.104.199
+    port: 3572
+    cipher: rc4-md5
+    password: cht1997...///
 
   - name: FreeS_B1
     type: ss
-    server: 172.105.75.22
-    port: '11954'
-    cipher: aes-256-cfb
-    password: 'x9HmBAbrX5mr'
+    server: 45.12.110.144
+    port: 9999
+    cipher: rc4-md5
+    password: t.me/SSRSUB
   - name: FreeS_B2
     type: ss
-    server: 178.79.180.136
-    port: '27516'
+    server: 162.220.51.58
+    port: 8097
     cipher: aes-256-cfb
-    password: 'lVOAj9AkpMGG'
+    password: eIW0Dnk69454e6nSwuspv9DmS201tQ0D
 
 # ---------------------------------------Namaho.org
   - name: NamaS_JP
     type: ss
     server: jp.v234.xyz
-    port: '81'
-    cipher: CHACHA20-IETF-POLY1305
-    password: namaho.org+LNVTU
+    port: 16741
+    cipher: aes-128-gcm
+    password: namahoYOEGM
   - name: NamaS_US
     type: ss
-    server: us.v234.xyz
-    port: '16741'
+    server: jp.v234.xyz
+    port: 16741
     cipher: aes-128-gcm
     password: namahoYOEGM
   - name: NamaV_JP
@@ -66,8 +66,8 @@ Proxy:
   - name: FreeV_T3
     type: vmess
     server: www.eieee.cf
-    port: 80
-    uuid: dda8e363-879c-4a7c-f9eb-df1734fa9945
+    port: 36245
+    uuid: 5bd39c16-d473-4006-b6d5-07b817d76cbc
     alterId: 0
     cipher: auto
     network: ws
@@ -77,7 +77,7 @@ Proxy:
     type: vmess
     server: www.kernels.bid
     port: 443
-    uuid: 67c6f478-9930-6140-3af5-f522e9f098bb
+    uuid: 7f868794-f012-0198-0fc4-2654498b20e5
     alterId: 0
     cipher: auto
     network: ws
@@ -87,7 +87,7 @@ Proxy:
     type: vmess
     server: www.kernels.bid
     port: 80
-    uuid: ef3a6424-e3c9-561c-0756-16a89cbab359
+    uuid: 7db30a54-065b-65b0-45e8-3c8f26071e9d
     alterId: 0
     cipher: auto
     network: ws
@@ -97,38 +97,58 @@ Proxy:
   - name: FreeV_R
     type: vmess
     server: auto.freev2.top
-    port: 10012
-    uuid: 8504e2fe-a080-4ebb-9c9c-8e392c93ce96
+    port: 34491
+    uuid: cf9d3ba6-ae53-4781-be2b-88dc71e1d331
     alterId: 1
     cipher: auto
     tls: false
 
 # ---------------------------------------Aagentneo.xyz
-  - name: AneoV_JP1
+  - name: AneoV_JP4
     type: vmess
-    server: 8b224701.andns.co 
+    server: cb094933.andns.co
     port: 443
-    uuid: 3dfee16c-4cac-4f70-910d-2384c094992e
+    uuid: 106a5036-0bad-4dd7-86b4-c5f3c3f900b4
     alterId: 1
     cipher: none
     tls: true
     network: ws
     ws-path: /v2
-  - name: AneoV_HK1_NF
+  - name: AneoV_SG2
     type: vmess
-    server: 6f18e728.andns.co 
+    server: 7b1bd4c1.andns.co
     port: 443
-    uuid: 3dfee16c-4cac-4f70-910d-2384c094992e
+    uuid: 106a5036-0bad-4dd7-86b4-c5f3c3f900b4
     alterId: 1
     cipher: none
     tls: true
     network: ws
     ws-path: /v2
-  - name: AneoV_US1_CN2
+  - name: AneoV_HK6_NF
     type: vmess
-    server: 2cfeefb6.andns.co
+    server: 456f6765.andns.co
     port: 443
-    uuid: 3dfee16c-4cac-4f70-910d-2384c094992e
+    uuid: 106a5036-0bad-4dd7-86b4-c5f3c3f900b4
+    alterId: 1
+    cipher: none
+    tls: true
+    network: ws
+    ws-path: /v2
+  - name: AneoV_US2_CN2
+    type: vmess
+    server: 740f80c4.andns.co
+    port: 443
+    uuid: 106a5036-0bad-4dd7-86b4-c5f3c3f900b4
+    alterId: 1
+    cipher: none
+    tls: true
+    network: ws
+    ws-path: /v2
+  - name: AneoV_US4__NF
+    type: vmess
+    server: ce127cf9.andns.co
+    port: 443
+    uuid: 106a5036-0bad-4dd7-86b4-c5f3c3f900b4
     alterId: 1
     cipher: none
     tls: true
@@ -160,9 +180,11 @@ Proxy Group:
       - FreeV_T2
       - FreeV_T3
       - FreeV_R
-      - AneoV_JP1
-      - AneoV_HK1_NF
-      - AneoV_US1_CN2
+      - AneoV_SG2
+      - AneoV_JP4
+      - AneoV_HK6_NF
+      - AneoV_US2_CN2
+      - AneoV_US4__NF
       - AUTO
   - name: FnProxy
     proxies:
@@ -181,7 +203,7 @@ Rule:
   - DOMAIN,douban.fm,DIRECT
   - DOMAIN-SUFFIX,tencent.com,DIRECT
   - DOMAIN,gist.github.com,Proxy
-  - DOMAIN-SUFFIX,githubusercontent.com,DIRECT
+  # - DOMAIN-SUFFIX,githubusercontent.com,DIRECT
   - DOMAIN,dmm.co.jp,Proxy
   - DOMAIN-SUFFIX,cc3001.dmm.co.jp,DIRECT
   - DOMAIN-SUFFIX,xclient.info,DIRECT
