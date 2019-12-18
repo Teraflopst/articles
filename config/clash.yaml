@@ -10,150 +10,47 @@ secret: ''
 Proxy:
   - name: FreeS_A1
     type: ss
-    server: 139.162.113.199
-    port: 31797
-    cipher: aes-256-cfb
-    password: jIpPlpR5v6MJ
+    server: 173.82.115.229
+    port: 12345
+    cipher: rc4-md5
+    password: 12345
   - name: FreeS_A2
     type: ss
-    server: 173.82.104.199
-    port: 3572
-    cipher: rc4-md5
-    password: cht1997...///
-
-  - name: FreeS_B1
-    type: ss
-    server: 45.12.110.144
-    port: 9999
-    cipher: rc4-md5
-    password: t.me/SSRSUB
-  - name: FreeS_B2
-    type: ss
-    server: 162.220.51.58
-    port: 8097
+    server: 45.56.94.8
+    port: 8099
     cipher: aes-256-cfb
     password: eIW0Dnk69454e6nSwuspv9DmS201tQ0D
 
 # ---------------------------------------Namaho.org
-  - name: NamaS_JP
-    type: ss
-    server: jp.v234.xyz
-    port: 16741
-    cipher: aes-128-gcm
-    password: namahoYOEGM
-  - name: NamaS_US
-    type: ss
-    server: jp.v234.xyz
-    port: 16741
-    cipher: aes-128-gcm
-    password: namahoYOEGM
-  - name: NamaV_JP
-    type: vmess
-    server: jp.v234.xyz
-    port: 82
-    uuid: 03042ad7-6316-46a0-8473-65768b0f1fb2
-    alterId: 0
-    cipher: auto
-  - name: NamaV_VUS
-    type: vmess
-    server: vus.v234.xyz
-    port: 82
-    uuid: 03042ad7-6316-46a0-8473-65768b0f1fb2
-    alterId: 0
-    cipher: auto
+  - {"name":"NamaS_JP","type":"ss","server":"jp.v234.xyz","port":16741,"password":"namahoYOEGM","cipher":"aes-128-gcm"}
+  - {"name":"NamaS_US","type":"ss","server":"us.v234.xyz","port":16741,"password":"namahoYOEGM","cipher":"aes-128-gcm"}
+  - {"name":"NamaV_JP","type":"vmess","server":"jp.v234.xyz","port":82,"uuid":"03042ad7-6316-46a0-8473-65768b0f1fb2","alterId":0,"cipher":"auto"}
+  - {"name":"NamaV_VUS","type":"vmess","server":"vus.v234.xyz","port":82,"uuid":"03042ad7-6316-46a0-8473-65768b0f1fb2","alterId":0,"cipher":"auto"}
 
 # ---------------------------------------Free-ss.site
-  - name: FreeV_T3
-    type: vmess
-    server: www.eieee.cf
-    port: 36245
-    uuid: 5bd39c16-d473-4006-b6d5-07b817d76cbc
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-path: /
-    tls: false
-  - name: FreeV_T1
-    type: vmess
-    server: www.kernels.bid
-    port: 443
-    uuid: 7f868794-f012-0198-0fc4-2654498b20e5
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-path: /ws
-    tls: true
-  - name: FreeV_T2
-    type: vmess
-    server: www.kernels.bid
-    port: 80
-    uuid: 7db30a54-065b-65b0-45e8-3c8f26071e9d
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-path: /ws
-    tls: false
+  - {"name":"FreeV_T1","type":"vmess","server":"www.kernels.bid","port":443,"uuid":"766f3bb4-8629-cb25-bf82-4d550ff8bec5","alterId":0,"cipher":"auto","network":"ws","ws-path":"/ws","tls":true}
+  - {"name":"FreeV_T2","type":"vmess","server":"www.kernels.bid","port":443,"uuid":"7798fffc-ccac-0310-02bf-ef23d06bbc7d","alterId":0,"cipher":"auto","network":"ws","ws-path":"/ws","tls":false}
+
+
 # ---------------------------------------Freev2ray.org
   - name: FreeV_R
     type: vmess
     server: auto.freev2.top
-    port: 34491
-    uuid: cf9d3ba6-ae53-4781-be2b-88dc71e1d331
+    port: 57811
+    uuid: dc351a00-2dba-4224-a606-c66b3ee83d53
     alterId: 1
     cipher: auto
     tls: false
 
-# ---------------------------------------Aagentneo.xyz
-  - name: AneoV_JP4
-    type: vmess
-    server: cb094933.andns.co
-    port: 443
-    uuid: 106a5036-0bad-4dd7-86b4-c5f3c3f900b4
-    alterId: 1
-    cipher: none
-    tls: true
-    network: ws
-    ws-path: /v2
-  - name: AneoV_SG2
-    type: vmess
-    server: 7b1bd4c1.andns.co
-    port: 443
-    uuid: 106a5036-0bad-4dd7-86b4-c5f3c3f900b4
-    alterId: 1
-    cipher: none
-    tls: true
-    network: ws
-    ws-path: /v2
-  - name: AneoV_HK6_NF
-    type: vmess
-    server: 456f6765.andns.co
-    port: 443
-    uuid: 106a5036-0bad-4dd7-86b4-c5f3c3f900b4
-    alterId: 1
-    cipher: none
-    tls: true
-    network: ws
-    ws-path: /v2
-  - name: AneoV_US2_CN2
-    type: vmess
-    server: 740f80c4.andns.co
-    port: 443
-    uuid: 106a5036-0bad-4dd7-86b4-c5f3c3f900b4
-    alterId: 1
-    cipher: none
-    tls: true
-    network: ws
-    ws-path: /v2
-  - name: AneoV_US4__NF
-    type: vmess
-    server: ce127cf9.andns.co
-    port: 443
-    uuid: 106a5036-0bad-4dd7-86b4-c5f3c3f900b4
-    alterId: 1
-    cipher: none
-    tls: true
-    network: ws
-    ws-path: /v2
+# ---------------------------------------https://yjc-f.xyz/user
+  - {"name":"V1-V2ray 美国04","type":"vmess","server":"us04.gudao.008015.xyz","port":443,"uuid":"47dab4af-54fa-39bb-8cd6-d3311a002591","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-path":"/v2ray","ws-headers":{"Host":"microsoft.com"}}
+  - {"name":"V1-V2ray 美国05","type":"vmess","server":"us05.gudao.008015.xyz","port":443,"uuid":"47dab4af-54fa-39bb-8cd6-d3311a002591","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-path":"/v2ray","ws-headers":{"Host":"microsoft.com"}}
+  - {"name":"V1-V2ray 美国06","type":"vmess","server":"us06.gudao.008015.xyz","port":443,"uuid":"47dab4af-54fa-39bb-8cd6-d3311a002591","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-path":"/v2ray","ws-headers":{"Host":"microsoft.com"}}
+  - {"name":"V1-V2ray 美国07","type":"vmess","server":"us07.gudao.008015.xyz","port":443,"uuid":"47dab4af-54fa-39bb-8cd6-d3311a002591","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-path":"/v2ray","ws-headers":{"Host":"microsoft.com"}}
+  - {"name":"V1-V2ray 美国08","type":"vmess","server":"us08.gudao.008015.xyz","port":443,"uuid":"47dab4af-54fa-39bb-8cd6-d3311a002591","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-path":"/v2ray","ws-headers":{"Host":"microsoft.com"}}
+  - {"name":"V1-V2ray 香港01","type":"vmess","server":"dzhkt.ddns.566366.xyz","port":570,"uuid":"47dab4af-54fa-39bb-8cd6-d3311a002591","alterId":2,"cipher":"auto","udp":true}
+  - {"name":"V1-V2ray 香港02","type":"vmess","server":"dzhkt.ddns.357159.xyz","port":570,"uuid":"47dab4af-54fa-39bb-8cd6-d3311a002591","alterId":2,"cipher":"auto","udp":true}
+
 
 
 # --------------------------------------- E.N.D
@@ -170,21 +67,20 @@ Proxy Group:
     proxies:
       - FreeS_A1
       - FreeS_A2
-      - FreeS_B1
-      - FreeS_B2
       - NamaS_JP
       - NamaS_US
       - NamaV_JP
       - NamaV_VUS
       - FreeV_T1
       - FreeV_T2
-      - FreeV_T3
       - FreeV_R
-      - AneoV_SG2
-      - AneoV_JP4
-      - AneoV_HK6_NF
-      - AneoV_US2_CN2
-      - AneoV_US4__NF
+      - V1-V2ray 美国04
+      - V1-V2ray 美国05
+      - V1-V2ray 美国06
+      - V1-V2ray 美国07
+      - V1-V2ray 美国08
+      - V1-V2ray 香港01
+      - V1-V2ray 香港02
       - AUTO
   - name: FnProxy
     proxies:
