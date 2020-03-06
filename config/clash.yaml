@@ -16,8 +16,8 @@ Proxy:
     password: 12345
   - name: FreeS_A2
     type: ss
-    server: 45.56.94.8
-    port: 8099
+    server: 139.162.82.254
+    port: 8097
     cipher: aes-256-cfb
     password: eIW0Dnk69454e6nSwuspv9DmS201tQ0D
 
@@ -25,7 +25,7 @@ Proxy:
   - {"name":"NamaS_JP","type":"ss","server":"jp.v234.xyz","port":16741,"password":"namahoYOEGM","cipher":"aes-128-gcm"}
   - {"name":"NamaS_US","type":"ss","server":"us.v234.xyz","port":16741,"password":"namahoYOEGM","cipher":"aes-128-gcm"}
   - {"name":"NamaV_JP","type":"vmess","server":"jp.v234.xyz","port":82,"uuid":"03042ad7-6316-46a0-8473-65768b0f1fb2","alterId":0,"cipher":"auto"}
-  - {"name":"NamaV_VUS","type":"vmess","server":"vus.v234.xyz","port":82,"uuid":"03042ad7-6316-46a0-8473-65768b0f1fb2","alterId":0,"cipher":"auto"}
+  - {"name":"NamaV_CDN","type":"vmess","server":"cf.v234.xyz","port":443,"uuid":"03042ad7-6316-46a0-8473-65768b0f1fb2","alterId":0,"cipher":"auto","network":"ws","ws-path":"/na","tls":true}
 
 # ---------------------------------------Free-ss.site
   - {"name":"FreeV_T1","type":"vmess","server":"www.kernels.bid","port":443,"uuid":"766f3bb4-8629-cb25-bf82-4d550ff8bec5","alterId":0,"cipher":"auto","network":"ws","ws-path":"/ws","tls":true}
@@ -36,21 +36,35 @@ Proxy:
   - name: FreeV_R
     type: vmess
     server: auto.freev2.top
-    port: 57811
-    uuid: dc351a00-2dba-4224-a606-c66b3ee83d53
+    port: 30645
+    uuid: 84920a50-9d7c-4024-845a-7d3427e04d30
     alterId: 1
     cipher: auto
     tls: false
 
-# ---------------------------------------https://yjc-f.xyz/user
-  - {"name":"V1-V2ray 美国04","type":"vmess","server":"us04.gudao.008015.xyz","port":443,"uuid":"47dab4af-54fa-39bb-8cd6-d3311a002591","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-path":"/v2ray","ws-headers":{"Host":"microsoft.com"}}
-  - {"name":"V1-V2ray 美国05","type":"vmess","server":"us05.gudao.008015.xyz","port":443,"uuid":"47dab4af-54fa-39bb-8cd6-d3311a002591","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-path":"/v2ray","ws-headers":{"Host":"microsoft.com"}}
-  - {"name":"V1-V2ray 美国06","type":"vmess","server":"us06.gudao.008015.xyz","port":443,"uuid":"47dab4af-54fa-39bb-8cd6-d3311a002591","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-path":"/v2ray","ws-headers":{"Host":"microsoft.com"}}
-  - {"name":"V1-V2ray 美国07","type":"vmess","server":"us07.gudao.008015.xyz","port":443,"uuid":"47dab4af-54fa-39bb-8cd6-d3311a002591","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-path":"/v2ray","ws-headers":{"Host":"microsoft.com"}}
-  - {"name":"V1-V2ray 美国08","type":"vmess","server":"us08.gudao.008015.xyz","port":443,"uuid":"47dab4af-54fa-39bb-8cd6-d3311a002591","alterId":2,"cipher":"auto","udp":true,"network":"ws","ws-path":"/v2ray","ws-headers":{"Host":"microsoft.com"}}
-  - {"name":"V1-V2ray 香港01","type":"vmess","server":"dzhkt.ddns.566366.xyz","port":570,"uuid":"47dab4af-54fa-39bb-8cd6-d3311a002591","alterId":2,"cipher":"auto","udp":true}
-  - {"name":"V1-V2ray 香港02","type":"vmess","server":"dzhkt.ddns.357159.xyz","port":570,"uuid":"47dab4af-54fa-39bb-8cd6-d3311a002591","alterId":2,"cipher":"auto","udp":true}
-
+# ---------------------------------------忍者云
+  - {"name":"Basic|台湾1|1.0|NF*","type":"ss","server":"twhinet1.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
+  - {"name":"Basic|台湾2|1.0|NF*","type":"ss","server":"twhinet2.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
+  - {"name":"Basic|香港01|1.0|NF*","type":"ss","server":"hkhkt01.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
+  - {"name":"Basic|香港02|1.0|NF*","type":"ss","server":"hkhkt02.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
+  - {"name":"Basic|香港03|1.0|NF*","type":"ss","server":"hkhkt03.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
+  - {"name":"Basic|香港04|1.0|NF*","type":"ss","server":"hkhkt04.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
+  - {"name":"Basic|香港05|1.0|NF*","type":"ss","server":"hkhkt05.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
+  - {"name":"Basic|香港06|1.0|NF*","type":"ss","server":"hkhkt06.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
+  - {"name":"Basic|香港07|1.0|NF*","type":"ss","server":"hkhkt08.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
+  - {"name":"Basic|香港08|1.0|NF*","type":"ss","server":"hkhkt09.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
+  - {"name":"Basic|香港09|1.0|NF*","type":"ss","server":"hkhkt10.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
+  - {"name":"Basic|香港10|1.0|NF*","type":"ss","server":"hkhkt12.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
+  - {"name":"[V2]Basic|香港01|2.0|NF*","type":"vmess","server":"hkhkt01.host-sub.com","port":156,"uuid":"bf87a494-cb07-39ed-9fd2-cac7b424403b","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"[V2]Basic|香港02|2.0|NF*","type":"vmess","server":"hkhkt02.host-sub.com","port":156,"uuid":"bf87a494-cb07-39ed-9fd2-cac7b424403b","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"[V2]Basic|香港03|2.0|NF*","type":"vmess","server":"hkhkt03.host-sub.com","port":156,"uuid":"bf87a494-cb07-39ed-9fd2-cac7b424403b","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"[V2]Basic|香港04|2.0|NF*","type":"vmess","server":"hkhkt04.host-sub.com","port":156,"uuid":"bf87a494-cb07-39ed-9fd2-cac7b424403b","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"[V2]Basic|香港05|2.0|NF*","type":"vmess","server":"hkhkt05.host-sub.com","port":156,"uuid":"bf87a494-cb07-39ed-9fd2-cac7b424403b","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"[V2]Basic|香港06|2.0|NF*","type":"vmess","server":"hkhkt06.host-sub.com","port":156,"uuid":"bf87a494-cb07-39ed-9fd2-cac7b424403b","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"[V2]Basic|香港07|2.0|NF*","type":"vmess","server":"hkhkt08.host-sub.com","port":156,"uuid":"bf87a494-cb07-39ed-9fd2-cac7b424403b","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"[V2]Basic|香港08|2.0|NF*","type":"vmess","server":"hkhkt09.host-sub.com","port":156,"uuid":"bf87a494-cb07-39ed-9fd2-cac7b424403b","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"[V2]Basic|香港09|2.0|NF*","type":"vmess","server":"hkhkt10.host-sub.com","port":156,"uuid":"bf87a494-cb07-39ed-9fd2-cac7b424403b","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"[V2]Basic|香港10|2.0|NF*","type":"vmess","server":"hkhkt12.host-sub.com","port":156,"uuid":"bf87a494-cb07-39ed-9fd2-cac7b424403b","alterId":0,"cipher":"auto","udp":true}
 
 
 # --------------------------------------- E.N.D
@@ -70,17 +84,32 @@ Proxy Group:
       - NamaS_JP
       - NamaS_US
       - NamaV_JP
-      - NamaV_VUS
+      - NamaV_CDN
       - FreeV_T1
       - FreeV_T2
       - FreeV_R
-      - V1-V2ray 美国04
-      - V1-V2ray 美国05
-      - V1-V2ray 美国06
-      - V1-V2ray 美国07
-      - V1-V2ray 美国08
-      - V1-V2ray 香港01
-      - V1-V2ray 香港02
+      - 'Basic|台湾1|1.0|NF*'
+      - 'Basic|台湾2|1.0|NF*'
+      - 'Basic|香港01|1.0|NF*'
+      - 'Basic|香港02|1.0|NF*'
+      - 'Basic|香港03|1.0|NF*'
+      - 'Basic|香港04|1.0|NF*'
+      - 'Basic|香港05|1.0|NF*'
+      - 'Basic|香港06|1.0|NF*'
+      - 'Basic|香港07|1.0|NF*'
+      - 'Basic|香港08|1.0|NF*'
+      - 'Basic|香港09|1.0|NF*'
+      - 'Basic|香港10|1.0|NF*'
+      - '[V2]Basic|香港01|2.0|NF*'
+      - '[V2]Basic|香港02|2.0|NF*'
+      - '[V2]Basic|香港03|2.0|NF*'
+      - '[V2]Basic|香港04|2.0|NF*'
+      - '[V2]Basic|香港05|2.0|NF*'
+      - '[V2]Basic|香港06|2.0|NF*'
+      - '[V2]Basic|香港07|2.0|NF*'
+      - '[V2]Basic|香港08|2.0|NF*'
+      - '[V2]Basic|香港09|2.0|NF*'
+      - '[V2]Basic|香港10|2.0|NF*'
       - AUTO
   - name: FnProxy
     proxies:
@@ -96,6 +125,8 @@ Rule:
   
   # 网络优化
   - DOMAIN-SUFFIX,trello.com,Proxy
+  - DOMAIN-SUFFIX,trellocdn.com,DIRECT
+  - DOMAIN-SUFFIX,cowtransfer.com/,DIRECT
   - DOMAIN,douban.fm,DIRECT
   - DOMAIN-SUFFIX,tencent.com,DIRECT
   - DOMAIN,gist.github.com,Proxy
@@ -337,7 +368,6 @@ Rule:
   - DOMAIN-SUFFIX,tietuku.com,DIRECT
   - DOMAIN-SUFFIX,tmall.com,DIRECT
   - DOMAIN-SUFFIX,tmzvps.com,DIRECT
-  - DOMAIN-SUFFIX,trellocdn.com,DIRECT
   - DOMAIN-SUFFIX,ttmeiju.com,DIRECT
   - DOMAIN-SUFFIX,tudou.com,DIRECT
   - DOMAIN-SUFFIX,udache.com,DIRECT
@@ -902,7 +932,6 @@ Rule:
   - DOMAIN-SUFFIX,traffichaus.com,Proxy
   - DOMAIN-SUFFIX,trakt.tv,Proxy
   - DOMAIN-SUFFIX,transparency.org,Proxy
-  - DOMAIN-SUFFIX,trello.com,Proxy
   - DOMAIN-SUFFIX,trendsmap.com,Proxy
   - DOMAIN-SUFFIX,trulyergonomic.com,Proxy
   - DOMAIN-SUFFIX,trustasiassl.com,Proxy
