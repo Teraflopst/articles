@@ -10,10 +10,10 @@ secret: ''
 Proxy:
   - name: FreeS_A1
     type: ss
-    server: 173.82.115.229
-    port: 12345
-    cipher: rc4-md5
-    password: 12345
+    server: free1.host-sub.com
+    port: 1063
+    cipher: aes-256-cfb
+    password: renzhecloud
   - name: FreeS_A2
     type: ss
     server: 139.162.82.254
@@ -36,13 +36,14 @@ Proxy:
   - name: FreeV_R
     type: vmess
     server: auto.freev2.top
-    port: 30645
-    uuid: 84920a50-9d7c-4024-845a-7d3427e04d30
+    port: 53769
+    uuid: d7f90629-4ce3-40fc-a1bb-82bc59f69878
     alterId: 1
     cipher: auto
     tls: false
 
 # ---------------------------------------忍者云
+  - {"name":"Special|日本|1.0|续费专用","type":"ss","server":"free1.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
   - {"name":"Basic|台湾1|1.0|NF*","type":"ss","server":"twhinet1.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
   - {"name":"Basic|台湾2|1.0|NF*","type":"ss","server":"twhinet2.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
   - {"name":"Basic|香港01|1.0|NF*","type":"ss","server":"hkhkt01.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
@@ -88,6 +89,7 @@ Proxy Group:
       - FreeV_T1
       - FreeV_T2
       - FreeV_R
+      - 'Special|日本|1.0|续费专用'
       - 'Basic|台湾1|1.0|NF*'
       - 'Basic|台湾2|1.0|NF*'
       - 'Basic|香港01|1.0|NF*'
