@@ -11,17 +11,24 @@ Proxy:
 
   - name: FreeS_A1
     type: ss
-    server: free1.host-sub.com
-    port: 1063
+    server: 172.104.106.212
+    port: 8099
     cipher: aes-256-cfb
-    password: renzhecloud
+    password: eIW0Dnk69454e6nSwuspv9DmS201tQ0D
+
+  - name: FreeS_A2
+    type: ss
+    server: 178.128.59.31
+    port: 11435
+    cipher: aes-256-gcm
+    password: isx.yt-07113658
 
 # ---------------------------------------Freev2ray.org
   - name: FreeV_R
     type: vmess
     server: auto.freev2.top
-    port: 53769
-    uuid: d7f90629-4ce3-40fc-a1bb-82bc59f69878
+    port: 22160
+    uuid: a1a6662c-7ccb-45e3-a647-49e3efafd510
     alterId: 1
     cipher: auto
     tls: false
@@ -34,6 +41,10 @@ Proxy:
   - {"name":"Special|日本|1.0|续费专用","type":"ss","server":"free1.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
   - {"name":"Basic|台湾1|1.0|NF*","type":"ss","server":"twhinet1.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
   - {"name":"Basic|台湾2|1.0|NF*","type":"ss","server":"twhinet2.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
+  - {"name":"Basic|日本1|1.0|NF*","type":"ss","server":"jpntt1.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
+  - {"name":"Basic|日本2|1.0|NF*","type":"ss","server":"jpntt2.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
+  - {"name":"Basic|美国1|1.0|NF*","type":"ss","server":"az-us-1.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
+  - {"name":"Basic|美国2|1.0|NF*","type":"ss","server":"az-us-2.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
   - {"name":"Basic|香港01|1.0|NF*","type":"ss","server":"hkhkt01.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
   - {"name":"Basic|香港02|1.0|NF*","type":"ss","server":"hkhkt02.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
   - {"name":"Basic|香港03|1.0|NF*","type":"ss","server":"hkhkt03.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
@@ -64,12 +75,17 @@ Proxy Group:
     proxies:
       - DIRECT
       - FreeS_A1
+      - FreeS_A2
       - NamaS_JP
       - NamaV_CDN
       - FreeV_R
       - 'Special|日本|1.0|续费专用'
       - 'Basic|台湾1|1.0|NF*'
       - 'Basic|台湾2|1.0|NF*'
+      - 'Basic|日本1|1.0|NF*'
+      - 'Basic|日本2|1.0|NF*'
+      - 'Basic|美国1|1.0|NF*'
+      - 'Basic|美国2|1.0|NF*'
       - 'Basic|香港01|1.0|NF*'
       - 'Basic|香港02|1.0|NF*'
       - 'Basic|香港03|1.0|NF*'
@@ -207,6 +223,7 @@ Rule:
   - DOMAIN-SUFFIX,bet365.com,NoProxy
   - DOMAIN-SUFFIX,bilibili.cn,NoProxy
   - DOMAIN-SUFFIX,bilibili.com,NoProxy
+  - DOMAIN-SUFFIX,bilivideo.com,NoProxy
   - DOMAIN-SUFFIX,caiyunapp.com,NoProxy
   - DOMAIN-SUFFIX,ccgslb.com,NoProxy
   - DOMAIN-SUFFIX,ccgslb.net,NoProxy
