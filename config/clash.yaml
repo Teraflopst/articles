@@ -41,8 +41,7 @@ Proxy:
     tls: false
 
 # ---------------------------------------Namaho.org
-  - {"name":"NamaS_JP","type":"ss","server":"jp.v234.xyz","port":16741,"password":"namahoYOEGM","cipher":"aes-128-gcm"}
-  - {"name":"NamaV_CDN","type":"vmess","server":"cf.v234.xyz","port":443,"uuid":"03042ad7-6316-46a0-8473-65768b0f1fb2","alterId":0,"cipher":"auto","network":"ws","ws-path":"/na","tls":true}
+  - {"name":"NamaV_CDN","type":"vmess","server":"cdn.n4321.xyz","port":443,"uuid":"03042ad7-6316-46a0-8473-65768b0f1fb2","alterId":0,"cipher":"auto","network":"ws","ws-path":"/na","tls":true}
 
 # ---------------------------------------忍者云
   - {"name":"Special|日本|1.0|续费专用","type":"ss","server":"free1.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
@@ -84,7 +83,6 @@ Proxy Group:
       - FreeS_A1
       - FreeS_A2
       - FreeS_A3
-      - NamaS_JP
       - NamaV_CDN
       - FreeV_R
       - 'Special|日本|1.0|续费专用'
