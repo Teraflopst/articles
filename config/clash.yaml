@@ -638,7 +638,7 @@ Rule:
   - DOMAIN-SUFFIX,engadget.com,EnProxy
   - DOMAIN-SUFFIX,entrust.net,EnProxy
   - DOMAIN-SUFFIX,eurekavpt.com,EnProxy
-  - DOMAIN-SUFFIX,evernote.com,EnProxy
+  - DOMAIN-SUFFIX,evernote.com,NoProxy
   - DOMAIN-SUFFIX,extmatrix.com,EnProxy
   - DOMAIN-SUFFIX,eyny.com,EnProxy
   - DOMAIN-SUFFIX,fabric.io,EnProxy
