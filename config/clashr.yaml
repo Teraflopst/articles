@@ -15,7 +15,7 @@ proxies:
 
   - name: FreeS_A1
     type: ss
-    server: 139.162.67.135
+    server: 172.105.192.135
     port: 8097
     cipher: aes-256-cfb
     password: eIW0Dnk69454e6nSwuspv9DmS201tQ0D
@@ -38,8 +38,8 @@ proxies:
   - name: FreeV_R
     type: vmess
     server: auto.freev2.top
-    port: 20323
-    uuid: b6152d48-40b9-44de-98aa-15a6bd965b12
+    port: 42438
+    uuid: db0d1d0c-c9f6-4570-bc53-8f08ce38808c
     alterId: 1
     cipher: auto
     tls: false
@@ -47,10 +47,62 @@ proxies:
 # ---------------------------------------Namaho.org
   - {"name":"NamaV_CDN","type":"vmess","server":"cdn.n4321.xyz","port":443,"uuid":"03042ad7-6316-46a0-8473-65768b0f1fb2","alterId":0,"cipher":"auto","network":"ws","ws-path":"/na","tls":true}
 
+
+# ---------------------------------------闪电
+  - name: SD-JP-A1
+    type: vmess
+    server: hn-lt-ahdaghsdaghdua3hu.guidecns.com
+    port: 30009
+    uuid: 95394af0-c128-3885-869a-b5aa9ef39927
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-path: /v2ray
+
+  - name: SD-JP-B2
+    type: vmess
+    server: 42.236.94.0
+    port: 80
+    uuid: 95394af0-c128-3885-869a-b5aa9ef39927
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-path: /v2ray
+
+  - name: SD-US-A2
+    type: vmess
+    server: cn2-pbgxkmfum2nx5uthrnso81g1.guidecns.com
+    port: 10014
+    uuid: 95394af0-c128-3885-869a-b5aa9ef39927
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-path: /v2ray
+    
+  - name: SD-US-B2
+    type: vmess
+    server: hn01-lt.guidecns.com
+    port: 13587
+    uuid: 95394af0-c128-3885-869a-b5aa9ef39927
+    alterId: 1
+    cipher: auto
+    network: ws
+    ws-path: /v2ray
+
+  - name: SD-RU-A2
+    type: vmess
+    server: hn-lt-ahdaghsdaghdua3hu.guidecns.com
+    port: 30005
+    uuid: 95394af0-c128-3885-869a-b5aa9ef39927
+    alterId: 1
+    cipher: auto
+    network: ws
+    ws-path: /v2ray
+
 # ---------------------------------------泡芙云
 
 
-  - {"name":"Paofu-JP1","type":"ssr","server":"cm-02.puffvip.com","port":1052,"cipher":"xchacha20","password":"Paofu","udp":true,"obfs":"plain","obfs-param":"49d71120042.microsoft.com","protocol":"auth_aes128_sha1","protocol-param":"120042:zaz4oH"}
+  - {"name":"PF-JP-A","type":"ssr","server":"cm-02.puffvip.com","port":1052,"cipher":"xchacha20","password":"Paofu","udp":true,"obfs":"plain","obfs-param":"49d71120042.microsoft.com","protocol":"auth_aes128_sha1","protocol-param":"120042:zaz4oH"}
 
 
 # ---------------------------------------忍者云
@@ -91,25 +143,30 @@ proxy-groups:
     proxies:
       - DIRECT
       - NG-R8
-      - Paofu-JP1
+      - PF-JP-A
+      - SD-JP-A1
+      - SD-JP-B2
+      - SD-US-A2
+      - SD-US-B2
+      - SD-RU-A2
       - FreeS_A1
       - FreeS_A2
       - FreeS_A3
       - NamaV_CDN
       - FreeV_R
       - 'Special|日本|1.0|续费专用'
-      - 'Basic|台湾1|1.0|NF*'
-      - 'Basic|台湾2|1.0|NF*'
-      - 'Basic|日本1|1.0|NF*'
-      - 'Basic|日本2|1.0|NF*'
-      - 'Basic|美国1|1.0|NF*'
-      - 'Basic|美国2|1.0|NF*'
-      - 'Basic|香港01|1.0|NF*'
-      - 'Basic|香港02|1.0|NF*'
-      - 'Basic|香港03|1.0|NF*'
-      - 'Basic|香港04|1.0|NF*'
-      - 'Basic|香港05|1.0|NF*'
-      - 'Basic|香港06|1.0|NF*'
+#       - 'Basic|台湾1|1.0|NF*'
+#       - 'Basic|台湾2|1.0|NF*'
+#       - 'Basic|日本1|1.0|NF*'
+#       - 'Basic|日本2|1.0|NF*'
+#       - 'Basic|美国1|1.0|NF*'
+#       - 'Basic|美国2|1.0|NF*'
+#       - 'Basic|香港01|1.0|NF*'
+#       - 'Basic|香港02|1.0|NF*'
+#       - 'Basic|香港03|1.0|NF*'
+#       - 'Basic|香港04|1.0|NF*'
+#       - 'Basic|香港05|1.0|NF*'
+#       - 'Basic|香港06|1.0|NF*'
       - 'Basic|香港07|1.0|NF*'
       - 'Basic|香港08|1.0|NF*'
       - 'Basic|香港09|1.0|NF*'
@@ -153,6 +210,9 @@ rules:
   - DOMAIN,gist.github.com,EnProxy
   - DOMAIN,cn.engadget.com,NoProxy
   - DOMAIN,macpaw.com,NoProxy
+  - DOMAIN,pcbeta.com,NoProxy
+  - DOMAIN,getchu.com,EnProxy
+  - DOMAIN,paofu.cloud,EnProxy
   
   # - DOMAIN-SUFFIX,githubusercontent.com,NoProxy
   - DOMAIN,dmm.co.jp,EnProxy
@@ -1226,14 +1286,17 @@ rules:
   - IP-CIDR,208.43.0.0/16,EnProxy
 
   # Telegram
+  - DOMAIN-SUFFIX,t.me,EnProxy
+  - DOMAIN-SUFFIX,tdesktop.com,EnProxy
+  - DOMAIN-SUFFIX,telegra.ph,EnProxy
+  - DOMAIN-SUFFIX,telegram.me,EnProxy
+  - DOMAIN-SUFFIX,telegram.org,EnProxy
+  - IP-CIDR,91.108.0.0/16,EnProxy
   - IP-CIDR,109.239.140.0/24,EnProxy
   - IP-CIDR,149.154.160.0/20,EnProxy
-  - IP-CIDR,149.154.164.0/22,EnProxy
-  - IP-CIDR,149.154.168.0/22,EnProxy
-  - IP-CIDR,149.154.172.0/22,EnProxy
-  - IP-CIDR,91.108.4.0/22,EnProxy
-  - IP-CIDR,91.108.56.0/22,EnProxy
-  - IP-CIDR,91.108.8.0/22,EnProxy
+  - IP-CIDR6,2001:67c:4e8::/48,EnProxy
+  - IP-CIDR6,2001:b28:f23d::/48,EnProxy
+  - IP-CIDR6,2001:b28:f23f::/48,EnProxy
 
   # Accelerate direct sites
   - DOMAIN-KEYWORD,torrent,NoProxy
