@@ -131,7 +131,6 @@ Proxy Group:
     type: select
     proxies:
       - DIRECT
-      - PF-JP-A
       - SD-JP-A1
       - SD-JP-B2
       - SD-US-A2
