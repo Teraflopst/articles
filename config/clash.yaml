@@ -196,10 +196,11 @@ Rule:
   - DOMAIN-SUFFIX,tencent.com,NoProxy
   - DOMAIN,gist.github.com,EnProxy
   - DOMAIN,cn.engadget.com,NoProxy
-  - DOMAIN,macpaw.com,NoProxy
-  - DOMAIN,pcbeta.com,NoProxy
-  - DOMAIN,getchu.com,EnProxy
-  - DOMAIN,paofu.cloud,EnProxy
+  - DOMAIN-SUFFIX,macpaw.com,NoProxy
+  - DOMAIN-SUFFIX,pcbeta.com,NoProxy
+  - DOMAIN-SUFFIX,getchu.com,EnProxy
+  - DOMAIN-SUFFIX,paofu.cloud,EnProxy
+  - DOMAIN-SUFFIX,inoreader.com,EnProxy
   
   # - DOMAIN-SUFFIX,githubusercontent.com,NoProxy
   - DOMAIN,dmm.co.jp,EnProxy
