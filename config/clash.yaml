@@ -47,7 +47,7 @@ Proxy:
   - name: SD-JP-A1
     type: vmess
     server: hn-lt-ahdaghsdaghdua3hu.guidecns.com
-    port: 30009
+    port: 30012
     uuid: 95394af0-c128-3885-869a-b5aa9ef39927
     alterId: 0
     cipher: auto
@@ -56,7 +56,7 @@ Proxy:
 
   - name: SD-JP-B2
     type: vmess
-    server: 42.236.94.0
+    server: 122.190.3.29
     port: 80
     uuid: 95394af0-c128-3885-869a-b5aa9ef39927
     alterId: 0
