@@ -8,10 +8,6 @@ external-controller: '127.0.0.1:9090'
 secret: ''
 
 Proxy:
-  - name: "NG-R8"
-    type: socks5
-    server: 127.0.0.1
-    port: 1086
 
   - name: FreeS_A1
     type: ss
@@ -131,7 +127,6 @@ Proxy Group:
     type: select
     proxies:
       - DIRECT
-      - NG-R8
       - SD-JP-A2
       - SD-JP-B2
       - SD-US-A2
