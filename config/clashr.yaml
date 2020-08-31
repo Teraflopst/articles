@@ -27,12 +27,6 @@ proxies:
     cipher: aes-256-gcm
     password: isx.yt-60568114
 
-  - name: FreeS_A3
-    type: ss
-    server: 144.202.65.144
-    port: 52556
-    cipher: chacha20-ietf-poly1305
-    password: DZWS4OlB
 
 # ---------------------------------------Freev2ray.org
   - name: FreeV_R
@@ -49,50 +43,50 @@ proxies:
 
 
 # ---------------------------------------闪电
-  - name: SD-JP-A1
+  - name: SD-JP-A2
     type: vmess
-    server: hn-lt-ahdaghsdaghdua3hu.guidecns.com
-    port: 30012
-    uuid: 95394af0-c128-3885-869a-b5aa9ef39927
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-path: /v2ray
-
-  - name: SD-JP-B2
-    type: vmess
-    server: 122.190.3.29
-    port: 80
-    uuid: 95394af0-c128-3885-869a-b5aa9ef39927
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-path: /v2ray
-
-  - name: SD-US-A2
-    type: vmess
-    server: cn2-pbgxkmfum2nx5uthrnso81g1.guidecns.com
-    port: 10014
-    uuid: 95394af0-c128-3885-869a-b5aa9ef39927
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-path: /v2ray
-    
-  - name: SD-US-B2
-    type: vmess
-    server: hn01-lt.guidecns.com
-    port: 13587
+    server: czlt-01.freexyz.cf
+    port: 20001
     uuid: 95394af0-c128-3885-869a-b5aa9ef39927
     alterId: 1
     cipher: auto
     network: ws
     ws-path: /v2ray
 
-  - name: SD-RU-A2
+  - name: SD-JP-B2
     type: vmess
-    server: hn-lt-ahdaghsdaghdua3hu.guidecns.com
-    port: 30005
+    server: czlt-01.freexyz.cf
+    port: 20002
+    uuid: 95394af0-c128-3885-869a-b5aa9ef39927
+    alterId: 1
+    cipher: auto
+    network: ws
+    ws-path: /v2ray
+
+  - name: SD-US-A2
+    type: vmess
+    server: 122.192.87.133
+    port: 20005
+    uuid: 95394af0-c128-3885-869a-b5aa9ef39927
+    alterId: 1
+    cipher: auto
+    network: ws
+    ws-path: /v2ray
+    
+  - name: SD-US-B2
+    type: vmess
+    server: cn2-pbgxkmfum2nx5uthrnso81g1.guidecns.com
+    port: 10015
+    uuid: 95394af0-c128-3885-869a-b5aa9ef39927
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-path: /v2ray
+
+  - name: SD-HK-A2
+    type: vmess
+    server: hn.yd.freexyz.club
+    port: 25012
     uuid: 95394af0-c128-3885-869a-b5aa9ef39927
     alterId: 1
     cipher: auto
@@ -100,10 +94,6 @@ proxies:
     ws-path: /v2ray
 
 # ---------------------------------------泡芙云
-
-
-  - {"name":"PF-JP-A","type":"ssr","server":"cm-02.puffvip.com","port":1052,"cipher":"xchacha20","password":"Paofu","udp":true,"obfs":"plain","obfs-param":"49d71120042.microsoft.com","protocol":"auth_aes128_sha1","protocol-param":"120042:zaz4oH"}
-
 
 # ---------------------------------------忍者云
   - {"name":"Special|日本|1.0|续费专用","type":"ss","server":"free1.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
@@ -143,15 +133,13 @@ proxy-groups:
     proxies:
       - DIRECT
       - NG-R8
-      - PF-JP-A
-      - SD-JP-A1
+      - SD-JP-A2
       - SD-JP-B2
       - SD-US-A2
       - SD-US-B2
-      - SD-RU-A2
+      - SD-HK-A2
       - FreeS_A1
       - FreeS_A2
-      - FreeS_A3
       - NamaV_CDN
       - FreeV_R
       - 'Special|日本|1.0|续费专用'
