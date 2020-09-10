@@ -65,10 +65,10 @@ proxies:
 
   - name: SD-US-A2
     type: vmess
-    server: 122.192.87.133
-    port: 20005
+    server: cn2-pbgxkmfum2nx5uthrnso81g1.guidecns.com
+    port: 10012
     uuid: 95394af0-c128-3885-869a-b5aa9ef39927
-    alterId: 1
+    alterId: 0
     cipher: auto
     network: ws
     ws-path: /v2ray
@@ -87,6 +87,16 @@ proxies:
     type: vmess
     server: hn.yd.freexyz.club
     port: 25012
+    uuid: 95394af0-c128-3885-869a-b5aa9ef39927
+    alterId: 1
+    cipher: auto
+    network: ws
+    ws-path: /v2ray
+
+  - name: SD-SG-A3
+    type: vmess
+    server: cn-ns-02.guidecns.com
+    port: 26006
     uuid: 95394af0-c128-3885-869a-b5aa9ef39927
     alterId: 1
     cipher: auto
@@ -138,6 +148,7 @@ proxy-groups:
       - SD-US-A2
       - SD-US-B2
       - SD-HK-A2
+      - SD-SG-A3
       - FreeS_A1
       - FreeS_A2
       - NamaV_CDN
@@ -189,6 +200,18 @@ rules:
   - DOMAIN,coderunnerapp.com,REJECT
   
   # 网络优化
+  - PROCESS-NAME,NeteaseMusic,NoProxy
+  - PROCESS-NAME,ClipManager,NoProxy
+  - PROCESS-NAME,wpsoffice,NoProxy
+  - PROCESS-NAME,Evernote,NoProxy
+  - PROCESS-NAME,WeChat,NoProxy
+  - PROCESS-NAME,TickTick,NoProxy
+  - PROCESS-NAME,QQ,NoProxy
+  - PROCESS-NAME,QQMusic,NoProxy
+  - PROCESS-NAME,HandShaker,NoProxy
+  - PROCESS-NAME,BaiduNetdisk_mac,NoProxy
+  - PROCESS-NAME,Maipo,NoProxy
+  
   - DOMAIN-SUFFIX,renzhe.cloud,EnProxy
   - DOMAIN-SUFFIX,trello.com,EnProxy
   - DOMAIN-SUFFIX,trellocdn.com,NoProxy
@@ -206,6 +229,7 @@ rules:
   
   # - DOMAIN-SUFFIX,githubusercontent.com,NoProxy
   - DOMAIN,dmm.co.jp,EnProxy
+  - DOMAIN,afreecatv.com,EnProxy
   - DOMAIN-SUFFIX,cc3001.dmm.co.jp,NoProxy
   - DOMAIN-SUFFIX,xclient.info,NoProxy
   - DOMAIN-SUFFIX,nvshens.net,NoProxy
@@ -213,19 +237,34 @@ rules:
   - DOMAIN-SUFFIX,javlibrary.com,EnProxy
   - DOMAIN-SUFFIX,avbebe.com,EnProxy
 
-
   # Apple 服务优化
-  - DOMAIN,gs.apple.com,EnProxy
+  - DOMAIN,aod.itunes.apple.com,NoProxy
+  - DOMAIN,api.smoot.apple.cn,NoProxy
+  - DOMAIN,appldnld.apple.com,NoProxy
+  - DOMAIN,apptrailers.itunes.apple.com,NoProxy
+  - DOMAIN,gs-loc-cn.apple.com,NoProxy
+  - DOMAIN,iosapps.itunes.apple.com,NoProxy
+  - DOMAIN,music.apple.com,NoProxy
+  - DOMAIN,mvod.itunes.apple.com,NoProxy
+  - DOMAIN,osxapps.itunes.apple.com,NoProxy
+  - DOMAIN,supportdownload.apple.com,NoProxy
+  - DOMAIN,swcdn.apple.com,NoProxy
+  - DOMAIN-SUFFIX,ls.apple.com,NoProxy
   - DOMAIN-SUFFIX,mzstatic.com,NoProxy
+  - DOMAIN,gs.apple.com,EnProxy
   - DOMAIN-SUFFIX,akadns.net,NoProxy
-  - DOMAIN-SUFFIX,aaplimg.com,NoProxy
   - DOMAIN-SUFFIX,cdn-apple.com,NoProxy
-
-  - DOMAIN,itunes.apple.com,EnProxy
-  - DOMAIN,beta.itunes.apple.com,EnProxy
-  - DOMAIN-SUFFIX,apple.com,NoProxy
+  - DOMAIN-SUFFIX,apple.com,EnProxy
   - DOMAIN-SUFFIX,icloud.com,NoProxy
   - DOMAIN-SUFFIX,icloud-content.com,NoProxy
+  # Apple News
+  - DOMAIN-SUFFIX,apple.news,EnProxy
+  # Apple TV
+  - DOMAIN,np-edge.itunes.apple.com,EnProxy
+  - DOMAIN,play-edge.itunes.apple.com,EnProxy
+  - DOMAIN-SUFFIX,tv.apple.com,EnProxy
+  # TestFlight
+  - DOMAIN,testflight.apple.com,EnProxy
 
   # 直连网站
   # Beplay
@@ -528,14 +567,37 @@ rules:
   - DOMAIN-SUFFIX,tvb.com,EnProxy
 
   # Microsoft
-  # - DOMAIN-KEYWORD,microsoft,EnProxy
-  # - DOMAIN-SUFFIX,hotmail.com,EnProxy
+  - PROCESS-NAME,OneDrive,EnProxy
+  - DOMAIN-KEYWORD,onedrive,EnProxy
+  - DOMAIN-SUFFIX,azure.com,EnProxy
+  - DOMAIN-SUFFIX,fabric.io,EnProxy
+  - DOMAIN-SUFFIX,files.1drv.com,EnProxy
+  - DOMAIN-SUFFIX,hotmail.com,EnProxy
   - DOMAIN-SUFFIX,live.com,EnProxy
   - DOMAIN-SUFFIX,live.net,EnProxy
+  - DOMAIN-SUFFIX,livefilestore.com,EnProxy
+  - DOMAIN-SUFFIX,mesh.com,EnProxy
+  - DOMAIN-SUFFIX,microsoft.com,EnProxy
+  - DOMAIN-SUFFIX,microsoftonline.com,EnProxy
+  - DOMAIN-SUFFIX,microsoft-tst.com,EnProxy
   - DOMAIN-SUFFIX,msn.com,EnProxy
-  # - DOMAIN-SUFFIX,office.com,EnProxy
-  # - DOMAIN-SUFFIX,office.net,EnProxy
+  - DOMAIN-SUFFIX,office.com,EnProxy
+  - DOMAIN-SUFFIX,office.net,EnProxy
+  - DOMAIN-SUFFIX,onedrive.com,EnProxy
   - DOMAIN-SUFFIX,outlook.com,EnProxy
+  - DOMAIN-SUFFIX,p.sfx.ms,EnProxy
+  - DOMAIN-SUFFIX,sharepoint.com,EnProxy
+  - DOMAIN-SUFFIX,skype.com,EnProxy
+  - DOMAIN-SUFFIX,spoprod-a.akamaihd.net,EnProxy
+  - DOMAIN-SUFFIX,storage.msn.com,EnProxy
+  - DOMAIN-SUFFIX,windows.net,EnProxy
+  - DOMAIN-SUFFIX,xbox.com,EnProxy
+  - DOMAIN-SUFFIX,xboxlive.com,EnProxy
+  - DOMAIN-SUFFIX,onedrive.live.com,EnProxy
+  - DOMAIN-SUFFIX,office365.com,EnProxy
+  - DOMAIN-SUFFIX,sfx.ms,EnProxy
+  - DOMAIN-SUFFIX,windows.com,EnProxy
+  - DOMAIN-SUFFIX,microsofttranslator.com,EnProxy
 
   # Netflix
   - DOMAIN-SUFFIX,netflix.com,EnProxy
@@ -665,7 +727,6 @@ rules:
   - DOMAIN-SUFFIX,cnn.com,EnProxy
   - DOMAIN-SUFFIX,cocoapods.org,EnProxy
   - DOMAIN-SUFFIX,comodoca.com,EnProxy
-  - DOMAIN-SUFFIX,content.office.net,EnProxy
   - DOMAIN-SUFFIX,culturedcode.com ,EnProxy
   - DOMAIN-SUFFIX,cygames.jp ,EnProxy
   - DOMAIN-SUFFIX,d.pr,EnProxy
@@ -704,7 +765,6 @@ rules:
   - DOMAIN-SUFFIX,evernote.com,NoProxy
   - DOMAIN-SUFFIX,extmatrix.com,EnProxy
   - DOMAIN-SUFFIX,eyny.com,EnProxy
-  - DOMAIN-SUFFIX,fabric.io,EnProxy
   - DOMAIN-SUFFIX,fast.com,EnProxy
   - DOMAIN-SUFFIX,fastly.net,EnProxy
   - DOMAIN-SUFFIX,fastmail.com,EnProxy
@@ -810,7 +870,6 @@ rules:
   - DOMAIN-SUFFIX,linode.com,EnProxy
   - DOMAIN-SUFFIX,lithium.com,EnProxy
   - DOMAIN-SUFFIX,littlehj.com,EnProxy
-  - DOMAIN-SUFFIX,livefilestore.com,EnProxy
   - DOMAIN-SUFFIX,llnwd.net,EnProxy
   - DOMAIN-SUFFIX,localnetwork.uop,EnProxy
   - DOMAIN-SUFFIX,logmein.com,EnProxy
@@ -825,7 +884,6 @@ rules:
   - DOMAIN-SUFFIX,mega.co.nz,EnProxy
   - DOMAIN-SUFFIX,mega.nz,EnProxy
   - DOMAIN-SUFFIX,megaupload.com,EnProxy
-  # - DOMAIN-SUFFIX,microsofttranslator.com,EnProxy
   - DOMAIN-SUFFIX,mindnode.com,EnProxy
   - DOMAIN-SUFFIX,mlssoccer.com,EnProxy
   - DOMAIN-SUFFIX,mobile01.com,EnProxy
@@ -853,10 +911,7 @@ rules:
   - DOMAIN-SUFFIX,nytimes.com,EnProxy
   - DOMAIN-SUFFIX,nytimg.com,EnProxy
   - DOMAIN-SUFFIX,nytstyle.com,EnProxy
-  - DOMAIN-SUFFIX,office365.com,EnProxy
   - DOMAIN-SUFFIX,omnigroup.com,EnProxy
-  - DOMAIN-SUFFIX,onedrive.com,EnProxy
-  - DOMAIN-SUFFIX,onedrive.live.com,EnProxy
   - DOMAIN-SUFFIX,onenote.com,EnProxy
   - DOMAIN-SUFFIX,ooyala.com,EnProxy
   - DOMAIN-SUFFIX,openvpn.net,EnProxy
@@ -918,7 +973,6 @@ rules:
   - DOMAIN-SUFFIX,scribd.com,EnProxy
   - DOMAIN-SUFFIX,search.com,EnProxy
   - DOMAIN-SUFFIX,servebom.com,EnProxy
-  - DOMAIN-SUFFIX,sfx.ms,EnProxy
   - DOMAIN-SUFFIX,shadowsocks.org,EnProxy
   - DOMAIN-SUFFIX,shadowverse.jp,EnProxy
   - DOMAIN-SUFFIX,sharethis.com,EnProxy
@@ -928,7 +982,6 @@ rules:
   - DOMAIN-SUFFIX,simp.ly,EnProxy
   - DOMAIN-SUFFIX,simplenote.com,EnProxy
   - DOMAIN-SUFFIX,sketchappsources.com,EnProxy
-  - DOMAIN-SUFFIX,skype.com,EnProxy
   - DOMAIN-SUFFIX,slack.com,EnProxy
   - DOMAIN-SUFFIX,slack-edge.com,EnProxy
   - DOMAIN-SUFFIX,slack-msgs.com,EnProxy
@@ -1100,8 +1153,6 @@ rules:
   - DOMAIN-SUFFIX,wikimedia.org,EnProxy
   - DOMAIN-SUFFIX,wikipedia.com,EnProxy
   - DOMAIN-SUFFIX,wikipedia.org,EnProxy
-  - DOMAIN-SUFFIX,windows.com,EnProxy
-  - DOMAIN-SUFFIX,windows.net,EnProxy
   - DOMAIN-SUFFIX,wn.com,EnProxy
   - DOMAIN-SUFFIX,wordpress.com,EnProxy
   - DOMAIN-SUFFIX,workflow.is,EnProxy
@@ -1306,4 +1357,4 @@ rules:
 
   # 最终规则
   - GEOIP,CN,NoProxy
-  - MATCH,,FnProxy
+  - MATCH,FnProxy
