@@ -1,11 +1,57 @@
+# 参考引用：
+# https://github.com/Dreamacro/clash
+# https://github.com/yichengchen/clashX
+# -------------------------------------
+# https://lancellc.gitbook.io/clash/
+# https://github.com/Hackl0us/SS-Rule-Snippet
+# https://github.com/lhie1/Rules/tree/master/
+# https://github.com/DivineEngine/Profiles/tree/master
+# https://github.com/Dreamacro/clash/wiki/configuration
+# Google 搜索 Clash 基本配置记录
+
 port: 7890
 socks-port: 7891
 redir-port: 7892
 allow-lan: true
-mode: Rule
+bind-address: '*'
+mode: rule
 log-level: info
 external-controller: '127.0.0.1:9090'
 secret: ''
+
+dns:
+  enable: false
+  listen: 0.0.0.0:53
+  ipv6: false
+  default-nameserver:
+    - 1.2.4.8
+    - 223.5.5.5
+    - 114.114.114.114
+    - 119.29.29.29
+  enhanced-mode: redir-host # 或 fake-ip
+  fake-ip-range: 198.18.0.1/16 # Fake IP 地址池 (CIDR 形式)
+
+  nameserver:
+    - 1.2.4.8
+    - 114.114.114.114
+    - 223.5.5.5
+    - tls://13800000000.rubyfish.cn:853
+  fallback:
+    - tls://13800000000.rubyfish.cn:853
+    - tls://1.0.0.1:853
+    - tls://dns.google:853
+
+  # nameserver:
+  #   - tls://dot.360.cn
+  #   - tls://dns.alidns.com
+  #   - tls://13800000000.rubyfish.cn
+  # fallback:
+  #   - https://dns.google/dns-query
+
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4
 
 proxies:
   - name: "NG-R8"
@@ -42,8 +88,9 @@ proxies:
   - {"name":"NamaV_CDN","type":"vmess","server":"cdn.n4321.xyz","port":443,"uuid":"03042ad7-6316-46a0-8473-65768b0f1fb2","alterId":0,"cipher":"auto","network":"ws","ws-path":"/na","tls":true}
 
 
+
 # ---------------------------------------闪电
-  - name: SD-JP-A2
+  - name: SDv-JP-A2
     type: vmess
     server: czlt-01.freexyz.cf
     port: 20001
@@ -53,7 +100,7 @@ proxies:
     network: ws
     ws-path: /v2ray
 
-  - name: SD-JP-B2
+  - name: SDv-JP-B2
     type: vmess
     server: czlt-01.freexyz.cf
     port: 20002
@@ -63,17 +110,27 @@ proxies:
     network: ws
     ws-path: /v2ray
 
-  - name: SD-US-A2
+  - name: SDv-JP-C3
     type: vmess
-    server: cn2-pbgxkmfum2nx5uthrnso81g1.guidecns.com
-    port: 10012
+    server: hn-lt-ahdaghsdaghdua3hu.guidecns.com
+    port: 30010
     uuid: 95394af0-c128-3885-869a-b5aa9ef39927
     alterId: 0
     cipher: auto
     network: ws
     ws-path: /v2ray
+
+  - name: SDv-US-A2
+    type: vmess
+    server: hn01-lt.guidecns.com
+    port: 13587
+    uuid: 95394af0-c128-3885-869a-b5aa9ef39927
+    alterId: 1
+    cipher: auto
+    network: ws
+    ws-path: /v2ray
     
-  - name: SD-US-B2
+  - name: SDv-US-B2
     type: vmess
     server: cn2-pbgxkmfum2nx5uthrnso81g1.guidecns.com
     port: 10015
@@ -83,7 +140,7 @@ proxies:
     network: ws
     ws-path: /v2ray
 
-  - name: SD-HK-A2
+  - name: SDv-HK-A2
     type: vmess
     server: hn.yd.freexyz.club
     port: 25012
@@ -93,15 +150,41 @@ proxies:
     network: ws
     ws-path: /v2ray
 
-  - name: SD-SG-A3
-    type: vmess
-    server: cn-ns-02.guidecns.com
-    port: 26006
-    uuid: 95394af0-c128-3885-869a-b5aa9ef39927
-    alterId: 1
-    cipher: auto
-    network: ws
-    ws-path: /v2ray
+  - name: "SDr-JP-A2"
+    type: ssr
+    server: gzyd.dasaric.pw
+    port: 6007
+    cipher: chacha20-ietf
+    password: gaLgrz
+    obfs: tls1.2_ticket_auth
+    obfs-param: 26f9578703.microsoft.com    
+    protocol: auth_aes128_sha1
+    protocol-param: 78703:ZSusEH
+
+  - name: "SDr-US-A2"
+    type: ssr
+    server: gzyd.dasaric.pw
+    port: 6002
+    cipher: chacha20-ietf
+    password: gaLgrz
+    obfs: tls1.2_ticket_auth
+    obfs-param: 26f9578703.microsoft.com    
+    protocol: auth_aes128_sha1
+    protocol-param: 78703:ZSusEH
+
+  - name: "SDr-HK-A2"
+    type: ssr
+    server: gzyd2.jk8w6mhejz8nxmj5.e-loli.xyz
+    port: 46301
+    cipher: chacha20-ietf
+    password: gaLgrz
+    obfs: tls1.2_ticket_auth
+    obfs-param: 26f9578703.microsoft.com    
+    protocol: auth_aes128_sha1
+    protocol-param: 78703:ZSusEH
+    # udp: true
+
+
 
 # ---------------------------------------泡芙云
 
@@ -143,12 +226,15 @@ proxy-groups:
     proxies:
       - DIRECT
       - NG-R8
-      - SD-JP-A2
-      - SD-JP-B2
-      - SD-US-A2
-      - SD-US-B2
-      - SD-HK-A2
-      - SD-SG-A3
+      - SDv-JP-A2
+      - SDv-JP-B2
+      - SDv-JP-C3
+      - SDv-US-A2
+      - SDv-US-B2
+      - SDv-HK-A2
+      - SDr-JP-A2
+      - SDr-US-A2
+      - SDr-HK-A2
       - FreeS_A1
       - FreeS_A2
       - NamaV_CDN
@@ -201,6 +287,7 @@ rules:
   
   # 网络优化
   - PROCESS-NAME,NeteaseMusic,NoProxy
+  - PROCESS-NAME,OneDrive,NoProxy
   - PROCESS-NAME,ClipManager,NoProxy
   - PROCESS-NAME,wpsoffice,NoProxy
   - PROCESS-NAME,Evernote,NoProxy
@@ -208,9 +295,18 @@ rules:
   - PROCESS-NAME,TickTick,NoProxy
   - PROCESS-NAME,QQ,NoProxy
   - PROCESS-NAME,QQMusic,NoProxy
+  - PROCESS-NAME,WeiyunApp,NoProxy
   - PROCESS-NAME,HandShaker,NoProxy
   - PROCESS-NAME,BaiduNetdisk_mac,NoProxy
   - PROCESS-NAME,Maipo,NoProxy
+  - PROCESS-NAME,Aliwangwang,NoProxy
+  - PROCESS-NAME,Syncthing,NoProxy
+  - PROCESS-NAME,QQPlayerMac,NoProxy
+  - PROCESS-NAME,Home,NoProxy
+  - PROCESS-NAME,优酷,NoProxy
+  - PROCESS-NAME,语雀,NoProxy
+  - PROCESS-NAME,腾讯翻译君,NoProxy
+  - PROCESS-NAME,小米云服务,NoProxy
   
   - DOMAIN-SUFFIX,renzhe.cloud,EnProxy
   - DOMAIN-SUFFIX,trello.com,EnProxy
@@ -567,7 +663,7 @@ rules:
   - DOMAIN-SUFFIX,tvb.com,EnProxy
 
   # Microsoft
-  - PROCESS-NAME,OneDrive,EnProxy
+  # - PROCESS-NAME,OneDrive,EnProxy
   - DOMAIN-KEYWORD,onedrive,EnProxy
   - DOMAIN-SUFFIX,azure.com,EnProxy
   - DOMAIN-SUFFIX,fabric.io,EnProxy
@@ -1344,14 +1440,14 @@ rules:
 
   # LAN
   - DOMAIN-SUFFIX,local,NoProxy
-  - IP-CIDR,127.0.0.0/8,NoProxy
-  - IP-CIDR,172.16.0.0/12,NoProxy
-  - IP-CIDR,192.168.0.0/16,NoProxy
-  - IP-CIDR,10.0.0.0/8,NoProxy
-  - IP-CIDR,17.0.0.0/8,NoProxy
-  - IP-CIDR,100.64.0.0/10,NoProxy
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,17.0.0.0/8,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
 
-  - SRC-IP-CIDR,192.168.1.201/32,NoProxy
+  - SRC-IP-CIDR,192.168.1.201/32,DIRECT
   - DST-PORT,80,NoProxy
   - SRC-PORT,7777,NoProxy
 
