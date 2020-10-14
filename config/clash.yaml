@@ -122,8 +122,8 @@ proxies:
 
   - name: SDv-US-A2
     type: vmess
-    server: hn01-lt.guidecns.com
-    port: 13587
+    server: 122.192.87.133
+    port: 20008
     uuid: 95394af0-c128-3885-869a-b5aa9ef39927
     alterId: 1
     cipher: auto
@@ -136,6 +136,16 @@ proxies:
     port: 10015
     uuid: 95394af0-c128-3885-869a-b5aa9ef39927
     alterId: 0
+    cipher: auto
+    network: ws
+    ws-path: /v2ray
+
+  - name: SDv-US-C2
+    type: vmess
+    server: cn2-pbgxkmfum2nx5uthrnso81g1.guidecns.com
+    port: 10015
+    uuid: 95394af0-c128-3885-869a-b5aa9ef39927
+    alterId: 1
     cipher: auto
     network: ws
     ws-path: /v2ray
@@ -231,6 +241,7 @@ proxy-groups:
       - SDv-JP-C3
       - SDv-US-A2
       - SDv-US-B2
+      - SDv-US-C2
       - SDv-HK-A2
       # - SDr-JP-A2
       # - SDr-US-A2
