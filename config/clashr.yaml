@@ -54,10 +54,6 @@ dns:
       - 240.0.0.0/4
 
 proxies:
-  - name: "NG-R8"
-    type: socks5
-    server: 127.0.0.1
-    port: 1086
 
   - name: FreeS_A1
     type: ss
@@ -115,7 +111,7 @@ proxies:
     server: hn-lt-ahdaghsdaghdua3hu.guidecns.com
     port: 30010
     uuid: 95394af0-c128-3885-869a-b5aa9ef39927
-    alterId: 0
+    alterId: 1
     cipher: auto
     network: ws
     ws-path: /v2ray
@@ -135,7 +131,7 @@ proxies:
     server: cn2-pbgxkmfum2nx5uthrnso81g1.guidecns.com
     port: 10015
     uuid: 95394af0-c128-3885-869a-b5aa9ef39927
-    alterId: 0
+    alterId: 1
     cipher: auto
     network: ws
     ws-path: /v2ray
@@ -143,7 +139,7 @@ proxies:
   - name: SDv-US-C2
     type: vmess
     server: cn2-pbgxkmfum2nx5uthrnso81g1.guidecns.com
-    port: 10015
+    port: 10016
     uuid: 95394af0-c128-3885-869a-b5aa9ef39927
     alterId: 1
     cipher: auto
@@ -160,10 +156,40 @@ proxies:
     network: ws
     ws-path: /v2ray
 
+  - name: SDv-HK-B2
+    type: vmess
+    server: hnyd-01.freepbox.tk
+    port: 13586
+    uuid: 95394af0-c128-3885-869a-b5aa9ef39927
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-path: /v2ray
+
+  - name: SDv-SG-A2
+    type: vmess
+    server: qd02-ali.freexyz.cf
+    port: 50002
+    uuid: 95394af0-c128-3885-869a-b5aa9ef39927
+    alterId: 1
+    cipher: auto
+    network: ws
+    ws-path: /v2ray
+
+  - name: SDv-KR-A3
+    type: vmess
+    server: 183.232.53.33
+    port: 80
+    uuid: 95394af0-c128-3885-869a-b5aa9ef39927
+    alterId: 1
+    cipher: auto
+    network: ws
+    ws-path: /v2ray
+
   - name: "SDr-JP-A2"
     type: ssr
     server: gzyd.dasaric.pw
-    port: 6007
+    port: 6006
     cipher: chacha20-ietf
     password: gaLgrz
     obfs: tls1.2_ticket_auth
@@ -182,51 +208,21 @@ proxies:
     protocol: auth_aes128_sha1
     protocol-param: 78703:ZSusEH
 
-  - name: "SDr-HK-A2"
+  - name: "SDr-SG-A2"
     type: ssr
-    server: gzyd2.jk8w6mhejz8nxmj5.e-loli.xyz
-    port: 46301
+    server: gzyd.dasaric.pw
+    port: 6010
     cipher: chacha20-ietf
     password: gaLgrz
     obfs: tls1.2_ticket_auth
     obfs-param: 26f9578703.microsoft.com    
     protocol: auth_aes128_sha1
     protocol-param: 78703:ZSusEH
-    # udp: true
-
-
 
 # ---------------------------------------泡芙云
 
 # ---------------------------------------忍者云
-  - {"name":"Special|日本|1.0|续费专用","type":"ss","server":"free1.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Basic|台湾1|1.0|NF*","type":"ss","server":"twhinet1.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Basic|台湾2|1.0|NF*","type":"ss","server":"twhinet2.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Basic|日本1|1.0|NF*","type":"ss","server":"jpntt1.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Basic|日本2|1.0|NF*","type":"ss","server":"jpntt2.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Basic|美国1|1.0|NF*","type":"ss","server":"az-us-1.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Basic|美国2|1.0|NF*","type":"ss","server":"az-us-2.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Basic|香港01|1.0|NF*","type":"ss","server":"hkhkt01.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Basic|香港02|1.0|NF*","type":"ss","server":"hkhkt02.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Basic|香港03|1.0|NF*","type":"ss","server":"hkhkt03.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Basic|香港04|1.0|NF*","type":"ss","server":"hkhkt04.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Basic|香港05|1.0|NF*","type":"ss","server":"hkhkt05.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Basic|香港06|1.0|NF*","type":"ss","server":"hkhkt06.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Basic|香港07|1.0|NF*","type":"ss","server":"hkhkt08.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Basic|香港08|1.0|NF*","type":"ss","server":"hkhkt09.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Basic|香港09|1.0|NF*","type":"ss","server":"hkhkt10.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Basic|香港10|1.0|NF*","type":"ss","server":"hkhkt12.host-sub.com","port":56724,"cipher":"xchacha20-ietf-poly1305","password":"pNYBIF","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"[V2]Basic|香港01|2.0|NF*","type":"vmess","server":"hkhkt01.host-sub.com","port":156,"uuid":"bf87a494-cb07-39ed-9fd2-cac7b424403b","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"[V2]Basic|香港02|2.0|NF*","type":"vmess","server":"hkhkt02.host-sub.com","port":156,"uuid":"bf87a494-cb07-39ed-9fd2-cac7b424403b","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"[V2]Basic|香港03|2.0|NF*","type":"vmess","server":"hkhkt03.host-sub.com","port":156,"uuid":"bf87a494-cb07-39ed-9fd2-cac7b424403b","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"[V2]Basic|香港04|2.0|NF*","type":"vmess","server":"hkhkt04.host-sub.com","port":156,"uuid":"bf87a494-cb07-39ed-9fd2-cac7b424403b","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"[V2]Basic|香港05|2.0|NF*","type":"vmess","server":"hkhkt05.host-sub.com","port":156,"uuid":"bf87a494-cb07-39ed-9fd2-cac7b424403b","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"[V2]Basic|香港06|2.0|NF*","type":"vmess","server":"hkhkt06.host-sub.com","port":156,"uuid":"bf87a494-cb07-39ed-9fd2-cac7b424403b","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"[V2]Basic|香港07|2.0|NF*","type":"vmess","server":"hkhkt08.host-sub.com","port":156,"uuid":"bf87a494-cb07-39ed-9fd2-cac7b424403b","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"[V2]Basic|香港08|2.0|NF*","type":"vmess","server":"hkhkt09.host-sub.com","port":156,"uuid":"bf87a494-cb07-39ed-9fd2-cac7b424403b","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"[V2]Basic|香港09|2.0|NF*","type":"vmess","server":"hkhkt10.host-sub.com","port":156,"uuid":"bf87a494-cb07-39ed-9fd2-cac7b424403b","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"[V2]Basic|香港10|2.0|NF*","type":"vmess","server":"hkhkt12.host-sub.com","port":156,"uuid":"bf87a494-cb07-39ed-9fd2-cac7b424403b","alterId":0,"cipher":"auto","udp":true}
-
+# https://renzhe.cloud/auth/login
 # --------------------------------------- E.N.D
 
 proxy-groups:
@@ -235,7 +231,6 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - NG-R8
       - SDv-JP-A2
       - SDv-JP-B2
       - SDv-JP-C3
@@ -243,40 +238,16 @@ proxy-groups:
       - SDv-US-B2
       - SDv-US-C2
       - SDv-HK-A2
+      - SDv-HK-B2
+      - SDv-SG-A2
+      - SDv-KR-A3
       - SDr-JP-A2
       - SDr-US-A2
-      - SDr-HK-A2
+      - SDr-SG-A2
       - FreeS_A1
       - FreeS_A2
       - NamaV_CDN
       - FreeV_R
-      - 'Special|日本|1.0|续费专用'
-#       - 'Basic|台湾1|1.0|NF*'
-#       - 'Basic|台湾2|1.0|NF*'
-#       - 'Basic|日本1|1.0|NF*'
-#       - 'Basic|日本2|1.0|NF*'
-#       - 'Basic|美国1|1.0|NF*'
-#       - 'Basic|美国2|1.0|NF*'
-#       - 'Basic|香港01|1.0|NF*'
-#       - 'Basic|香港02|1.0|NF*'
-#       - 'Basic|香港03|1.0|NF*'
-#       - 'Basic|香港04|1.0|NF*'
-#       - 'Basic|香港05|1.0|NF*'
-#       - 'Basic|香港06|1.0|NF*'
-      - 'Basic|香港07|1.0|NF*'
-      - 'Basic|香港08|1.0|NF*'
-      - 'Basic|香港09|1.0|NF*'
-      - 'Basic|香港10|1.0|NF*'
-      - '[V2]Basic|香港01|2.0|NF*'
-      - '[V2]Basic|香港02|2.0|NF*'
-      - '[V2]Basic|香港03|2.0|NF*'
-      - '[V2]Basic|香港04|2.0|NF*'
-      - '[V2]Basic|香港05|2.0|NF*'
-      - '[V2]Basic|香港06|2.0|NF*'
-      - '[V2]Basic|香港07|2.0|NF*'
-      - '[V2]Basic|香港08|2.0|NF*'
-      - '[V2]Basic|香港09|2.0|NF*'
-      - '[V2]Basic|香港10|2.0|NF*'
 
   - name: NoProxy
     proxies:
