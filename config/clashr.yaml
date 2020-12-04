@@ -119,7 +119,7 @@ proxies:
   - name: SDv-US-A2
     type: vmess
     server: 122.192.87.133
-    port: 20008
+    port: 20005
     uuid: 95394af0-c128-3885-869a-b5aa9ef39927
     alterId: 1
     cipher: auto
@@ -156,15 +156,15 @@ proxies:
     network: ws
     ws-path: /v2ray
 
-  - name: SDv-HK-B2
+  - name: SDv-HK-B1
     type: vmess
-    server: hnyd-01.freepbox.tk
-    port: 13586
+    server: agan2.e-loli.xyz
+    port: 18086
     uuid: 95394af0-c128-3885-869a-b5aa9ef39927
-    alterId: 0
+    alterId: 1
     cipher: auto
     network: ws
-    ws-path: /v2ray
+    ws-path: /GenshinImpact.exe
 
   - name: SDv-SG-A2
     type: vmess
@@ -176,10 +176,10 @@ proxies:
     network: ws
     ws-path: /v2ray
 
-  - name: SDv-KR-A3
+  - name: SDv-MY-A3
     type: vmess
-    server: 183.232.53.33
-    port: 80
+    server: cz-yd.cn-jidian-01.cf
+    port: 20003
     uuid: 95394af0-c128-3885-869a-b5aa9ef39927
     alterId: 1
     cipher: auto
@@ -200,7 +200,7 @@ proxies:
   - name: "SDr-US-A2"
     type: ssr
     server: gzyd.dasaric.pw
-    port: 6002
+    port: 6003
     cipher: chacha20-ietf
     password: gaLgrz
     obfs: tls1.2_ticket_auth
@@ -238,9 +238,9 @@ proxy-groups:
       - SDv-US-B2
       - SDv-US-C2
       - SDv-HK-A2
-      - SDv-HK-B2
+      - SDv-HK-B1
       - SDv-SG-A2
-      - SDv-KR-A3
+      - SDv-MY-A3
       - SDr-JP-A2
       - SDr-US-A2
       - SDr-SG-A2
