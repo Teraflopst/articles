@@ -290,6 +290,7 @@ rules:
   - PROCESS-NAME,腾讯翻译君,NoProxy
   - PROCESS-NAME,小米云服务,NoProxy
   
+  - DOMAIN-SUFFIX,as.vivo.com,DIRECT
   - DOMAIN-SUFFIX,renzhe.cloud,EnProxy
   - DOMAIN-SUFFIX,trello.com,EnProxy
   - DOMAIN-SUFFIX,trellocdn.com,NoProxy
