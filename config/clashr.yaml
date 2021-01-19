@@ -74,8 +74,8 @@ proxies:
   - name: FreeV_R
     type: vmess
     server: auto.freev2.top
-    port: 42438
-    uuid: db0d1d0c-c9f6-4570-bc53-8f08ce38808c
+    port: 28571
+    uuid: 699b1559-23f1-4289-90d4-2707606cde2c
     alterId: 1
     cipher: auto
     tls: false
@@ -222,7 +222,52 @@ proxies:
 # ---------------------------------------泡芙云
 
 # ---------------------------------------忍者云
-# https://renzhe.cloud/auth/login
+# https://renzhe.cloud/
+
+  - name: "RZr-US-A2"
+    type: ssr
+    server: basic-cm-2.host-sub.com
+    port: 5015
+    cipher: chacha20-ietf
+    password: renzhecloud
+    obfs: plain
+    obfs-param: 3482c149540.microsoft.com 
+    protocol: auth_aes128_sha1
+    protocol-param: 149540:3zYLdO
+
+  - name: "RZr-JP-A2"
+    type: ssr
+    server: basic-cm-2.host-sub.com
+    port: 4015
+    cipher: chacha20-ietf
+    password: renzhecloud
+    obfs: plain
+    obfs-param: 3482c149540.microsoft.com 
+    protocol: auth_aes128_sha1
+    protocol-param: 149540:3zYLdO
+  
+  - name: "RZr-HK-A2"
+    type: ssr
+    server: hkhkt02.host-sub.com
+    port: 1063
+    cipher: chacha20-ietf
+    password: renzhecloud
+    obfs: plain
+    obfs-param: 3482c149540.microsoft.com 
+    protocol: auth_aes128_sha1
+    protocol-param: 149540:3zYLdO
+
+  - name: "RZr-SG-A2"
+    type: ssr
+    server: basic-cm-2.host-sub.com
+    port: 4015
+    cipher: chacha20-ietf
+    password: renzhecloud
+    obfs: plain
+    obfs-param: 3482c149540.microsoft.com 
+    protocol: auth_aes128_sha1
+    protocol-param: 149540:3zYLdO
+  
 # --------------------------------------- E.N.D
 
 proxy-groups:
@@ -247,6 +292,10 @@ proxy-groups:
       - FreeS_A1
       - FreeS_A2
       - NamaV_CDN
+      - RZr-US-A2
+      - RZr-JP-A2
+      - RZr-HK-A2
+      - RZr-SG-A2
       - FreeV_R
 
   - name: NoProxy
@@ -308,6 +357,10 @@ rules:
   
   # - DOMAIN-SUFFIX,githubusercontent.com,NoProxy
   - DOMAIN,dmm.co.jp,EnProxy
+  - DOMAIN,sexinsex.net,EnProxy
+  - DOMAIN,hkpic.net,EnProxy
+  - DOMAIN,hkbisi.com,EnProxy
+  - DOMAIN,gelbooru.com,EnProxy
   - DOMAIN,afreecatv.com,EnProxy
   - DOMAIN-SUFFIX,cc3001.dmm.co.jp,NoProxy
   - DOMAIN-SUFFIX,xclient.info,NoProxy
