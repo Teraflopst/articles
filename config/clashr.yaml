@@ -90,7 +90,7 @@ proxies:
     type: vmess
     server: czlt-01.freexyz.cf
     port: 20001
-    uuid: 95394af0-c128-3885-869a-b5aa9ef39927
+    uuid: aedc58a2-cba0-3ef9-9e8b-fcafe28da1a2
     alterId: 1
     cipher: auto
     network: ws
@@ -100,7 +100,7 @@ proxies:
     type: vmess
     server: czlt-01.freexyz.cf
     port: 20002
-    uuid: 95394af0-c128-3885-869a-b5aa9ef39927
+    uuid: aedc58a2-cba0-3ef9-9e8b-fcafe28da1a2
     alterId: 1
     cipher: auto
     network: ws
@@ -110,7 +110,7 @@ proxies:
     type: vmess
     server: hn-lt-ahdaghsdaghdua3hu.guidecns.com
     port: 30010
-    uuid: 95394af0-c128-3885-869a-b5aa9ef39927
+    uuid: aedc58a2-cba0-3ef9-9e8b-fcafe28da1a2
     alterId: 1
     cipher: auto
     network: ws
@@ -120,7 +120,7 @@ proxies:
     type: vmess
     server: 122.192.87.133
     port: 20005
-    uuid: 95394af0-c128-3885-869a-b5aa9ef39927
+    uuid: aedc58a2-cba0-3ef9-9e8b-fcafe28da1a2
     alterId: 1
     cipher: auto
     network: ws
@@ -130,7 +130,7 @@ proxies:
     type: vmess
     server: cn2-pbgxkmfum2nx5uthrnso81g1.guidecns.com
     port: 10015
-    uuid: 95394af0-c128-3885-869a-b5aa9ef39927
+    uuid: aedc58a2-cba0-3ef9-9e8b-fcafe28da1a2
     alterId: 1
     cipher: auto
     network: ws
@@ -140,7 +140,7 @@ proxies:
     type: vmess
     server: cn2-pbgxkmfum2nx5uthrnso81g1.guidecns.com
     port: 10016
-    uuid: 95394af0-c128-3885-869a-b5aa9ef39927
+    uuid: aedc58a2-cba0-3ef9-9e8b-fcafe28da1a2
     alterId: 1
     cipher: auto
     network: ws
@@ -150,7 +150,7 @@ proxies:
     type: vmess
     server: hn.yd.freexyz.club
     port: 25012
-    uuid: 95394af0-c128-3885-869a-b5aa9ef39927
+    uuid: aedc58a2-cba0-3ef9-9e8b-fcafe28da1a2
     alterId: 1
     cipher: auto
     network: ws
@@ -160,7 +160,7 @@ proxies:
     type: vmess
     server: agan2.e-loli.xyz
     port: 18086
-    uuid: 95394af0-c128-3885-869a-b5aa9ef39927
+    uuid: aedc58a2-cba0-3ef9-9e8b-fcafe28da1a2
     alterId: 1
     cipher: auto
     network: ws
@@ -170,7 +170,7 @@ proxies:
     type: vmess
     server: qd02-ali.freexyz.cf
     port: 50002
-    uuid: 95394af0-c128-3885-869a-b5aa9ef39927
+    uuid: aedc58a2-cba0-3ef9-9e8b-fcafe28da1a2
     alterId: 1
     cipher: auto
     network: ws
@@ -180,7 +180,7 @@ proxies:
     type: vmess
     server: cz-yd.cn-jidian-01.cf
     port: 20003
-    uuid: 95394af0-c128-3885-869a-b5aa9ef39927
+    uuid: aedc58a2-cba0-3ef9-9e8b-fcafe28da1a2
     alterId: 1
     cipher: auto
     network: ws
@@ -193,7 +193,7 @@ proxies:
     cipher: chacha20-ietf
     password: gaLgrz
     obfs: tls1.2_ticket_auth
-    obfs-param: 26f9578703.microsoft.com    
+    obfs-param: 26f9578703.microsoft.com
     protocol: auth_aes128_sha1
     protocol-param: 78703:ZSusEH
 
@@ -204,7 +204,7 @@ proxies:
     cipher: chacha20-ietf
     password: gaLgrz
     obfs: tls1.2_ticket_auth
-    obfs-param: 26f9578703.microsoft.com    
+    obfs-param: 26f9578703.microsoft.com
     protocol: auth_aes128_sha1
     protocol-param: 78703:ZSusEH
 
@@ -215,7 +215,7 @@ proxies:
     cipher: chacha20-ietf
     password: gaLgrz
     obfs: tls1.2_ticket_auth
-    obfs-param: 26f9578703.microsoft.com    
+    obfs-param: 26f9578703.microsoft.com
     protocol: auth_aes128_sha1
     protocol-param: 78703:ZSusEH
 
@@ -226,8 +226,8 @@ proxies:
 
   - name: "RZr-US-A2"
     type: ssr
-    server: basic-cm-2.host-sub.com
-    port: 5015
+    server: bcmrelay-basic-2.host-sub.com
+    port: 5005
     cipher: chacha20-ietf
     password: renzhecloud
     obfs: plain
@@ -237,8 +237,8 @@ proxies:
 
   - name: "RZr-JP-A2"
     type: ssr
-    server: basic-cm-2.host-sub.com
-    port: 4015
+    server: cmrelay-basic-2.host-sub.com
+    port: 4005
     cipher: chacha20-ietf
     password: renzhecloud
     obfs: plain
@@ -259,8 +259,8 @@ proxies:
 
   - name: "RZr-SG-A2"
     type: ssr
-    server: basic-cm-2.host-sub.com
-    port: 4015
+    server: cmrelay-basic-2.host-sub.com
+    port: 6005
     cipher: chacha20-ietf
     password: renzhecloud
     obfs: plain
