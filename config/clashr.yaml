@@ -226,8 +226,8 @@ proxies:
 
   - name: "RZr-US-A2"
     type: ssr
-    server: bcmrelay-basic-2.host-sub.com
-    port: 5005
+    server: cmrelay-basic-2.host-sub.com
+    port: 5000
     cipher: chacha20-ietf
     password: renzhecloud
     obfs: plain
