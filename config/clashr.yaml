@@ -108,8 +108,8 @@ proxies:
 
   - name: SDv-JP-C3
     type: vmess
-    server: hn-lt-ahdaghsdaghdua3hu.guidecns.com
-    port: 30010
+    server: hn-lt.cn-jidian-01.cf
+    port: 10002
     uuid: aedc58a2-cba0-3ef9-9e8b-fcafe28da1a2
     alterId: 1
     cipher: auto
@@ -168,8 +168,8 @@ proxies:
 
   - name: SDv-SG-A2
     type: vmess
-    server: qd02-ali.freexyz.cf
-    port: 50002
+    server: yd-dd-01.cn-jidian-01.cf
+    port: 26001
     uuid: aedc58a2-cba0-3ef9-9e8b-fcafe28da1a2
     alterId: 1
     cipher: auto
@@ -189,7 +189,7 @@ proxies:
   - name: "SDr-JP-A2"
     type: ssr
     server: gzyd.dasaric.pw
-    port: 6006
+    port: 6007
     cipher: chacha20-ietf
     password: gaLgrz
     obfs: tls1.2_ticket_auth
@@ -200,7 +200,7 @@ proxies:
   - name: "SDr-US-A2"
     type: ssr
     server: gzyd.dasaric.pw
-    port: 6003
+    port: 6002
     cipher: chacha20-ietf
     password: gaLgrz
     obfs: tls1.2_ticket_auth
