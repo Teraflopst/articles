@@ -108,8 +108,8 @@ proxies:
 
   - name: SDv-JP-C3
     type: vmess
-    server: hn-lt.cn-jidian-01.cf
-    port: 10002
+    server: hn-lt-ahdaghsdaghdua3hu.guidecns.com
+    port: 30010
     uuid: aedc58a2-cba0-3ef9-9e8b-fcafe28da1a2
     alterId: 1
     cipher: auto
@@ -118,7 +118,7 @@ proxies:
 
   - name: SDv-US-A2
     type: vmess
-    server: 122.192.87.133
+    server: cz-02.cn-jidian-01.cf
     port: 20005
     uuid: aedc58a2-cba0-3ef9-9e8b-fcafe28da1a2
     alterId: 1
@@ -128,8 +128,8 @@ proxies:
     
   - name: SDv-US-B2
     type: vmess
-    server: cn2-pbgxkmfum2nx5uthrnso81g1.guidecns.com
-    port: 10015
+    server: qd-lt-01.freepbox.tk
+    port: 20008
     uuid: aedc58a2-cba0-3ef9-9e8b-fcafe28da1a2
     alterId: 1
     cipher: auto
@@ -138,8 +138,8 @@ proxies:
 
   - name: SDv-US-C2
     type: vmess
-    server: cn2-pbgxkmfum2nx5uthrnso81g1.guidecns.com
-    port: 10016
+    server: qd-lt-01.freepbox.tk
+    port: 10015
     uuid: aedc58a2-cba0-3ef9-9e8b-fcafe28da1a2
     alterId: 1
     cipher: auto
@@ -148,8 +148,8 @@ proxies:
 
   - name: SDv-HK-A2
     type: vmess
-    server: hn.yd.freexyz.club
-    port: 25012
+    server: cn-ns-01.guidecns.com
+    port: 10001
     uuid: aedc58a2-cba0-3ef9-9e8b-fcafe28da1a2
     alterId: 1
     cipher: auto
@@ -158,17 +158,17 @@ proxies:
 
   - name: SDv-HK-B1
     type: vmess
-    server: agan2.e-loli.xyz
-    port: 18086
+    server: jm-yd-dd.cn-jidian-01.com
+    port: 21011
     uuid: aedc58a2-cba0-3ef9-9e8b-fcafe28da1a2
     alterId: 1
     cipher: auto
     network: ws
-    ws-path: /GenshinImpact.exe
+    ws-path: /v2ray
 
   - name: SDv-SG-A2
     type: vmess
-    server: yd-dd-01.cn-jidian-01.cf
+    server: jm01-qd0lt.freepbox.tk
     port: 26001
     uuid: aedc58a2-cba0-3ef9-9e8b-fcafe28da1a2
     alterId: 1
@@ -176,10 +176,10 @@ proxies:
     network: ws
     ws-path: /v2ray
 
-  - name: SDv-MY-A3
+  - name: SDv-TW-A1
     type: vmess
-    server: cz-yd.cn-jidian-01.cf
-    port: 20003
+    server: yd-dd-01.cn-jidian-01.com
+    port: 20010
     uuid: aedc58a2-cba0-3ef9-9e8b-fcafe28da1a2
     alterId: 1
     cipher: auto
@@ -189,35 +189,35 @@ proxies:
   - name: "SDr-JP-A2"
     type: ssr
     server: gzyd.dasaric.pw
-    port: 6007
+    port: 6006
     cipher: chacha20-ietf
     password: gaLgrz
     obfs: tls1.2_ticket_auth
-    obfs-param: 26f9578703.microsoft.com
+    obfs-param: 9f52078703.microsoft.com
     protocol: auth_aes128_sha1
-    protocol-param: 78703:ZSusEH
+    protocol-param: 78703:ASusEH
 
   - name: "SDr-US-A2"
     type: ssr
     server: gzyd.dasaric.pw
-    port: 6002
+    port: 6001
     cipher: chacha20-ietf
     password: gaLgrz
     obfs: tls1.2_ticket_auth
-    obfs-param: 26f9578703.microsoft.com
+    obfs-param: 9f52078703.microsoft.com
     protocol: auth_aes128_sha1
-    protocol-param: 78703:ZSusEH
+    protocol-param: 78703:ASusEH
 
   - name: "SDr-SG-A2"
     type: ssr
     server: gzyd.dasaric.pw
-    port: 6010
+    port: 7008
     cipher: chacha20-ietf
     password: gaLgrz
     obfs: tls1.2_ticket_auth
-    obfs-param: 26f9578703.microsoft.com
+    obfs-param: 9f52078703.microsoft.com
     protocol: auth_aes128_sha1
-    protocol-param: 78703:ZSusEH
+    protocol-param: 78703:ASusEH
 
 # ---------------------------------------泡芙云
 
@@ -227,7 +227,18 @@ proxies:
   - name: "RZr-US-A2"
     type: ssr
     server: cmrelay-basic-2.host-sub.com
-    port: 5000
+    port: 5501
+    cipher: chacha20-ietf
+    password: renzhecloud
+    obfs: plain
+    obfs-param: 3482c149540.microsoft.com 
+    protocol: auth_aes128_sha1
+    protocol-param: 149540:3zYLdO
+
+  - name: "RZr-US-A3"
+    type: ssr
+    server: cmrelay-basic-2.host-sub.com
+    port: 5502
     cipher: chacha20-ietf
     password: renzhecloud
     obfs: plain
@@ -238,7 +249,18 @@ proxies:
   - name: "RZr-JP-A2"
     type: ssr
     server: cmrelay-basic-2.host-sub.com
-    port: 4005
+    port: 4501
+    cipher: chacha20-ietf
+    password: renzhecloud
+    obfs: plain
+    obfs-param: 3482c149540.microsoft.com 
+    protocol: auth_aes128_sha1
+    protocol-param: 149540:3zYLdO
+
+  - name: "RZr-JP-A3"
+    type: ssr
+    server: cmrelay-basic-2.host-sub.com
+    port: 4502
     cipher: chacha20-ietf
     password: renzhecloud
     obfs: plain
@@ -248,8 +270,19 @@ proxies:
   
   - name: "RZr-HK-A2"
     type: ssr
-    server: hkhkt02.host-sub.com
-    port: 1063
+    server: cmrelay-basic-1.host-sub.com
+    port: 3501
+    cipher: chacha20-ietf
+    password: renzhecloud
+    obfs: plain
+    obfs-param: 3482c149540.microsoft.com 
+    protocol: auth_aes128_sha1
+    protocol-param: 149540:3zYLdO
+
+  - name: "RZr-HK-A3"
+    type: ssr
+    server: cmrelay-basic-1.host-sub.com
+    port: 3502
     cipher: chacha20-ietf
     password: renzhecloud
     obfs: plain
@@ -260,14 +293,25 @@ proxies:
   - name: "RZr-SG-A2"
     type: ssr
     server: cmrelay-basic-2.host-sub.com
-    port: 6005
+    port: 6501
     cipher: chacha20-ietf
     password: renzhecloud
     obfs: plain
     obfs-param: 3482c149540.microsoft.com 
     protocol: auth_aes128_sha1
     protocol-param: 149540:3zYLdO
-  
+
+  - name: "RZr-SG-A3"
+    type: ssr
+    server: cmrelay-basic-2.host-sub.com
+    port: 6502
+    cipher: chacha20-ietf
+    password: renzhecloud
+    obfs: plain
+    obfs-param: 3482c149540.microsoft.com 
+    protocol: auth_aes128_sha1
+    protocol-param: 149540:3zYLdO
+    
 # --------------------------------------- E.N.D
 
 proxy-groups:
@@ -285,7 +329,7 @@ proxy-groups:
       - SDv-HK-A2
       - SDv-HK-B1
       - SDv-SG-A2
-      - SDv-MY-A3
+      - SDv-TW-A1
       - SDr-JP-A2
       - SDr-US-A2
       - SDr-SG-A2
@@ -293,9 +337,13 @@ proxy-groups:
       - FreeS_A2
       - NamaV_CDN
       - RZr-US-A2
+      - RZr-US-A3
       - RZr-JP-A2
+      - RZr-JP-A3
       - RZr-HK-A2
+      - RZr-HK-A3
       - RZr-SG-A2
+      - RZr-SG-A3
       - FreeV_R
 
   - name: NoProxy
