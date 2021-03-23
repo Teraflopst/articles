@@ -389,6 +389,7 @@ rules:
   
   - DOMAIN-SUFFIX,as.vivo.com,DIRECT
   - DOMAIN-SUFFIX,renzhe.cloud,EnProxy
+  - DOMAIN-SUFFIX,mgstage.com,EnProxy
   - DOMAIN-SUFFIX,trello.com,EnProxy
   - DOMAIN-SUFFIX,trellocdn.com,NoProxy
   - DOMAIN-SUFFIX,cowtransfer.com/,NoProxy
