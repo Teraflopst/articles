@@ -219,7 +219,48 @@ proxies:
     protocol: auth_aes128_sha1
     protocol-param: 78703:ASusEH
 
-# ---------------------------------------泡芙云
+# ---------------------------------------樱花云
+# https://yhy001.xyz/user/node
+
+  - name: YHv-JP-A1
+    type: vmess
+    server: soolos.com
+    port: 58884
+    uuid: 088d9067-ef2f-3a6c-a6b0-e6af7070aac9
+    alterId: 2
+    cipher: auto
+    network: ws
+    ws-path: /v2ray
+
+  - name: YHv-JP-A2
+    type: vmess
+    server: shcu114514.qwqcloud.cyou
+    port: 11551
+    uuid: 088d9067-ef2f-3a6c-a6b0-e6af7070aac9
+    alterId: 2
+    cipher: auto
+    network: ws
+    ws-path: /v2ray
+
+  - name: YHv-US-A1
+    type: vmess
+    server: soolos.com
+    port: 58881
+    uuid: 088d9067-ef2f-3a6c-a6b0-e6af7070aac9
+    alterId: 2
+    cipher: auto
+    network: ws
+    ws-path: /v2ray
+
+  - name: YHv-US-A2
+    type: vmess
+    server: shcu114514.qwqcloud.cyou
+    port: 11558
+    uuid: 088d9067-ef2f-3a6c-a6b0-e6af7070aac9
+    alterId: 2
+    cipher: auto
+    network: ws
+    ws-path: /v2ray
 
 # ---------------------------------------忍者云
 # https://renzhe.cloud/
@@ -333,18 +374,22 @@ proxy-groups:
       - SDr-JP-A2
       - SDr-US-A2
       - SDr-SG-A2
+      # - RZr-US-A2
+      # - RZr-US-A3
+      # - RZr-JP-A2
+      # - RZr-JP-A3
+      # - RZr-HK-A2
+      # - RZr-HK-A3
+      # - RZr-SG-A2
+      # - RZr-SG-A3
+      - YHv-JP-A1
+      - YHv-JP-A2
+      - YHv-US-A1
+      - YHv-US-A2
       - FreeS_A1
       - FreeS_A2
-      - NamaV_CDN
-      - RZr-US-A2
-      - RZr-US-A3
-      - RZr-JP-A2
-      - RZr-JP-A3
-      - RZr-HK-A2
-      - RZr-HK-A3
-      - RZr-SG-A2
-      - RZr-SG-A3
       - FreeV_R
+      - NamaV_CDN
 
   - name: NoProxy
     proxies:
