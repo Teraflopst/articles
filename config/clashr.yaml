@@ -55,6 +55,7 @@ dns:
 
 proxies:
 
+# ---------------------------------------免费节点
   - name: FreeS_A1
     type: ss
     server: 172.105.192.135
@@ -69,8 +70,7 @@ proxies:
     cipher: aes-256-gcm
     password: isx.yt-60568114
 
-
-# ---------------------------------------Freev2ray.org
+  # ---------------------------------------Freev2ray.org
   - name: FreeV_R
     type: vmess
     server: auto.freev2.top
@@ -80,12 +80,12 @@ proxies:
     cipher: auto
     tls: false
 
-# ---------------------------------------Namaho.org
+  # ---------------------------------------Namaho.org
   - {"name":"NamaV_CDN","type":"vmess","server":"cdn.n4321.xyz","port":443,"uuid":"03042ad7-6316-46a0-8473-65768b0f1fb2","alterId":0,"cipher":"auto","network":"ws","ws-path":"/na","tls":true}
 
-
-
 # ---------------------------------------闪电
+# https://yaofan.cc/lighting/
+
   - name: SDv-JP-A2
     type: vmess
     server: czlt-01.freexyz.cf
@@ -262,6 +262,56 @@ proxies:
     network: ws
     ws-path: /v2ray
 
+  - name: YHv-SG-A1
+    type: vmess
+    server: soolos.com
+    port: 58882
+    uuid: 088d9067-ef2f-3a6c-a6b0-e6af7070aac9
+    alterId: 2
+    cipher: auto
+    network: ws
+    ws-path: /v2ray
+
+  - name: YHv-SG-A2
+    type: vmess
+    server: shcu114514.qwqcloud.cyou
+    port: 11557
+    uuid: 088d9067-ef2f-3a6c-a6b0-e6af7070aac9
+    alterId: 2
+    cipher: auto
+    network: ws
+    ws-path: /v2ray
+
+  - name: YHv-TW-A1
+    type: vmess
+    server: soolos.com
+    port: 58887
+    uuid: 088d9067-ef2f-3a6c-a6b0-e6af7070aac9
+    alterId: 2
+    cipher: auto
+    network: ws
+    ws-path: /v2ray
+
+  - name: YHv-TW-A2
+    type: vmess
+    server: shcu114514.qwqcloud.cyou
+    port: 11553
+    uuid: 088d9067-ef2f-3a6c-a6b0-e6af7070aac9
+    alterId: 2
+    cipher: auto
+    network: ws
+    ws-path: /v2ray
+
+  - name: YHv-RU-A2
+    type: vmess
+    server: shcu114514.qwqcloud.cyou
+    port: 11554
+    uuid: 088d9067-ef2f-3a6c-a6b0-e6af7070aac9
+    alterId: 2
+    cipher: auto
+    network: ws
+    ws-path: /v2ray
+
 # ---------------------------------------忍者云
 # https://renzhe.cloud/
 
@@ -361,19 +411,19 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - SDv-JP-A2
-      - SDv-JP-B2
-      - SDv-JP-C3
-      - SDv-US-A2
-      - SDv-US-B2
-      - SDv-US-C2
-      - SDv-HK-A2
-      - SDv-HK-B1
-      - SDv-SG-A2
-      - SDv-TW-A1
-      - SDr-JP-A2
-      - SDr-US-A2
-      - SDr-SG-A2
+      # - SDv-JP-A2
+      # - SDv-JP-B2
+      # - SDv-JP-C3
+      # - SDv-US-A2
+      # - SDv-US-B2
+      # - SDv-US-C2
+      # - SDv-HK-A2
+      # - SDv-HK-B1
+      # - SDv-SG-A2
+      # - SDv-TW-A1
+      # - SDr-JP-A2
+      # - SDr-US-A2
+      # - SDr-SG-A2
       # - RZr-US-A2
       # - RZr-US-A3
       # - RZr-JP-A2
@@ -386,6 +436,11 @@ proxy-groups:
       - YHv-JP-A2
       - YHv-US-A1
       - YHv-US-A2
+      - YHv-SG-A1
+      - YHv-SG-A2
+      - YHv-RU-A2
+      - YHv-TW-A1
+      - YHv-TW-A2
       - FreeS_A1
       - FreeS_A2
       - FreeV_R
