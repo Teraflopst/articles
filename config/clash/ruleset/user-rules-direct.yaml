@@ -1,4 +1,6 @@
 payload:
-  # 自定义
+  # 文件传输
   - DOMAIN,snapdrop.net
+  - DOMAIN,docstransfer.com
+  # 其它
   - DOMAIN,mmzztt.com
