@@ -1,0 +1,14 @@
+proxies:
+  - name: 印度 CDN x1
+    type: vmess
+    server: CDN.yunddns.top
+    port: 2052
+    uuid: 99ac382c-1c5b-33c1-831c-fbca7fe66c52
+    alterId: 2
+    cipher: auto
+    udp: false
+    network: ws
+    ws-opts:
+      path: /download/microsoft-in/nd94mi3jftx9utxy
+      headers:
+        Host: IN.233yun.icu
