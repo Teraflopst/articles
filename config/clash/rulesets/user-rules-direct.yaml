@@ -1,6 +1,6 @@
 payload:
   # 文件传输
-  - DOMAIN,snapdrop.net
-  - DOMAIN,docstransfer.com
+  - DOMAIN-SUFFIX,snapdrop.net
+  - DOMAIN-SUFFIX,docstransfer.com
   # 其它
-  - DOMAIN,mmzztt.com
+  - DOMAIN-SUFFIX,mmzztt.com
