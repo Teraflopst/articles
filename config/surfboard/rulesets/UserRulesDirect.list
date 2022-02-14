@@ -1,0 +1,8 @@
+# UserRulesDirect
+
+# 文件传输
+DOMAIN-SUFFIX,snapdrop.net
+DOMAIN-SUFFIX,docstransfer.com
+
+# 其它
+DOMAIN-SUFFIX,mmzztt.com
