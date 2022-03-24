@@ -1,6 +1,22 @@
 payload:
-  # 文件传输
+  # 进程 (support macOS、Linux、FreeBSD and Windows)
+  # ---- macOS ----
+  - PROCESS-NAME,NeteaseMusic,DIRECT
+  - PROCESS-NAME,TickTick,DIRECT
+  - PROCESS-NAME,QQ,DIRECT
+  - PROCESS-NAME,WeChat,DIRECT
+  - PROCESS-NAME,Aliwangwang,DIRECT
+  - PROCESS-NAME,Nutstore,DIRECT
+  - PROCESS-NAME,NutstoreJavaBE,DIRECT
+  - PROCESS-NAME,BaiduNetdisk_mac,DIRECT
+  - PROCESS-NAME,aDrive,DIRECT
+  - PROCESS-NAME,kuaitie,DIRECT
+  # ---- Windows ----
+  - PROCESS-NAME,NeteaseMusic.exe,DIRECT
+
+# 文件传输
   - DOMAIN-SUFFIX,snapdrop.net
   - DOMAIN-SUFFIX,docstransfer.com
-  # 其它
+  
+# 其它
   - DOMAIN-SUFFIX,mmzztt.com
