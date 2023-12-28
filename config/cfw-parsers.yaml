@@ -1,0 +1,298 @@
+## 参考
+## https://github.com/iczrac/Parsers-for-clash/tree/main
+## https://github.com/ACL4SSR/ACL4SSR/tree/master
+## https://docs.gtk.pw/contents/parser.html
+
+parsers: # array
+  # - reg: ^.*$ #匹配所有订阅，
+  # 或 - url: https://example.com/profile.yaml 指定订阅
+  # - reg: ^https://dy\.xfltd\.cc/.+$ # 正则匹配域名
+  - reg: ^https://service.+$ # 正则匹配域名
+    
+    # 下面是删除服务商自带的策略组和规则
+    code: |
+      module.exports.parse = (raw, { yaml }) => {
+        const rawObj = yaml.parse(raw)
+        const groups = []
+        const rules = []
+        return yaml.stringify({ ...rawObj, 'proxy-groups': groups, rules })
+      }
+    
+    # 策略和规则
+    yaml:
+      prepend-rules: # 规则由上往下遍历，如上面规则已经命中，则不再往下处理
+        - PROCESS-NAME,cloudmusic.exe,DIRECT
+        - PROCESS-NAME,aDrive.exe,DIRECT
+        - PROCESS-NAME,baidunetdisk.exe,DIRECT
+        - PROCESS-NAME,baidunetdiskhost.exe,DIRECT
+        - PROCESS-NAME,NutstoreClient.exe,DIRECT
+        - PROCESS-NAME,Thunder.exe,DIRECT
+        - PROCESS-NAME,aria2c.exe,DIRECT
+        - PROCESS-NAME,fdm.exe,DIRECT
+        - PROCESS-NAME,Folx.exe,DIRECT
+        - PROCESS-NAME,NetTransport.exe,DIRECT
+        - PROCESS-NAME,Transmission.exe,DIRECT
+        - PROCESS-NAME,uTorrent.exe,DIRECT
+        - PROCESS-NAME,WebTorrent.exe,DIRECT
+        - PROCESS-NAME,WebTorrent Helper.exe,DIRECT
+        - PROCESS-NAME,qbittorrent.exe,DIRECT
+        - DOMAIN-SUFFIX,smtp,DIRECT
+        - DOMAIN-KEYWORD,aria2,DIRECT
+        - PROCESS-NAME,DownloadService.exe,DIRECT
+        - PROCESS-NAME,Weiyun.exe,DIRECT
+
+        # Dmm by ACL4SSR
+        - DOMAIN-SUFFIX,akabeesoft2.com,IP日本
+        - DOMAIN-SUFFIX,akabeesoft3.com,IP日本
+        - DOMAIN-SUFFIX,akatsukiworks.com,IP日本
+        - DOMAIN-SUFFIX,alicesoft.com,IP日本
+        - DOMAIN-SUFFIX,cosmiccute.com,IP日本
+        - DOMAIN-SUFFIX,ddo.jp,IP日本
+        - DOMAIN-SUFFIX,dmm-extension.com,IP日本
+        - DOMAIN-SUFFIX,dmm.co.jp,IP日本
+        - DOMAIN-SUFFIX,dmm.com,IP日本
+        - DOMAIN-SUFFIX,dmm.hk,IP日本
+        - DOMAIN-SUFFIX,hibiki-site.com,IP日本
+        - DOMAIN-SUFFIX,minori.ph,IP日本
+        - DOMAIN-SUFFIX,tenco.cc,IP日本
+        - DOMAIN-SUFFIX,wheel-soft.com,IP日本
+
+        - RULE-SET,Apple,Apple
+        - RULE-SET,Bing,Bing
+        - RULE-SET,OneDrive,OneDrive
+        - RULE-SET,Microsoft,Microsoft
+        - RULE-SET,GoogleFCM,谷歌FCM
+        - RULE-SET,Epic,游戏平台
+        - RULE-SET,Origin,游戏平台
+        - RULE-SET,Sony,游戏平台
+        - RULE-SET,Steam,游戏平台
+        - RULE-SET,Nintendo,游戏平台
+        - RULE-SET,Xbox,游戏平台
+        - RULE-SET,GameDownload,游戏平台
+        - RULE-SET,ProxyMedia,国外媒体
+        - RULE-SET,ChinaMedia,国内媒体
+        - RULE-SET,LocalAreaNetwork,直连规则
+        - RULE-SET,UnBan,直连规则
+        - RULE-SET,ChinaDomain,直连规则
+        - RULE-SET,ChinaCompanyIp,直连规则
+        - RULE-SET,ProxyLite,手动切换
+        - GEOIP,CN,DIRECT
+        - MATCH,FINAL
+      prepend-proxy-groups:
+        - name: IP日本
+          type: select
+          proxies:
+            - 🇯🇵 日本自动
+            - DIRECT
+        - name: 手动切换
+          type: select
+        - name: Apple
+          type: select
+          proxies:
+            - DIRECT
+            - 手动切换
+        - name: Bing
+          type: select
+          proxies:
+            - DIRECT
+            - 手动切换
+        - name: OneDrive
+          type: select
+          proxies:
+            - DIRECT
+            - 手动切换
+        - name: Microsoft
+          type: select
+          proxies:
+            - DIRECT
+            - 手动切换
+        - name: 谷歌FCM
+          type: select
+          proxies:
+            - 手动切换
+            - DIRECT
+        - name: 游戏平台
+          type: select
+          proxies:
+            - DIRECT
+            - 手动切换
+        - name: 国内媒体
+          type: select
+          proxies:
+            - DIRECT
+            - 手动切换
+        - name: 国外媒体
+          type: select
+          proxies:
+            - 手动切换
+            - DIRECT
+        - name: 直连规则
+          type: select
+          proxies:
+            - DIRECT
+            - 手动切换
+        - name: FINAL
+          type: select
+          proxies:
+            - DIRECT
+            - 手动切换
+
+        - name: 🌏 全部自动
+          type: url-test
+          url: http://www.gstatic.com/generate_204
+          interval: 300
+        - name: 🇯🇵 日本自动
+          type: url-test
+          url: http://www.gstatic.com/generate_204
+          interval: 300
+        - name: 🇺🇸 美国自动
+          type: url-test
+          url: http://www.gstatic.com/generate_204
+          interval: 300
+        - name: 🇭🇰 香港自动
+          type: url-test
+          url: http://www.gstatic.com/generate_204
+          interval: 300
+        - name: 🇸🇬 狮城自动
+          type: url-test
+          url: http://www.gstatic.com/generate_204
+          interval: 300
+        - name: 🇺🇳 其余自动
+          type: url-test
+          url: http://www.gstatic.com/generate_204
+          interval: 300
+      commands:
+        - proxy-groups.(🌏 全部自动).proxies=[]proxyNames
+        - proxy-groups.(🇯🇵 日本自动).proxies=[]proxyNames|(日本|🇯🇵)
+        - proxy-groups.(🇺🇸 美国自动).proxies=[]proxyNames|(美国|🇺🇸)
+        - proxy-groups.(🇭🇰 香港自动).proxies=[]proxyNames|(香港|🇭🇰)
+        - proxy-groups.(🇸🇬 狮城自动).proxies=[]proxyNames|(新加坡|🇸🇬)
+        - proxy-groups.(🇺🇳 其余自动).proxies=[]proxyNames|^[^香日台新韩美]*$ # 排除节点名字有“香日台新韩美”的节点
+        #分隔线
+        - proxy-groups.(手动切换).proxies=[]groupNames|(自动)
+        - proxy-groups.(手动切换).proxies.0+DIRECT
+        - proxy-groups.(游戏平台).proxies.99+[]groupNames|(自动)
+        - proxy-groups.(国内媒体).proxies.99+[]groupNames|(自动)
+        - proxy-groups.(国外媒体).proxies.99+[]groupNames|(自动)
+        # 添加规则集
+      mix-rule-providers:
+        Apple:
+          type: http
+          behavior: classical
+          url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Apple.yaml"
+          path: ./ruleset/Apple.yaml
+          interval: 86400
+        Bing:
+          type: http
+          behavior: classical
+          url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Bing.yaml"
+          path: ./ruleset/Bing.yaml
+          interval: 86400
+        OneDrive:
+          type: http
+          behavior: classical
+          url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/OneDrive.yaml"
+          path: ./ruleset/OneDrive.yaml
+          interval: 86400
+        Microsoft:
+          type: http
+          behavior: classical
+          url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Microsoft.yaml"
+          path: ./ruleset/Microsoft.yaml
+          interval: 86400
+        GoogleFCM:
+          type: http
+          behavior: classical
+          url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/GoogleFCM.yaml"
+          path: ./ruleset/GoogleFCM.yaml
+          interval: 86400
+
+        ChinaMedia: # 国内媒体
+          type: http
+          behavior: classical
+          url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/ChinaMedia.yaml"
+          path: ./ruleset/ChinaMedia.yaml
+          interval: 86400
+        ProxyMedia: # 国外媒体
+          type: http
+          behavior: classical
+          url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/ProxyMedia.yaml"
+          path: ./ruleset/ProxyMedia.yaml
+          interval: 86400
+
+        Epic: # 游戏
+          type: http
+          behavior: classical
+          url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Epic.yaml"
+          path: ./ruleset/Epic.yaml
+          interval: 86400
+        Origin: # 游戏
+          type: http
+          behavior: classical
+          url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Origin.yaml"
+          path: ./ruleset/Origin.yaml
+          interval: 86400
+        Sony: # 游戏
+          type: http
+          behavior: classical
+          url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Sony.yaml"
+          path: ./ruleset/Sony.yaml
+          interval: 86400
+        Steam: # 游戏
+          type: http
+          behavior: classical
+          url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Steam.yaml"
+          path: ./ruleset/Steam.yaml
+          interval: 86400
+        Nintendo: # 游戏
+          type: http
+          behavior: classical
+          url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Nintendo.yaml"
+          path: ./ruleset/Nintendo.yaml
+          interval: 86400
+        Xbox: # 游戏
+          type: http
+          behavior: classical
+          url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Xbox.yaml"
+          path: ./ruleset/Xbox.yaml
+          interval: 86400
+        GameDownload: # 游戏
+          type: http
+          behavior: classical
+          url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/GameDownload.yaml"
+          path: ./ruleset/GameDownload.yaml
+          interval: 86400
+
+        # 代理规则
+        ProxyLite: #比较精简的代理列表，包含常用的，以及被污染的域名。ProxyGFWlist 则包含GFW的全量列表
+          type: http
+          behavior: classical
+          url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/ProxyLite.yaml"
+          path: ./ruleset/ProxyLite.yaml
+          interval: 86400
+
+        # 以下为一些直连规则
+        LocalAreaNetwork:
+          type: http
+          behavior: classical
+          url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/LocalAreaNetwork.yaml"
+          path: ./ruleset/LocalAreaNetwork.yaml
+          interval: 86400
+        UnBan:
+          type: http
+          behavior: classical
+          url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/UnBan.yaml"
+          path: ./ruleset/UnBan.yaml
+          interval: 86400
+        ChinaDomain:
+          type: http
+          behavior: classical
+          url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/ChinaDomain.yaml"
+          path: ./ruleset/ChinaDomain.yaml
+          interval: 86400
+        ChinaCompanyIp:
+          type: http
+          behavior: ipcidr
+          url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/ChinaCompanyIp.yaml"
+          path: ./ruleset/ChinaCompanyIp.yaml
+          interval: 86400
