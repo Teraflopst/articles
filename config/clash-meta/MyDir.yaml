@@ -1,0 +1,36 @@
+payload:
+  - PROCESS-NAME,KDE Connect,DIRECT
+  - PROCESS-NAME,kdeconnect-app,DIRECT
+  - PROCESS-NAME,kdeconnectd,DIRECT
+  - PROCESS-NAME,kdeconnect-indicator,DIRECT
+  - PROCESS-NAME,kdeconnect-cli,DIRECT
+  - PROCESS-NAME,com.microsoft.appmanager,DIRECT
+  - PROCESS-NAME,com.tencent.mm,DIRECT
+  - PROCESS-NAME,cloudmusic.exe,DIRECT
+  - PROCESS-NAME,lx-music-desktop.exe,DIRECT
+  - PROCESS-NAME,aDrive.exe,DIRECT
+  - PROCESS-NAME,baidunetdisk.exe,DIRECT
+  - PROCESS-NAME,baidunetdiskhost.exe,DIRECT
+  - PROCESS-NAME,NutstoreClient.exe,DIRECT
+  - PROCESS-NAME,Thunder.exe,DIRECT
+  - PROCESS-NAME,aria2c.exe,DIRECT
+  - PROCESS-NAME,fdm.exe,DIRECT
+  - PROCESS-NAME,Folx.exe,DIRECT
+  - PROCESS-NAME,NetTransport.exe,DIRECT
+  - PROCESS-NAME,Transmission.exe,DIRECT
+  - PROCESS-NAME,uTorrent.exe,DIRECT
+  - PROCESS-NAME,WebTorrent.exe,DIRECT
+  - PROCESS-NAME,WebTorrent Helper.exe,DIRECT
+  - PROCESS-NAME,qbittorrent.exe,DIRECT
+  - DOMAIN-SUFFIX,smtp,DIRECT
+  - DOMAIN-KEYWORD,aria2,DIRECT
+  - PROCESS-NAME,DownloadService.exe,DIRECT
+  - PROCESS-NAME,Weiyun.exe,DIRECT
+  - DOMAIN-SUFFIX,cn.bing.com,DIRECT
+  - DOMAIN-KEYWORD,ac-baidu,DIRECT
+  - DOMAIN-SUFFIX,sspai.com,DIRECT
+  - DOMAIN-SUFFIX,doubao.com,DIRECT
+  - DOMAIN-SUFFIX,duckdns.org,DIRECT
+  - DOMAIN-SUFFIX,tangoapp.dev,DIRECT
+  - DOMAIN,steamcdn-a.akamaihd.net,DIRECT
+  - DOMAIN-SUFFIX,steamserver.net,DIRECT
