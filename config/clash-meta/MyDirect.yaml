@@ -4,6 +4,7 @@ payload:
   - PROCESS-NAME,kdeconnectd
   - PROCESS-NAME,kdeconnect-indicator
   - PROCESS-NAME,kdeconnect-cli
+  - PROCESS-NAME,LocalSend
   - PROCESS-NAME,com.microsoft.appmanager
   - PROCESS-NAME,com.tencent.mm
   - PROCESS-NAME,cloudmusic.exe
