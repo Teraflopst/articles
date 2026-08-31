@@ -32,6 +32,8 @@ payload:
   - DOMAIN-SUFFIX,sspai.com
   - DOMAIN-SUFFIX,doubao.com
   - DOMAIN-SUFFIX,duckdns.org
+  - DOMAIN-SUFFIX,pairdrop.net
+  - DOMAIN-SUFFIX,snapdrop.net
   - DOMAIN-SUFFIX,tangoapp.dev
   - DOMAIN,steamcdn-a.akamaihd.net
   - DOMAIN-SUFFIX,steamserver.net
